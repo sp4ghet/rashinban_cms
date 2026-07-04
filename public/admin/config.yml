@@ -4,7 +4,7 @@ backend:
   branch: main
   # リモート(本番URL)から編集する場合は sveltia-cms-auth をCloudflare Workersに
   # デプロイしてそのURLを指定する。ローカル編集 (localhost) だけなら不要。
-  # base_url: https://sveltia-cms-auth.<your-subdomain>.workers.dev
+  base_url: https://sveltia-cms-auth.rikuo-hase1997.workers.dev
 
 media_folder: public/assets/images
 public_folder: /assets/images
