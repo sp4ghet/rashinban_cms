@@ -23,12 +23,13 @@ collections:
     slug: '{{slug}}'
     summary: '{{title}}'
     sortable_fields: [date, title]
+    # 記事ページに実際に表示されるのは本文のみなので、プレビューも本文だけにする
     fields:
-      - { label: タイトル, name: title, widget: string }
-      - { label: 日付, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, picker_utc: true }
-      - { label: 説明(OGP用・任意), name: description, widget: string, required: false }
-      - { label: OGP画像(任意), name: ogImage, widget: image, required: false }
-      - { label: リンク先URL(設定すると記事ページを作らず、一覧からこのURLへ飛ぶ), name: link, widget: string, required: false }
+      - { label: タイトル, name: title, widget: string, preview: false }
+      - { label: 日付, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, picker_utc: true, preview: false }
+      - { label: 説明(OGP用・任意), name: description, widget: string, required: false, preview: false }
+      - { label: OGP画像(任意), name: ogImage, widget: image, required: false, preview: false }
+      - { label: リンク先URL(設定すると記事ページを作らず、一覧からこのURLへ飛ぶ), name: link, widget: string, required: false, preview: false }
       - { label: 本文, name: body, widget: markdown }
 
   - name: interviews
@@ -41,9 +42,9 @@ collections:
     slug: '{{slug}}'
     summary: '{{title}}'
     fields:
-      - { label: タイトル, name: title, widget: string }
-      - { label: 説明(OGP用・任意), name: description, widget: string, required: false }
-      - { label: OGP画像(任意), name: ogImage, widget: image, required: false }
+      - { label: タイトル, name: title, widget: string, preview: false }
+      - { label: 説明(OGP用・任意), name: description, widget: string, required: false, preview: false }
+      - { label: OGP画像(任意), name: ogImage, widget: image, required: false, preview: false }
       - { label: 本文, name: body, widget: markdown }
 
   - name: players
@@ -71,8 +72,8 @@ collections:
         label: ABOUT
         file: src/content/pages/about.md
         fields: &page_fields
-          - { label: ページタイトル, name: title, widget: string }
-          - { label: 説明(OGP用・任意), name: description, widget: string, required: false }
+          - { label: ページタイトル, name: title, widget: string, preview: false }
+          - { label: 説明(OGP用・任意), name: description, widget: string, required: false, preview: false }
           - { label: 本文, name: body, widget: markdown }
       - name: tournament
         label: TOURNAMENT

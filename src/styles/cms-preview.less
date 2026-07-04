@@ -14,6 +14,12 @@ body {
   padding: @spacing-md;
   .article-content();
 
+  // Sveltia がフィールドごとに挿入するラベル (svelte-* クラス付きの h4) を隠し、
+  // 実ページと同じ見た目にする。Markdown 由来の h4 はクラスを持たないので影響しない
+  h4[class] {
+    display: none;
+  }
+
   // プレビューでは画像が <p> に包まれず出力されることがあり、
   // その場合 p:has(img) の中央寄せが効かないため、ラッパーに
   // 依存しない形で中央寄せする (プレビュー限定)
