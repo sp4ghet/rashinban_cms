@@ -12,6 +12,8 @@ const news = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/news' }),
   schema: z.object({
     title: z.string(),
+    // 記事ページ冒頭の見出し。未設定なら title を使う。HTML可 (<br/> など)
+    headline: optionalString,
     date: z.coerce.date(),
     description: optionalString,
     ogImage: optionalString,

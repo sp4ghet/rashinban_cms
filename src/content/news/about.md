@@ -1,8 +1,8 @@
 ---
 title: 大会概要・告知
+headline: 'RASHINBAN 2025 大会概要'
 date: 2025-08-05
 ---
-## RASHINBAN 2025 大会概要
 
 本ページでは、GeoGuessr日本最強決定戦【RASHINBAN 2025】の概要について説明します。
 

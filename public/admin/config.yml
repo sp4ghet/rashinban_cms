@@ -23,10 +23,12 @@ collections:
     slug: '{{slug}}'
     summary: '{{title}}'
     sortable_fields: [date, title]
-    # 記事ページに実際に表示されるのは本文のみなので、プレビューも本文だけにする
+    # 記事ページは 見出し(headline) → 日付 → 本文 の順で表示されるため、
+    # プレビューもそれに合わせる (title はOGP・一覧用でページ本体には出ない)
     fields:
-      - { label: タイトル, name: title, widget: string, preview: false }
-      - { label: 日付, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, picker_utc: true, preview: false }
+      - { label: タイトル(一覧・OGP用), name: title, widget: string, preview: false }
+      - { label: 見出し(記事冒頭に表示・未入力時はタイトルを使用), name: headline, widget: string, required: false }
+      - { label: 日付, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, picker_utc: true }
       - { label: 説明(OGP用・任意), name: description, widget: string, required: false, preview: false }
       - { label: OGP画像(任意), name: ogImage, widget: image, required: false, preview: false }
       - { label: リンク先URL(設定すると記事ページを作らず、一覧からこのURLへ飛ぶ), name: link, widget: string, required: false, preview: false }

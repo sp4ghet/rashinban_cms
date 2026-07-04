@@ -1,8 +1,8 @@
 ---
 title: RASHINBAN 2025 本戦 結果
+headline: 'GeoGuessr日本最強決定戦 <br/>「RASHINBAN 2025」本戦が開催！'
 date: 2025-11-21T08:00:00Z
 ---
-## GeoGuessr日本最強決定戦 <br/>「RASHINBAN 2025」本戦が開催！
 
 世界レベルの地理推理バトル、激戦を制し、初の日本最強の座を勝ち取ったのは――？
 

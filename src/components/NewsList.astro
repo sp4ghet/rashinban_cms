@@ -1,14 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
+import { formatDate } from '../utils';
 
 interface Props {
   limit?: number;
 }
 
 const { limit } = Astro.props;
-
-const formatDate = (d: Date) =>
-  `${d.getUTCFullYear()}.${d.getUTCMonth() + 1}.${d.getUTCDate()}`;
 
 let entries = (await getCollection('news')).sort(
   (a, b) => b.data.date.getTime() - a.data.date.getTime()
