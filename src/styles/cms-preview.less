@@ -1,5 +1,5 @@
 // Sveltia CMS のエントリープレビュー用スタイル。
-// `npm run preview-css` で public/admin/preview.css にコンパイルされ、
+// astro.config.mjs の integration で public/admin/preview.css にコンパイルされ、
 // admin ページの CMS.registerPreviewStyle() で読み込まれる。
 // プレビューは iframe 内に描画されるため、サイト側の <head> にある
 // フォント読み込み (Typekit) はここで import する必要がある。
@@ -7,10 +7,10 @@
 
 @import "main.less";
 
-// プレビュー iframe にはサイトの .article ラッパーが無いため、
-// 記事系ページの見た目に合わせた最低限の調整
+// プレビュー iframe には .article ラッパーが無いので、記事本文のスタイルを
+// body に直接適用する (定義は article-content.less と共通)
 body {
-  color: @text-secondary;
   background-color: #fff;
   padding: @spacing-md;
+  .article-content();
 }
