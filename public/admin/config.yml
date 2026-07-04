@@ -26,9 +26,9 @@ collections:
     fields:
       - { label: タイトル, name: title, widget: string }
       - { label: 日付, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, picker_utc: true }
-      - { label: 説明（OGP用・任意）, name: description, widget: string, required: false }
-      - { label: OGP画像（任意）, name: ogImage, widget: image, required: false }
-      - { label: リンク先URL（設定すると記事ページを作らず、一覧からこのURLへ飛ぶ）, name: link, widget: string, required: false }
+      - { label: 説明(OGP用・任意), name: description, widget: string, required: false }
+      - { label: OGP画像(任意), name: ogImage, widget: image, required: false }
+      - { label: リンク先URL(設定すると記事ページを作らず、一覧からこのURLへ飛ぶ), name: link, widget: string, required: false }
       - { label: 本文, name: body, widget: markdown }
 
   - name: interviews
@@ -42,8 +42,8 @@ collections:
     summary: '{{title}}'
     fields:
       - { label: タイトル, name: title, widget: string }
-      - { label: 説明（OGP用・任意）, name: description, widget: string, required: false }
-      - { label: OGP画像（任意）, name: ogImage, widget: image, required: false }
+      - { label: 説明(OGP用・任意), name: description, widget: string, required: false }
+      - { label: OGP画像(任意), name: ogImage, widget: image, required: false }
       - { label: 本文, name: body, widget: markdown }
 
   - name: players
@@ -58,10 +58,10 @@ collections:
     sortable_fields: [order, name]
     fields:
       - { label: 名前, name: name, widget: string }
-      - { label: 肩書き（例：予選第1回 優勝）, name: title, widget: string }
+      - { label: 肩書き(例:予選第1回 優勝), name: title, widget: string }
       - { label: 写真, name: photo, widget: image }
       - { label: 紹介文, name: description, widget: text }
-      - { label: インタビュー記事スラッグ（任意・例：shiina）, name: interview, widget: string, required: false }
+      - { label: インタビュー記事スラッグ(任意・例:shiina), name: interview, widget: string, required: false }
       - { label: 表示順, name: order, widget: number, value_type: int, default: 0 }
 
   - name: pages
@@ -72,7 +72,7 @@ collections:
         file: src/content/pages/about.md
         fields: &page_fields
           - { label: ページタイトル, name: title, widget: string }
-          - { label: 説明（OGP用・任意）, name: description, widget: string, required: false }
+          - { label: 説明(OGP用・任意), name: description, widget: string, required: false }
           - { label: 本文, name: body, widget: markdown }
       - name: tournament
         label: TOURNAMENT
