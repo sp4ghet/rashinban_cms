@@ -23,6 +23,8 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {/* 本番 (rashinban.org) 以外のドメインは検索エンジンに載せない */}
+    {Astro.site?.hostname !== 'rashinban.org' && <meta name="robots" content="noindex" />}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />

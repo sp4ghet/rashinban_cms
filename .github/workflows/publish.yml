@@ -1,0 +1,69 @@
+# rashinban.org (本番) への公開: 本番URLでビルドし、rashinban_lp の gh-pages
+# ブランチへのPRを作成/更新する。PRをマージした時点で本番に反映される。
+# 必要なもの: rashinban_lp への Contents / Pull requests 書き込み権限を持つ
+# fine-grained PAT を、このリポジトリの LP_PUBLISH_TOKEN シークレットに設定。
+name: Publish to rashinban.org
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build with production URLs
+        run: npx astro build
+        env:
+          SITE: https://rashinban.org
+
+      - name: Prepare production artifact
+        run: |
+          # CMSは cms.rashinban.org 専用なので本番には載せない
+          rm -rf dist/admin
+          # 独自ドメインの紐付け (legacy Pages はブランチ上のこのファイルを見る)
+          echo rashinban.org > dist/CNAME
+          # Astro の _astro/ ディレクトリを Jekyll に無視させない
+          touch dist/.nojekyll
+
+      - name: Checkout rashinban_lp (gh-pages)
+        uses: actions/checkout@v4
+        with:
+          repository: sp4ghet/rashinban_lp
+          ref: gh-pages
+          path: production
+          token: ${{ secrets.LP_PUBLISH_TOKEN }}
+
+      - name: Sync build output
+        run: |
+          find production -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -a dist/. production/
+
+      - name: Create or update publish PR
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.LP_PUBLISH_TOKEN }}
+          path: production
+          branch: publish/cms
+          base: gh-pages
+          commit-message: 'Publish site from rashinban_cms@${{ github.sha }}'
+          title: 'Publish: rashinban.org を CMS の内容で更新'
+          body: |
+            rashinban_cms の `main` (${{ github.sha }}) からビルドした本番サイトです。
+
+            - レンダリング結果の確認: https://cms.rashinban.org
+            - このPRをマージすると rashinban.org に反映されます
+            - 再実行すると、このPRは最新の内容に更新されます
+
+            (Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})

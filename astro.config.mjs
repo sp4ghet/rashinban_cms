@@ -17,7 +17,8 @@ const cmsPreviewCss = () => ({
 });
 
 export default defineConfig({
-  site: 'https://cms.rashinban.org',
+  // publish ワークフローが本番URL (https://rashinban.org) を SITE で注入する
+  site: process.env.SITE ?? 'https://cms.rashinban.org',
   trailingSlash: 'ignore',
   integrations: [cmsPreviewCss()],
 });
