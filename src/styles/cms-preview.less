@@ -13,4 +13,12 @@ body {
   background-color: #fff;
   padding: @spacing-md;
   .article-content();
+
+  // プレビューでは画像が <p> に包まれず出力されることがあり、
+  // その場合 p:has(img) の中央寄せが効かないため、ラッパーに
+  // 依存しない形で中央寄せする (プレビュー限定)
+  img {
+    display: block;
+    margin-inline: auto;
+  }
 }
