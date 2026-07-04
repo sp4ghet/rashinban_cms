@@ -17,7 +17,7 @@ const cmsPreviewCss = () => ({
 });
 
 export default defineConfig({
-  site: 'https://rashinban.org',
+  site: 'https://cms.rashinban.org',
   trailingSlash: 'ignore',
   integrations: [cmsPreviewCss()],
 });

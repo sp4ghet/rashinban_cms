@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: sp4ghet/rashinban_cms # TODO: GitHubにpush後、実際の owner/repo に合わせる
+  repo: sp4ghet/rashinban_cms
   branch: main
   # リモート(本番URL)から編集する場合は sveltia-cms-auth をCloudflare Workersに
   # デプロイしてそのURLを指定する。ローカル編集 (localhost) だけなら不要。

@@ -12,7 +12,7 @@ interface Props {
 const {
   title = 'RASHINBAN 2025 - GeoGuessr日本最強決定戦',
   description = 'RASHINBAN 2025 - GeoGuessr日本最強決定戦公式Webサイト',
-  ogImage = 'https://rashinban.org/assets/images/hero.png',
+  ogImage = new URL('/assets/images/hero.png', Astro.site).href,
 } = Astro.props;
 ---
 
