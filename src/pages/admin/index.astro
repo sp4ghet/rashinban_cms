@@ -1,0 +1,18 @@
+---
+// Sveltia CMS 管理画面。src/pages 配下に置くことで dev サーバーでも /admin/ が解決される
+// (public/ 配下の静的ファイルは /admin/index.html でしか開けない)
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="cms-config-url" href="/admin/config.yml" />
+    <title>コンテンツ管理 - RASHINBAN</title>
+  </head>
+  <body>
+    <script is:inline src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js" type="module"></script>
+  </body>
+</html>
