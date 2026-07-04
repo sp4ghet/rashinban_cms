@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "preview-css": "lessc src/styles/cms-preview.less public/admin/preview.css",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",

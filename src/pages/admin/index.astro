@@ -14,5 +14,9 @@
   </head>
   <body>
     <script is:inline src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js" type="module"></script>
+    <script is:inline type="module">
+      // サイトのスタイル (LESSからコンパイル) をエントリープレビューに適用
+      window.CMS.registerPreviewStyle('/admin/preview.css');
+    </script>
   </body>
 </html>
