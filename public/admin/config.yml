@@ -9,8 +9,8 @@ backend:
 media_folder: public/assets/images
 public_folder: /assets/images
 
-site_url: https://rashinban.org
-display_url: https://rashinban.org
+site_url: https://cms.rashinban.org
+display_url: https://cms.rashinban.org
 
 collections:
   - name: news
