@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  limit?: number;
+}
+
+const { limit } = Astro.props;
+
+const formatDate = (d: Date) =>
+  `${d.getUTCFullYear()}.${d.getUTCMonth() + 1}.${d.getUTCDate()}`;
+
+let entries = (await getCollection('news')).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+if (limit) entries = entries.slice(0, limit);
+---
+
+<ul class="news__list">
+  {
+    entries.map((entry) => {
+      const href = entry.data.link ?? `/news/${entry.id}/`;
+      const external = href.startsWith('http');
+      return (
+        <li class="news__item">
+          <div class="news__date">{formatDate(entry.data.date)}</div>
+          <div class="news__text">
+            <a
+              href={href}
+              target={external ? '_blank' : undefined}
+              rel={external ? 'noreferrer' : undefined}
+            >
+              {entry.data.title}
+            </a>
+          </div>
+        </li>
+      );
+    })
+  }
+</ul>

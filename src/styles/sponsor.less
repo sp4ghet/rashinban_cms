@@ -1,0 +1,67 @@
+// Sponsor section (black background)
+.sponsor {
+  background-color: #000;
+  color: #fff;
+  padding: @spacing-3xl 0;
+
+  &__title {
+    text-align: center;
+    color: #fff;
+    font-size: @font-size-2xl;
+    margin-bottom: @spacing-xl;
+    letter-spacing: 0.01em;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Rows per sponsor level */
+  &__rows {
+    display: flex;
+    flex-direction: column;
+    gap: @spacing-xl;
+    width: 100%;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: @spacing-lg;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Logo link wrapper */
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: @spacing-sm @spacing-md;
+    background: transparent;
+    text-decoration: none;
+  }
+
+  /* Logo sizes */
+  &__logo {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    filter: none;
+  }
+
+  &__logo--lg {
+    max-height: 96px;
+  }
+
+  &__logo--md {
+    max-height: 72px;
+  }
+
+  &__logo--sm {
+    max-height: 48px;
+  }
+}

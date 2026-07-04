@@ -1,0 +1,179 @@
+// Header & Navigation (extracted from main.less)
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent; // transparent nav bar
+  backdrop-filter: none;
+  border-bottom: none;
+  z-index: @z-fixed;
+  transition: all @transition-normal;
+
+  &--scrolled {
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom-color: transparent;
+  }
+}
+
+.nav {
+  // Avoid horizontal overflow from 100vw on Windows scrollbars
+  width: 100%;
+
+  &__container {
+    max-width: @container-max-width;
+    margin: 24px auto;
+    padding: 0 @container-padding;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: right;
+
+    @media (min-width: @breakpoint-sm) {
+      padding: 0 @spacing-lg;
+    }
+
+    @media (min-width: @breakpoint-lg) {
+      padding: 0 @spacing-xl;
+    }
+  }
+
+  &__brand {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    height: 47px;
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 80vw;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: @spacing-lg; // reduced from xl
+    padding: 72px @spacing-xl @spacing-xl; // account for header height
+    background-color: @bg-primary;
+    transform: translateX(100%);
+    transition: transform @transition-normal, opacity @transition-normal, visibility @transition-normal;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: @z-fixed;
+    overflow-y: auto; // allow scroll on short viewports
+    -webkit-overflow-scrolling: touch;
+
+    &--active {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+
+  &__item--close {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__link {
+    font-size: @font-size-xl;
+    font-weight: @font-weight-bold;
+    color: @text-primary;
+    transition: color @transition-fast;
+    text-decoration: none;
+
+    &:hover {
+      color: @primary-dark;
+    }
+  }
+
+  // Compact the drawer menu on short-height screens
+  @media (max-height: 700px) {
+    &__menu {
+      gap: @spacing-md;
+      padding: 56px @spacing-lg @spacing-lg;
+    }
+    &__link {
+      font-size: @font-size-lg;
+    }
+    &__close {
+      i { font-size: 2.2rem; }
+    }
+  }
+
+  @media (max-height: 560px) {
+    &__menu {
+      gap: @spacing-sm;
+      padding: 48px @spacing-md @spacing-md;
+    }
+    &__link {
+      font-size: @font-size-base;
+    }
+  }
+
+  // Handle very narrow screens: avoid 1px seam showing menu background
+  @media (max-width: 320px) {
+    &__menu {
+      width: 100vw; // cover full width when open
+      max-width: none;
+    }
+    &__menu:not(.nav__menu--active) {
+      transform: translateX(calc(100% + 2px)); // push fully off-screen when closed
+    }
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    color: @text-primary;
+    padding: @spacing-sm;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: @border-radius-md;
+
+    i {
+      font-size: 2.6rem;
+      line-height: 2;
+    }
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: @spacing-sm;
+    font-weight: bolder;
+  }
+
+  &__toggle-line {
+    width: 35px;
+    height: 5px;
+    background-color: @text-primary;
+    transition: all @transition-fast;
+  }
+}

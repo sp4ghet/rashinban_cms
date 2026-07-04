@@ -1,0 +1,284 @@
+.players {
+  padding: @spacing-4xl 0;
+  background-color: @bg-registration;
+  position: relative;
+  // Provide hover color for shared view-more button
+  --view-more-hover-color: @bg-registration;
+
+  &__title {
+    text-align: left;
+    margin-bottom: 0;
+    position: relative;
+    line-height: @font-size-4xl * (124 / 180);
+    font-family: @font-family-heading;
+    color: @text-primary;
+
+    @media (max-width: (@breakpoint-md - 1px)) {
+      font-size: @font-size-3xl;
+      line-height: @font-size-3xl;
+    }
+  }
+
+  &__separator {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: @text-primary;
+    margin-top: @spacing-2xl;
+    margin-bottom: @spacing-2xl;
+  }
+
+  &__description {
+    text-align: left;
+    font-family: @font-family-text;
+    font-size: @font-size-2base;
+    font-weight: @font-weight-semibold;
+    line-height: @font-size-base * (24 / 20);
+    color: @text-primary;
+    margin-bottom: @spacing-sm;
+    max-width: 1200px;
+    min-width: 90%;
+
+    @media (max-width: (@breakpoint-md - 1px)) {
+      font-size: @font-size-sm;
+    }
+  }
+
+  /* Qualifier grid and cards */
+  .qualifier-grid {
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: @spacing-xl;
+    margin-bottom: 0;
+
+    // Stack cards on small screens
+    @media (max-width: (@breakpoint-md - 1px)) {
+      grid-template-columns: 1fr;
+      max-width: 100%;
+      gap: @spacing-lg;
+    }
+  }
+
+  .qualifier-card {
+    border: 0px solid @text-primary;
+    padding: @spacing-xl 0;
+    border-radius: @border-radius-lg;
+    background: transparent;
+    min-height: 140px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &__title {
+      color: @text-primary;
+      font-family: @font-family-heading;
+      font-weight: @font-weight-bold;
+      font-size: @font-size-2xl;
+      margin: 0;
+    }
+
+    &__cta {
+      display: flex;
+      align-items: center;
+      gap: @spacing-md;
+      flex-wrap: nowrap;
+      margin-top: @spacing-sm;
+
+      @media (max-width: (@breakpoint-md - 1px)) {
+        flex-wrap: wrap;
+        gap: @spacing-sm;
+      }
+    }
+
+    &__register {
+      width: 200px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: @spacing-xs @spacing-sm;
+      font-size: @font-size-base + 4px;
+      border: 1.5px solid @text-primary;
+      color: @text-primary;
+      background: @bg-registration;
+      text-decoration: none;
+      font-family: @font-family-heading;
+      font-weight: @font-weight-bold;
+
+      &:hover {
+        opacity: 0.9;
+        text-decoration: none;
+      }
+    }
+
+    &__deadline {
+      color: @text-primary;
+      font-family: @font-family-text;
+      font-weight: @font-weight-semibold;
+      font-size: @font-size-base + 4px;
+
+      @media (max-width: (@breakpoint-md - 1px)) {
+        font-size: @font-size-sm;
+      }
+    }
+  }
+
+  .player-interview-link {
+    font-weight: bold;
+    font-size: @font-family-text;
+  }
+
+  // Interview link CTA button
+  .players__actions {
+    display: flex;
+    justify-content: left;
+    margin-top: @spacing-lg;
+    position: relative;
+    z-index: 2;
+  }
+
+  // view-more は共通 .btn--view-more を使用
+
+  // Rulebook button: white background, blue text, slightly larger and bold
+  .players__btn--rulebook {
+    background: #fff;
+    color: @bg-registration; // match section blue
+    border-color: #fff;
+    font-size: (@font-size-sm + 8px);
+    font-weight: @font-weight-bold;
+    width: auto; // allow text to fit
+    min-width: 300px;
+    border-radius: 10px;
+    max-height: (@font-size-sm + 30px);
+    margin-bottom: @spacing-2xl;
+
+    &:hover {
+      background: #fff; // keep white on hover
+      color: @bg-registration;
+    }
+
+    // Make the rulebook button fluid on small screens
+    @media (max-width: (@breakpoint-md - 1px)) {
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+      font-size: @font-size-sm;
+    }
+  }
+
+  .tournament-format {
+    margin-bottom: @spacing-xl;
+
+    h4 {
+      font-family: @font-family-text;
+      color: @text-primary;
+      margin-bottom: @spacing-md;
+      font-size: @font-size-base;
+
+      @media (max-width: (@breakpoint-md - 1px)) {
+        font-size: @font-size-sm;
+      }
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        position: relative;
+        padding-left: @spacing-lg;
+        margin-bottom: @spacing-sm;
+        color: @text-primary;
+        font-size: @font-size-base;
+        font-family: @font-family-text;
+        font-weight: @font-weight-semibold;
+
+        @media (max-width: (@breakpoint-md - 1px)) {
+          font-size: @font-size-sm;
+        }
+
+        &:before {
+          content: "\2022";
+          position: absolute;
+          left: 0;
+          top: 2px;
+          color: @text-primary;
+          font-size: @font-size-2base;
+        }
+      }
+    }
+  }
+
+  &__stats {
+    display: flex;
+    text-align: left;
+    margin-bottom: @spacing-3xl;
+
+    @media (min-width: @breakpoint-md) {
+      justify-content: space-between;
+      flex-direction: row;
+      max-width: 1000px;
+    }
+
+    @media (max-width: (@breakpoint-md - 1px)) {
+      flex-direction: column;
+      max-height: 60vh;
+      justify-content: space-between;
+    }
+
+    .stat {
+      &__label {
+        color: @text-primary;
+        font-size: @font-size-lg;
+        font-weight: @font-weight-semibold;
+        margin-bottom: 0;
+      }
+
+      &__number {
+        color: @text-primary;
+        font-size: @font-size-3xl;
+        font-weight: @font-weight-semibold;
+        margin-bottom: 0;
+        line-height: 0.8;
+
+        @media (max-width: (@breakpoint-md - 1px)) {
+          font-size: @font-size-2xl;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    text-align: left;
+
+    .btn {
+      background-color: @text-secondary;
+      max-width: 400px;
+
+      @media (max-width: (@breakpoint-md - 1px)) {
+        width: 80vw;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: @bg-volunteer;
+      font-family: @font-family-heading;
+      font-weight: @font-weight-bold;
+    }
+  }
+}
+
+
+img.players__pc {
+  position: absolute;
+  right: 4%;
+  top: 85%;
+  transform: translateY(-35%) rotate(15.32deg);
+  width: 22.1vw;
+  z-index: 1;
+
+  @media (max-width: (@breakpoint-lg - 1px)) {
+    display: none;
+  }
+}

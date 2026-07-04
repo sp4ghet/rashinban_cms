@@ -1,0 +1,88 @@
+backend:
+  name: github
+  repo: sp4ghet/rashinban_cms # TODO: GitHubにpush後、実際の owner/repo に合わせる
+  branch: main
+  # リモート(本番URL)から編集する場合は sveltia-cms-auth をCloudflare Workersに
+  # デプロイしてそのURLを指定する。ローカル編集 (localhost) だけなら不要。
+  # base_url: https://sveltia-cms-auth.<your-subdomain>.workers.dev
+
+media_folder: public/assets/images
+public_folder: /assets/images
+
+site_url: https://rashinban.org
+display_url: https://rashinban.org
+
+collections:
+  - name: news
+    label: ニュース
+    label_singular: ニュース記事
+    folder: src/content/news
+    create: true
+    extension: md
+    format: yaml-frontmatter
+    slug: '{{slug}}'
+    summary: '{{title}}'
+    sortable_fields: [date, title]
+    fields:
+      - { label: タイトル, name: title, widget: string }
+      - { label: 日付, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, picker_utc: true }
+      - { label: 説明（OGP用・任意）, name: description, widget: string, required: false }
+      - { label: OGP画像（任意）, name: ogImage, widget: image, required: false }
+      - { label: リンク先URL（設定すると記事ページを作らず、一覧からこのURLへ飛ぶ）, name: link, widget: string, required: false }
+      - { label: 本文, name: body, widget: markdown }
+
+  - name: interviews
+    label: インタビュー
+    label_singular: インタビュー記事
+    folder: src/content/interviews
+    create: true
+    extension: md
+    format: yaml-frontmatter
+    slug: '{{slug}}'
+    summary: '{{title}}'
+    fields:
+      - { label: タイトル, name: title, widget: string }
+      - { label: 説明（OGP用・任意）, name: description, widget: string, required: false }
+      - { label: OGP画像（任意）, name: ogImage, widget: image, required: false }
+      - { label: 本文, name: body, widget: markdown }
+
+  - name: players
+    label: 選手
+    label_singular: 選手
+    folder: src/content/players
+    create: true
+    extension: yaml
+    format: yaml
+    identifier_field: name
+    summary: '{{name}} ({{title}})'
+    sortable_fields: [order, name]
+    fields:
+      - { label: 名前, name: name, widget: string }
+      - { label: 肩書き（例：予選第1回 優勝）, name: title, widget: string }
+      - { label: 写真, name: photo, widget: image }
+      - { label: 紹介文, name: description, widget: text }
+      - { label: インタビュー記事スラッグ（任意・例：shiina）, name: interview, widget: string, required: false }
+      - { label: 表示順, name: order, widget: number, value_type: int, default: 0 }
+
+  - name: pages
+    label: 固定ページ
+    files:
+      - name: about
+        label: ABOUT
+        file: src/content/pages/about.md
+        fields: &page_fields
+          - { label: ページタイトル, name: title, widget: string }
+          - { label: 説明（OGP用・任意）, name: description, widget: string, required: false }
+          - { label: 本文, name: body, widget: markdown }
+      - name: tournament
+        label: TOURNAMENT
+        file: src/content/pages/tournament.md
+        fields: *page_fields
+      - name: tickets
+        label: TICKETS & GOODS
+        file: src/content/pages/tickets.md
+        fields: *page_fields
+      - name: staff
+        label: STAFF
+        file: src/content/pages/staff.md
+        fields: *page_fields

@@ -1,0 +1,17 @@
+---
+import Base from './Base.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+---
+
+<Base {...Astro.props}>
+  <section class="article">
+    <div class="container" id="article__body">
+      <slot />
+    </div>
+  </section>
+</Base>

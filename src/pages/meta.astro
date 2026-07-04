@@ -1,0 +1,83 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import Base from '../layouts/Base.astro';
+
+// public/assets/images/meta/ に画像を追加するとギャラリーに自動で載る
+const metaDir = path.join(process.cwd(), 'public/assets/images/meta');
+const images = fs
+  .readdirSync(metaDir)
+  .filter((f) => /\.(png|jpe?g|webp)$/i.test(f))
+  .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+  .map((f) => ({
+    src: `/assets/images/meta/${f}`,
+    name: path.parse(f).name,
+  }));
+---
+
+<Base title="RASHINBAN 2025 - META ギャラリー">
+  <section class="news-spacer"></section>
+  <section class="meta-gallery" id="meta" style="background-color: #d7d7d7">
+    <div class="container" id="article__body">
+      <h2 class="meta-gallery__title">META</h2>
+      <div class="meta-gallery__grid" id="meta-grid" aria-live="polite">
+        {
+          images.map((img) => (
+            <button class="meta-card" type="button" aria-label={`${img.name} を拡大表示`}>
+              <img
+                class="meta-card__img"
+                loading="lazy"
+                decoding="async"
+                alt={img.name}
+                src={img.src}
+              />
+            </button>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox__backdrop" data-action="close"></div>
+    <img class="lightbox__img" alt="" />
+    <button class="lightbox__close" aria-label="閉じる" title="閉じる" data-action="close">×</button>
+  </div>
+</Base>
+
+<style>
+  .lightbox { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,.8); z-index: 1000; }
+  .lightbox.is-open { display: flex; }
+  .lightbox__img { max-width: 90vw; max-height: 90vh; border-radius: 8px; }
+  .lightbox__close { position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,.6); color: #fff; border: none; width: 40px; height: 40px; border-radius: 999px; cursor: pointer; display: grid; place-items: center; font-size: 22px; }
+  .lightbox__backdrop { position: absolute; inset: 0; }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = lightbox.querySelector('.lightbox__img');
+
+    function openLightbox(src, alt) {
+      lbImg.src = src;
+      lbImg.alt = alt || '';
+      lightbox.classList.add('is-open');
+      document.addEventListener('keydown', onKey);
+    }
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lbImg.src = '';
+      document.removeEventListener('keydown', onKey);
+    }
+    function onKey(e) { if (e.key === 'Escape') closeLightbox(); }
+
+    document.querySelectorAll('.meta-card').forEach(card => {
+      const img = card.querySelector('img');
+      card.addEventListener('click', () => openLightbox(img.currentSrc || img.src, img.alt));
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target && e.target.getAttribute('data-action') === 'close') closeLightbox();
+    });
+  });
+</script>

@@ -1,0 +1,18 @@
+---
+import NewsList from '../NewsList.astro';
+---
+
+<section class="news" id="news">
+  <div class="container">
+    <h2 class="news__title">NEWS</h2>
+    <div class="news__contents">
+      <NewsList limit={3} />
+
+      <div class="news__actions">
+        <a class="btn btn--view-more" href="/news/" aria-label="NEWS一覧へ">
+          VIEW MORE
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

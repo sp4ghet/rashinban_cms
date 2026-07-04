@@ -1,0 +1,39 @@
+<section class="live" id="live">
+  <div class="container">
+    <h2 class="live__title">＼大会配信はYouTube,Twitchで視聴可能／</h2>
+
+    <div class="live__stage">
+      <!-- YouTube: default visible, muted -->
+      <div class="embed-16x9 live__pane is-active" data-pane="youtube" aria-hidden="false">
+        <iframe
+          src="https://www.youtube.com/embed/Ixagpu62QBo?si=tqdaPJuyUk18pfV8&rel=0&modestbranding=1&mute=1"
+          title="YouTube Live Player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- Twitch: hidden by default -->
+      <div class="embed-16x9 live__pane" data-pane="twitch" aria-hidden="true">
+        <iframe
+          src="https://player.twitch.tv/?channel=sp4geo&parent=localhost&parent=rashinban.org&muted=true"
+          title="Twitch Live Player"
+          allowfullscreen
+          frameborder="0"
+          scrolling="no">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="live__tabs" role="tablist" aria-label="配信プラットフォーム選択">
+      <button class="live__tab is-active" role="tab" aria-selected="true" data-target="youtube" aria-label="YouTube を表示">
+        <i class="bi bi-youtube" aria-hidden="true"></i>
+      </button>
+      <button class="live__tab" role="tab" aria-selected="false" data-target="twitch" aria-label="Twitch を表示">
+        <i class="bi bi-twitch" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</section>

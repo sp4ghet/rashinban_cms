@@ -1,0 +1,138 @@
+// Live stream section
+.live {
+  background-color: #000;
+  color: #fff;
+  padding: @spacing-4xl 0;
+
+  &__title {
+    font-family: Noto Sans JP, sans-serif;
+    text-align: center;
+    color: #fff;
+    font-size: @font-size-lg;
+    margin-bottom: 1em;
+    letter-spacing: 0.08em;
+  }
+
+  /* Tabs */
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    gap: @spacing-md;
+    margin-top: @spacing-lg;
+  }
+
+  &__tab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    border-radius: @border-radius-md + 2px;
+    cursor: pointer;
+    transition: opacity @transition-fast, transform @transition-fast;
+    opacity: 0.7;
+    margin: 0 20px;
+
+    i {
+      font-size: 50px;
+      line-height: 1;
+    }
+
+    &:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    &.is-active {
+      opacity: 1;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+  }
+
+  /* Stage */
+  &__stage {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* 16:9 embed wrapper */
+  .embed-16x9 {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    padding-top: 0;
+    // Round the corners of the embedded players
+    border-radius: @border-radius-md;
+    overflow: hidden;
+
+    iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      // Ensure iframe respects rounding as a fallback
+      border-radius: inherit;
+    }
+  }
+
+  /* Panes */
+  &__pane {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+  }
+
+  &__pane.is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  &__placeholder {
+    position: relative;
+    width: 80%;
+    min-width: 893px;
+    max-width: 900px;
+    background: #111;
+    border: 2px dashed #444;
+    border-radius: @border-radius-lg;
+    color: #bbb;
+    text-align: center;
+    margin: 0 auto;
+
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 56.25%; // 16:9 ratio
+    }
+
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      padding: @spacing-lg;
+      font-size: @font-size-2xl;
+
+      @media (min-width: @breakpoint-md) {
+        font-size: @font-size-3xl;
+      }
+    }
+  }
+}
