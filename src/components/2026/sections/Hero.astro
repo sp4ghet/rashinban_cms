@@ -1,8 +1,10 @@
+{/* キービジュアル: 固定背景。スクロールに応じて JS が --hero-dim を上げて暗転させる */}
+<div class="hero__bg" id="hero-bg" aria-hidden="true"></div>
+
 <section class="hero">
-  <div class="hero__title-wrap">
-    <img class="hero__compass" src="/assets/images/compass-full.svg" alt="" />
-    <h1 class="hero__title"><span>RASHINBAN</span><span>2026</span></h1>
-  </div>
+  <h1 class="hero__title">
+    <img src="/assets/2026/title.svg" alt="RASHINBAN 2026" />
+  </h1>
 
   <div class="hero__dates">
     <div class="date-badge">
@@ -22,3 +24,23 @@
     <p class="hero__venue-address">〒175-0082 板橋区高島平1-79-3</p>
   </div>
 </section>
+
+<script>
+  const bg = document.getElementById('hero-bg');
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    // 1画面分スクロールしたら完全に暗くなる (最初から少し暗くして文字を読みやすく)
+    const progress = Math.min(1, window.scrollY / window.innerHeight);
+    bg?.style.setProperty('--hero-dim', String(0.3 + 0.7 * progress));
+  };
+  const onScroll = () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  update();
+</script>

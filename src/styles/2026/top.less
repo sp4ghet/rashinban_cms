@@ -6,33 +6,28 @@
   padding: 200px 24px 96px;
   text-align: center;
 
-  &__title-wrap {
-    position: relative;
-    display: inline-block;
-  }
+  // キービジュアル: position:fixed でスクロールしても動かない
+  // (background-attachment:fixed は iOS Safari で効かないため要素で敷く)。
+  // 暗転オーバーレイの濃さは Hero.astro の JS が --hero-dim で制御する
+  &__bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: url('/assets/2026/kv-fhd.png') center / cover no-repeat;
 
-  // 見出しの背後に重なるコンパス
-  &__compass {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: clamp(140px, 22vw, 300px);
-    z-index: 0;
-    pointer-events: none;
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: #000;
+      opacity: var(--hero-dim, 0.3);
+    }
   }
 
   &__title {
-    position: relative;
-    z-index: 1;
-    font-family: @font-display;
-    font-weight: 700;
-    font-size: clamp(48px, 10.5vw, 152px);
-    line-height: 0.98;
-    letter-spacing: 0.01em;
-
-    span {
-      display: block;
+    img {
+      display: inline-block;
+      width: clamp(300px, 41vw, 620px);
     }
   }
 
