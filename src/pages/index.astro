@@ -1,5 +1,24 @@
 ---
 import Base from '../layouts/2026/Base.astro';
+import Hero from '../components/2026/sections/Hero.astro';
+import About from '../components/2026/sections/About.astro';
+import News from '../components/2026/sections/News.astro';
+import Broadcast from '../components/2026/sections/Broadcast.astro';
+import Tournament from '../components/2026/sections/Tournament.astro';
+import JoinUs from '../components/2026/sections/JoinUs.astro';
+import Faq from '../components/2026/sections/Faq.astro';
 ---
 
-<Base />
+<Base>
+  <Hero />
+
+  {/* ヒーロー以降は赤いアートワーク背景の上にセクションが載る */}
+  <div class="page-bg">
+    <About />
+    <News />
+    <Broadcast />
+    <Tournament />
+    <JoinUs />
+    <Faq />
+  </div>
+</Base>

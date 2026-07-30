@@ -1,0 +1,28 @@
+<nav class="nav" id="nav">
+  <a href="/" class="nav__logo">
+    <img src="/assets/2026/logo-side-white.svg" alt="RASHINBAN" />
+  </a>
+  <button class="nav__toggle" id="nav-toggle" aria-label="メニュー" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav__links">
+    <li><a href="#about" class="nav__link">ABOUT</a></li>
+    <li><a href="#news" class="nav__link">NEWS</a></li>
+    <li><a href="#tournament" class="nav__link">TOURNAMENT</a></li>
+    <li><a href="#join-us" class="nav__link">JOIN US</a></li>
+  </ul>
+</nav>
+
+<script>
+  const nav = document.getElementById('nav');
+  const toggle = document.getElementById('nav-toggle');
+  toggle?.addEventListener('click', () => {
+    const open = nav?.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(!!open));
+  });
+  nav?.querySelectorAll('.nav__link').forEach((link) => {
+    link.addEventListener('click', () => nav.classList.remove('is-open'));
+  });
+</script>

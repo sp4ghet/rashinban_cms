@@ -1,0 +1,131 @@
+@import (reference) './variables.less';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: @color-bg;
+  color: @color-text;
+  font-family: @font-body;
+  font-size: 16px;
+  line-height: 1.8;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: @container-width;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+// セクション見出し: 大きな欧文 + 小さな日本語サブタイトル (中央揃え)
+.section-title {
+  text-align: center;
+  line-height: 1;
+
+  &__en {
+    display: block;
+    font-family: @font-display;
+    font-weight: 400;
+    font-size: clamp(48px, 7vw, 76px);
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+
+  &__ja {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+// 丸形アウトラインボタン (VIEW MORE / GOOGLE MAPS / BACK TO TOP)
+.btn-pill {
+  display: inline-block;
+  min-width: 160px;
+  padding: 8px 32px;
+  border: 1px solid @color-text;
+  border-radius: 999px;
+  font-family: @font-display;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+
+  &:hover {
+    background: @color-text;
+    color: @color-bg;
+  }
+}
+
+// 角形アウトラインボタン (スポンサー募集 / ボランティア募集)
+.btn-rect {
+  display: inline-block;
+  min-width: 224px;
+  padding: 10px 32px;
+  border: 1px solid @color-text;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+
+  &:hover {
+    background: @color-text;
+    color: @color-bg;
+  }
+}
+
+// 赤塗りボタン (Coming Soon)
+.btn-red {
+  display: inline-block;
+  min-width: 224px;
+  padding: 11px 32px;
+  border-radius: 4px;
+  background: @color-red-deep;
+  color: @color-text;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+
+// 白帯ラベル ([日程] / [会場])
+.label-bar {
+  display: block;
+  width: min(320px, 100%);
+  margin: 0 auto;
+  padding: 4px 0;
+  background: @color-text;
+  color: @color-bg;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+}

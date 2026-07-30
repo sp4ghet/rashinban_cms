@@ -7,6 +7,19 @@ const optionalString = z
   .optional()
   .transform((v) => v || undefined);
 
+// 2026年のニュース記事 (トップの NEWS 欄に表示。記事ページ・一覧ページは未実装)
+const news = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/news' }),
+  schema: z.object({
+    title: z.string(),
+    headline: optionalString,
+    date: z.coerce.date(),
+    description: optionalString,
+    ogImage: optionalString,
+    link: optionalString,
+  }),
+});
+
 // ニュース記事。link を設定すると記事ページは生成されず、一覧からそのURLへ直接リンクする
 const news2025 = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/news2025' }),
@@ -51,4 +64,4 @@ const pages2025 = defineCollection({
   }),
 });
 
-export const collections = { news2025, interviews2025, players2025, pages2025 };
+export const collections = { news, news2025, interviews2025, players2025, pages2025 };

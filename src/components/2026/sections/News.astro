@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import { formatDate } from '../../../utils';
+
+// 2026年のニュース (最新6件)。記事ページ・一覧ページは未実装なので、
+// 実装するまでは VIEW MORE を表示しない (旧URL /news/ は /2025/news/ へ
+// リダイレクトされるため)
+const entries = (await getCollection('news'))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 6);
+---
+
+<section class="section news" id="news">
+  <div class="container">
+    <h2 class="section-title">
+      <span class="section-title__en">News</span>
+      <span class="section-title__ja">ニュース</span>
+    </h2>
+
+    {
+      entries.length > 0 ? (
+        <ul class="news__grid">
+          {entries.map((entry) => {
+            const href = entry.data.link ?? `/news/${entry.id}/`;
+            const external = href.startsWith('http');
+            return (
+              <li>
+                <a
+                  class="news-card"
+                  href={href}
+                  target={external ? '_blank' : undefined}
+                  rel={external ? 'noreferrer' : undefined}
+                >
+                  <span class="news-card__date">{formatDate(entry.data.date)}</span>
+                  <span class="news-card__title">{entry.data.title}</span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      ) : (
+        <p class="news__empty">Coming Soon</p>
+      )
+    }
+  </div>
+</section>

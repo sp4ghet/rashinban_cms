@@ -1,0 +1,400 @@
+@import (reference) './variables.less';
+
+// ============ HERO ============
+.hero {
+  position: relative;
+  padding: 200px 24px 96px;
+  text-align: center;
+
+  &__title-wrap {
+    position: relative;
+    display: inline-block;
+  }
+
+  // 見出しの背後に重なるコンパス
+  &__compass {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(140px, 22vw, 300px);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    font-family: @font-display;
+    font-weight: 400;
+    font-size: clamp(48px, 10.5vw, 152px);
+    line-height: 0.98;
+    letter-spacing: 0.01em;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__dates {
+    display: flex;
+    justify-content: center;
+    gap: 56px;
+    margin-top: 96px;
+    flex-wrap: wrap;
+  }
+
+  &__venue {
+    margin-top: 72px;
+
+    &-name {
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    &-address {
+      margin-top: 4px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+  }
+}
+
+// 日付表記 (DAY1 10/24 [SAT]) — ヒーローと TOURNAMENT で共用
+.date-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 12px;
+  font-family: @font-display;
+  line-height: 1;
+
+  &__day {
+    font-size: 22px;
+  }
+
+  &__date {
+    font-size: 44px;
+  }
+
+  &__dow {
+    font-size: 20px;
+  }
+
+  // TOURNAMENT セクションの枠付きバリアント
+  &--boxed {
+    border: 1px solid @color-border;
+    padding: 24px 40px;
+    gap: 16px;
+
+    .date-badge__day {
+      font-size: 26px;
+    }
+
+    .date-badge__date {
+      font-size: 52px;
+    }
+
+    .date-badge__dow {
+      font-size: 24px;
+    }
+  }
+}
+
+// モバイルではデザイン上の改行位置が収まらないため自動改行に任せる
+@media @mobile {
+  .about__lead br,
+  .broadcast__lead br,
+  .join-us__lead br {
+    display: none;
+  }
+}
+
+// ============ 共通セクションレイアウト ============
+// ヒーロー以降は赤いワイヤーフレーム調のアートワークが背景に敷かれる。
+// TODO: Figma から背景アートワークを書き出したら
+// /assets/2026/bg-texture.png に置き換える (現状はCSSグラデーションによる近似)
+.page-bg {
+  position: relative;
+  background:
+    radial-gradient(48% 30% at 50% 12%, rgba(255, 48, 48, 0.16), transparent 70%),
+    radial-gradient(70% 40% at 50% 55%, rgba(160, 10, 10, 0.22), transparent 75%),
+    radial-gradient(60% 35% at 18% 80%, rgba(120, 0, 0, 0.18), transparent 70%),
+    radial-gradient(60% 35% at 82% 35%, rgba(120, 0, 0, 0.16), transparent 70%),
+    linear-gradient(
+      to right,
+      transparent 43%,
+      rgba(180, 20, 20, 0.1) 47%,
+      rgba(255, 60, 40, 0.22) 50%,
+      rgba(180, 20, 20, 0.1) 53%,
+      transparent 57%
+    ),
+    @color-bg;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+// ============ ABOUT ============
+.about {
+  &__lead {
+    margin-top: 48px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__more {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  &__guides {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 44px;
+    margin-top: 64px;
+
+    @media @mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// ガイドカード (PLAYERS GUIDE / SPECTATOR GUIDE)
+// TODO: Figma から写真素材を書き出したら background-image を設定する
+.guide-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 208px;
+  border: 1px solid @color-border;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    linear-gradient(135deg, #3a1010, #101018 60%, #1a0505);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  text-decoration: none;
+
+  &__title {
+    font-family: @font-display;
+    font-weight: 400;
+    font-size: clamp(28px, 3.2vw, 40px);
+    line-height: 1;
+    padding-bottom: 10px;
+    border-bottom: 3px solid @color-red;
+    text-transform: uppercase;
+  }
+
+  &__sub {
+    margin-top: 12px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+}
+
+// ============ NEWS ============
+.news {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px 32px;
+    margin-top: 64px;
+
+    @media @mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__empty {
+    margin-top: 56px;
+    text-align: center;
+    font-family: @font-display;
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    opacity: 0.7;
+  }
+
+  &__more {
+    margin-top: 48px;
+    text-align: center;
+  }
+}
+
+.news-card {
+  display: block;
+  border: 1px solid @color-border;
+  padding: 20px 24px 24px;
+  text-decoration: none;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  &__date {
+    display: inline-block;
+    font-family: @font-display;
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    padding-bottom: 6px;
+    border-bottom: 1px solid @color-text;
+  }
+
+  &__title {
+    margin-top: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+// ============ BROADCAST ============
+.broadcast {
+  text-align: center;
+
+  &__lead {
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__platforms {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    font-size: 38px;
+
+    a {
+      color: @color-text;
+      text-decoration: none;
+      line-height: 1;
+
+      &:hover {
+        color: @color-red;
+      }
+    }
+  }
+}
+
+// ============ TOURNAMENT ============
+.tournament {
+  &__dates {
+    display: flex;
+    justify-content: center;
+    gap: 44px;
+    margin-top: 48px;
+    flex-wrap: wrap;
+  }
+
+  .label-bar {
+    margin-top: 72px;
+
+    &:first-of-type {
+      margin-top: 64px;
+    }
+  }
+
+  &__venue {
+    display: grid;
+    grid-template-columns: 480px 1fr;
+    gap: 36px;
+    align-items: center;
+    margin-top: 48px;
+
+    @media @mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__venue-name {
+    font-size: 26px;
+    font-weight: 900;
+  }
+
+  &__venue-address {
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  &__venue-access {
+    margin-top: 16px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  &__venue-map {
+    margin-top: 20px;
+  }
+}
+
+// ============ JOIN US ============
+.join-us {
+  text-align: center;
+
+  &__lead {
+    margin-top: 32px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin-top: 48px;
+    flex-wrap: wrap;
+  }
+}
+
+// ============ FAQ ============
+.faq {
+  &__list {
+    max-width: 800px;
+    margin: 56px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__item {
+    border: 1px solid @color-border;
+
+    summary {
+      display: flex;
+      gap: 16px;
+      padding: 14px 24px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+    }
+
+    &[open] summary {
+      background: @color-text;
+      color: @color-bg;
+    }
+  }
+
+  &__answer {
+    display: flex;
+    gap: 16px;
+    padding: 14px 24px;
+    border-top: 1px solid @color-border;
+    font-size: 15px;
+    font-weight: 700;
+  }
+}

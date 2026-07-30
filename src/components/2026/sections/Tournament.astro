@@ -1,0 +1,45 @@
+---
+const mapsUrl =
+  'https://www.google.com/maps/search/?api=1&query=' +
+  encodeURIComponent('eスポフィールド 東京都板橋区高島平1丁目79-3 トミコシ会館');
+---
+
+<section class="section tournament" id="tournament">
+  <div class="container">
+    <h2 class="section-title">
+      <span class="section-title__en">Tournament</span>
+      <span class="section-title__ja">開催概要</span>
+    </h2>
+
+    <span class="label-bar">[日程]</span>
+
+    <div class="tournament__dates">
+      <div class="date-badge date-badge--boxed">
+        <span class="date-badge__day">DAY1</span>
+        <span class="date-badge__date">10/24</span>
+        <span class="date-badge__dow">[SAT]</span>
+      </div>
+      <div class="date-badge date-badge--boxed">
+        <span class="date-badge__day">DAY2</span>
+        <span class="date-badge__date">10/25</span>
+        <span class="date-badge__dow">[SUN]</span>
+      </div>
+    </div>
+
+    <span class="label-bar">[会場]</span>
+
+    <div class="tournament__venue">
+      <img src="/assets/2026/venue.jpg" alt="eスポフィールドの会場内観" />
+      <div>
+        <p class="tournament__venue-name">eスポフィールド</p>
+        <p class="tournament__venue-address">
+          〒175-0082 東京都板橋区高島平１丁目７９−３ トミコシ会館 ２F
+        </p>
+        <p class="tournament__venue-access">西台駅　東口改札より徒歩1分</p>
+        <p class="tournament__venue-map">
+          <a class="btn-pill" href={mapsUrl} target="_blank" rel="noreferrer">Google Maps</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
