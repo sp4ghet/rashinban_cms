@@ -3,6 +3,8 @@
 // 2025年のフッター (src/styles/footer.less) を移植したもの。
 // 変数は 2025 の値を解決して直接埋め込んでいる
 .footer {
+  position: relative;
+  overflow: hidden;
   background-color: @color-red;
   color: @color-text;
 
@@ -82,22 +84,17 @@
     }
   }
 
-  // 中央下のコンパス (フッター下端に重なる)
+  // 中央下のコンパス: フッター下端に固定し、下側が少し見切れる
   &__bottom-logo {
-    width: 100%;
-    height: 0;
-    text-align: center;
-    position: relative;
-    top: -270px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 0;
+    pointer-events: none;
 
-    img {
-      position: relative;
-      top: 50px;
-      display: inline-block;
-
-      @media (max-width: 767px) {
-        visibility: hidden;
-      }
+    @media (max-width: 767px) {
+      display: none;
     }
   }
 }
