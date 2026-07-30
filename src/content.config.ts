@@ -8,8 +8,8 @@ const optionalString = z
   .transform((v) => v || undefined);
 
 // ニュース記事。link を設定すると記事ページは生成されず、一覧からそのURLへ直接リンクする
-const news = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/news' }),
+const news2025 = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/news2025' }),
   schema: z.object({
     title: z.string(),
     // 記事ページ冒頭の見出し。未設定なら title を使う。HTML可 (<br/> など)
@@ -21,8 +21,8 @@ const news = defineCollection({
   }),
 });
 
-const interviews = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/interviews' }),
+const interviews2025 = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/interviews2025' }),
   schema: z.object({
     title: z.string(),
     description: optionalString,
@@ -30,8 +30,8 @@ const interviews = defineCollection({
   }),
 });
 
-const players = defineCollection({
-  loader: glob({ pattern: '**/*.yaml', base: './src/content/players' }),
+const players2025 = defineCollection({
+  loader: glob({ pattern: '**/*.yaml', base: './src/content/players2025' }),
   schema: z.object({
     name: z.string(),
     title: z.string(),
@@ -43,12 +43,12 @@ const players = defineCollection({
 });
 
 // 固定ページ (about / tournament / tickets / staff など)
-const pages = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/pages' }),
+const pages2025 = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/pages2025' }),
   schema: z.object({
     title: z.string(),
     description: optionalString,
   }),
 });
 
-export const collections = { news, interviews, players, pages };
+export const collections = { news2025, interviews2025, players2025, pages2025 };

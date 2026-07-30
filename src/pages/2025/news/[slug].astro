@@ -1,9 +1,10 @@
 ---
 import { getCollection, render } from 'astro:content';
-import Article from '../../layouts/Article.astro';
+import Article from '../../../layouts/2025/Article.astro';
+import { formatDate } from '../../../utils';
 
 export async function getStaticPaths() {
-  const entries = await getCollection('interviews');
+  const entries = await getCollection('news2025', (entry) => !entry.data.link);
   return entries.map((entry) => ({
     params: { slug: entry.id },
     props: { entry },
@@ -19,5 +20,7 @@ const { Content } = await render(entry);
   description={entry.data.description ?? entry.data.title}
   ogImage={entry.data.ogImage}
 >
+  <h2 set:html={entry.data.headline ?? entry.data.title} />
+  <p class="article__date">{formatDate(entry.data.date)}</p>
   <Content />
 </Article>

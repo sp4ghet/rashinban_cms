@@ -13,10 +13,10 @@ site_url: https://cms.rashinban.org
 display_url: https://cms.rashinban.org
 
 collections:
-  - name: news
-    label: ニュース
+  - name: news2025
+    label: ニュース (2025)
     label_singular: ニュース記事
-    folder: src/content/news
+    folder: src/content/news2025
     create: true
     extension: md
     format: yaml-frontmatter
@@ -34,10 +34,10 @@ collections:
       - { label: リンク先URL(設定すると記事ページを作らず、一覧からこのURLへ飛ぶ), name: link, widget: string, required: false, preview: false }
       - { label: 本文, name: body, widget: markdown }
 
-  - name: interviews
-    label: インタビュー
+  - name: interviews2025
+    label: インタビュー (2025)
     label_singular: インタビュー記事
-    folder: src/content/interviews
+    folder: src/content/interviews2025
     create: true
     extension: md
     format: yaml-frontmatter
@@ -49,10 +49,10 @@ collections:
       - { label: OGP画像(任意), name: ogImage, widget: image, required: false, preview: false }
       - { label: 本文, name: body, widget: markdown }
 
-  - name: players
-    label: 選手
+  - name: players2025
+    label: 選手 (2025)
     label_singular: 選手
-    folder: src/content/players
+    folder: src/content/players2025
     create: true
     extension: yaml
     format: yaml
@@ -67,25 +67,25 @@ collections:
       - { label: インタビュー記事スラッグ(任意・例:shiina), name: interview, widget: string, required: false }
       - { label: 表示順, name: order, widget: number, value_type: int, default: 0 }
 
-  - name: pages
-    label: 固定ページ
+  - name: pages2025
+    label: 固定ページ (2025)
     files:
       - name: about
         label: ABOUT
-        file: src/content/pages/about.md
+        file: src/content/pages2025/about.md
         fields: &page_fields
           - { label: ページタイトル, name: title, widget: string, preview: false }
           - { label: 説明(OGP用・任意), name: description, widget: string, required: false, preview: false }
           - { label: 本文, name: body, widget: markdown }
       - name: tournament
         label: TOURNAMENT
-        file: src/content/pages/tournament.md
+        file: src/content/pages2025/tournament.md
         fields: *page_fields
       - name: tickets
         label: TICKETS & GOODS
-        file: src/content/pages/tickets.md
+        file: src/content/pages2025/tickets.md
         fields: *page_fields
       - name: staff
         label: STAFF
-        file: src/content/pages/staff.md
+        file: src/content/pages2025/staff.md
         fields: *page_fields

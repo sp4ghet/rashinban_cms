@@ -13,14 +13,27 @@ npm run build    # dist/ に静的サイトを出力
 
 ## コンテンツ構成
 
+2025年サイトは `/2025/` 以下にアーカイブ済み。ルート `/` は 2026 年サイト用
+(`src/pages/index.astro` + `src/layouts/2026/` + `src/styles/2026/`、現状ほぼ空)。
+旧URL (`/news/…` など) は `astro.config.mjs` の `redirects` で `/2025/…` へ転送される。
+
+### 2026 (作成中)
+
 | 内容 | 場所 | ページ |
 | --- | --- | --- |
-| ニュース記事 | `src/content/news/*.md` | `/news/<slug>/` + `/news/` 一覧 + トップNEWS欄(最新3件) |
-| インタビュー | `src/content/interviews/*.md` | `/interviews/<slug>/` |
-| 選手 | `src/content/players/*.yaml` | `/players/` に一覧表示 |
-| 固定ページ | `src/content/pages/{about,tournament,tickets,staff}.md` | `/about/` など |
-| METAギャラリー | `public/assets/images/meta/` に画像を置くだけ | `/meta/` |
-| トップページ | `src/pages/index.astro` + `src/components/sections/` (手書き) | `/` |
+| トップページ | `src/pages/index.astro` + `src/layouts/2026/Base.astro` | `/` |
+| スタイル | `src/styles/2026/main.less` (新デザイン用・2025とは独立) | - |
+
+### 2025 アーカイブ
+
+| 内容 | 場所 | ページ |
+| --- | --- | --- |
+| ニュース記事 | `src/content/news2025/*.md` | `/2025/news/<slug>/` + `/2025/news/` 一覧 + 2025トップNEWS欄(最新3件) |
+| インタビュー | `src/content/interviews2025/*.md` | `/2025/interviews/<slug>/` |
+| 選手 | `src/content/players2025/*.yaml` | `/2025/players/` に一覧表示 |
+| 固定ページ | `src/content/pages2025/{about,tournament,tickets,staff}.md` | `/2025/about/` など |
+| METAギャラリー | `public/assets/images/meta/` に画像を置くだけ | `/2025/meta/` |
+| トップページ | `src/pages/2025/index.astro` + `src/components/2025/sections/` (手書き) | `/2025/` |
 
 ニュース記事は frontmatter の `link` を設定すると記事ページを生成せず、
 一覧からそのURLへ直接リンクする（外部リンク告知用）。
