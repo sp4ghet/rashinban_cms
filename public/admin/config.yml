@@ -13,6 +13,40 @@ site_url: https://cms.rashinban.org
 display_url: https://cms.rashinban.org
 
 collections:
+  - name: news
+    label: ニュース (2026)
+    label_singular: ニュース記事
+    folder: src/content/news
+    create: true
+    extension: md
+    format: yaml-frontmatter
+    slug: '{{slug}}'
+    summary: '{{title}}'
+    sortable_fields: [date, title]
+    fields:
+      - { label: タイトル(一覧・OGP用), name: title, widget: string, preview: false }
+      - { label: 見出し(記事冒頭に表示・未入力時はタイトルを使用), name: headline, widget: string, required: false }
+      - { label: 日付, name: date, widget: datetime, format: 'YYYY-MM-DD', time_format: false, picker_utc: true }
+      - { label: 説明(OGP用・任意), name: description, widget: string, required: false, preview: false }
+      - { label: OGP画像(任意), name: ogImage, widget: image, required: false, preview: false }
+      - { label: リンク先URL(設定すると記事ページを作らず、一覧からこのURLへ飛ぶ), name: link, widget: string, required: false, preview: false }
+      - { label: 本文, name: body, widget: markdown }
+
+  - name: faq
+    label: FAQ (2026)
+    label_singular: FAQ
+    folder: src/content/faq
+    create: true
+    extension: yaml
+    format: yaml
+    identifier_field: question
+    summary: '{{question}}'
+    sortable_fields: [order, question]
+    fields:
+      - { label: 質問, name: question, widget: string }
+      - { label: 回答, name: answer, widget: text }
+      - { label: 表示順, name: order, widget: number, value_type: int, default: 0 }
+
   - name: news2025
     label: ニュース (2025)
     label_singular: ニュース記事

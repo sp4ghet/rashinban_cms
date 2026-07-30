@@ -20,6 +20,16 @@ const news = defineCollection({
   }),
 });
 
+// 2026年の FAQ (トップの FAQ セクションに表示順で表示)
+const faq = defineCollection({
+  loader: glob({ pattern: '**/*.yaml', base: './src/content/faq' }),
+  schema: z.object({
+    question: z.string(),
+    answer: z.string(),
+    order: z.number().default(0),
+  }),
+});
+
 // ニュース記事。link を設定すると記事ページは生成されず、一覧からそのURLへ直接リンクする
 const news2025 = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/news2025' }),
@@ -64,4 +74,4 @@ const pages2025 = defineCollection({
   }),
 });
 
-export const collections = { news, news2025, interviews2025, players2025, pages2025 };
+export const collections = { news, faq, news2025, interviews2025, players2025, pages2025 };

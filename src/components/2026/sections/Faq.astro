@@ -1,35 +1,34 @@
 ---
-// TODO: 実際のよくあるご質問が決まったら差し替える (デザインのダミー文のまま)
-const faqs = [
-  { q: '質問文がここに入ります。', a: '回答文がここに入ります。' },
-  { q: '質問文がここに入ります。', a: '回答文がここに入ります。' },
-  { q: '質問文がここに入ります。', a: '回答文がここに入ります。' },
-  { q: '質問文がここに入ります。', a: '回答文がここに入ります。' },
-];
+import { getCollection } from 'astro:content';
+
+// CMS (FAQ (2026) コレクション) から表示順に取得。未登録の間はセクションごと非表示
+const faqs = (await getCollection('faq')).sort((a, b) => a.data.order - b.data.order);
 ---
 
-<section class="section faq" id="faq">
-  <div class="container">
-    <h2 class="section-title">
-      <span class="section-title__en">FAQ</span>
-      <span class="section-title__ja">よくあるご質問</span>
-    </h2>
+{
+  faqs.length > 0 && (
+    <section class="section faq" id="faq">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title__en">FAQ</span>
+          <span class="section-title__ja">よくあるご質問</span>
+        </h2>
 
-    <div class="faq__list">
-      {
-        faqs.map((faq) => (
-          <details class="faq__item">
-            <summary>
-              <span>Q.</span>
-              <span>{faq.q}</span>
-            </summary>
-            <div class="faq__answer">
-              <span>A.</span>
-              <span>{faq.a}</span>
-            </div>
-          </details>
-        ))
-      }
-    </div>
-  </div>
-</section>
+        <div class="faq__list">
+          {faqs.map((faq) => (
+            <details class="faq__item">
+              <summary>
+                <span>Q.</span>
+                <span>{faq.data.question}</span>
+              </summary>
+              <div class="faq__answer">
+                <span>A.</span>
+                <span>{faq.data.answer}</span>
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

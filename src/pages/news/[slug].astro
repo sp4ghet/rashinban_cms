@@ -1,0 +1,44 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/2026/Base.astro';
+import { formatDate } from '../../utils';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('news', (entry) => !entry.data.link);
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<Base
+  title={`${entry.data.title} - RASHINBAN 2026`}
+  description={entry.data.description ?? entry.data.title}
+  ogImage={entry.data.ogImage}
+>
+  <div class="page-bg">
+    <article class="article-page">
+      <div class="container">
+        <div class="article-page__head">
+          <h1 class="article-page__news">News</h1>
+          <a class="btn-pill" href="/#news">Back to Top Page</a>
+        </div>
+
+        <h2 class="article-page__title" set:html={entry.data.headline ?? entry.data.title} />
+        <p class="article-page__date">{formatDate(entry.data.date)}</p>
+
+        <div class="article-page__body">
+          <Content />
+        </div>
+
+        <p class="article-page__back">
+          <a class="btn-pill" href="#">Back to Top</a>
+        </p>
+      </div>
+    </article>
+  </div>
+</Base>
