@@ -3,7 +3,13 @@
 // ============ HERO ============
 .hero {
   position: relative;
-  padding: 200px 24px 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 120px 24px 64px;
   text-align: center;
 
   // キービジュアル: position:fixed でスクロールしても動かない
@@ -111,20 +117,6 @@
 // /assets/2026/bg-texture.png に置き換える (現状はCSSグラデーションによる近似)
 .page-bg {
   position: relative;
-  background:
-    radial-gradient(48% 30% at 50% 12%, rgba(255, 48, 48, 0.16), transparent 70%),
-    radial-gradient(70% 40% at 50% 55%, rgba(160, 10, 10, 0.22), transparent 75%),
-    radial-gradient(60% 35% at 18% 80%, rgba(120, 0, 0, 0.18), transparent 70%),
-    radial-gradient(60% 35% at 82% 35%, rgba(120, 0, 0, 0.16), transparent 70%),
-    linear-gradient(
-      to right,
-      transparent 43%,
-      rgba(180, 20, 20, 0.1) 47%,
-      rgba(255, 60, 40, 0.22) 50%,
-      rgba(180, 20, 20, 0.1) 53%,
-      transparent 57%
-    );
-  // 背景は透過のまま: 背後の固定KV (0.8まで暗転) が透けて見える
 }
 
 .section {
