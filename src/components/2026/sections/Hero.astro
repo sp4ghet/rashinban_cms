@@ -1,6 +1,4 @@
-{/* キービジュアル: 固定背景。スクロールに応じて JS が --hero-dim を上げて暗転させる */}
-<div class="hero__bg" id="hero-bg" aria-hidden="true"></div>
-
+{/* キービジュアルは Base の .kv-bg。スクロールに応じて下のJSが --kv-dim を上げて暗転させる */}
 <section class="hero">
   <h1 class="hero__title">
     <img src="/assets/2026/title.svg" alt="RASHINBAN 2026" />
@@ -26,13 +24,13 @@
 </section>
 
 <script>
-  const bg = document.getElementById('hero-bg');
+  const bg = document.getElementById('kv-bg');
   let ticking = false;
   const update = () => {
     ticking = false;
     // 1画面分スクロールで最大 0.8 まで暗くなる (KVがうっすら見え続ける程度)
     const progress = Math.min(1, window.scrollY / window.innerHeight);
-    bg?.style.setProperty('--hero-dim', String(0.8 * progress));
+    bg?.style.setProperty('--kv-dim', String(0.8 * progress));
   };
   const onScroll = () => {
     if (!ticking) {

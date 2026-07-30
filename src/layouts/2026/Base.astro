@@ -7,12 +7,15 @@ interface Props {
   title?: string;
   description?: string;
   ogImage?: string;
+  // 固定KV背景の暗さ (0=素通し 〜 1=真っ黒)。トップページはスクロールでJSが上書きする
+  kvDim?: number;
 }
 
 const {
   title = 'RASHINBAN 2026 - GeoGuessr日本最強決定戦',
   description = 'RASHINBAN 2026 - GeoGuessr日本最強決定戦公式Webサイト',
   ogImage,
+  kvDim = 0.8,
 } = Astro.props;
 const ogImageUrl = ogImage && new URL(ogImage, Astro.site).href;
 ---
@@ -52,6 +55,9 @@ const ogImageUrl = ogImage && new URL(ogImage, Astro.site).href;
   </head>
 
   <body>
+    {/* キービジュアル: 全ページ共通の固定背景 (スクロールしても動かない) */}
+    <div class="kv-bg" id="kv-bg" style={`--kv-dim: ${kvDim}`} aria-hidden="true"></div>
+
     <header class="header">
       <Nav />
     </header>

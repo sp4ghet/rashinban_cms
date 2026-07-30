@@ -39,6 +39,24 @@ ul {
   padding: 0 24px;
 }
 
+// 全ページ共通の固定キービジュアル背景。position:fixed でスクロールしても動かない
+// (background-attachment:fixed は iOS Safari で効かないため要素で敷く)。
+// 暗さは --kv-dim (Base.astro の kvDim prop / トップページはスクロール連動のJS) が決める
+.kv-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url('/assets/2026/kv-fhd.png') center / cover no-repeat;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #000;
+    opacity: var(--kv-dim, 0.8);
+  }
+}
+
 // セクション見出し: 大きな欧文 + 小さな日本語サブタイトル (中央揃え)
 .section-title {
   text-align: center;

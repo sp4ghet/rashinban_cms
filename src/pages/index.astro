@@ -9,7 +9,8 @@ import JoinUs from '../components/2026/sections/JoinUs.astro';
 import Faq from '../components/2026/sections/Faq.astro';
 ---
 
-<Base>
+{/* トップはヒーロー用にKVを素通しで出し、スクロールに応じて Hero.astro のJSが暗くする */}
+<Base kvDim={0}>
   <Hero />
 
   {/* ヒーロー以降は赤いアートワーク背景の上にセクションが載る */}

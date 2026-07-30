@@ -13,24 +13,6 @@
   padding: 48px 24px 40px;
   text-align: center;
 
-  // キービジュアル: position:fixed でスクロールしても動かない
-  // (background-attachment:fixed は iOS Safari で効かないため要素で敷く)。
-  // 暗転オーバーレイの濃さは Hero.astro の JS が --hero-dim で制御する
-  &__bg {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    background: url('/assets/2026/kv-fhd.png') center / cover no-repeat;
-
-    &::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: #000;
-      opacity: var(--hero-dim, 0.3);
-    }
-  }
-
   &__title {
     grid-row: 2;
     align-self: center;
