@@ -49,7 +49,7 @@ export default defineConfig({
     '/interviews/[slug]': '/2025/interviews/[slug]',
     '/players': '/2025/players',
     '/meta': '/2025/meta',
-    '/about': '/2025/about',
+    // /about は 2026 のページになった (2025 のABOUTは /2025/about)
     '/tournament': '/2025/tournament',
     '/tickets': '/2025/tickets',
     '/staff': '/2025/staff',

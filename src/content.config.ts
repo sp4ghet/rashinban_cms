@@ -30,6 +30,71 @@ const faq = defineCollection({
   }),
 });
 
+// 2026年の固定ページ (ABOUT / PLAYERS GUIDE / SPECTATOR GUIDE)。
+// セクションをブロック単位で組み立てる (Sveltia の types 付き list ウィジェットに対応)
+const guideSection = z.discriminatedUnion('type', [
+  // 見出し + 本文 (+ 枠囲みの注意書き / 画像)
+  z.object({
+    type: z.literal('text'),
+    headingEn: z.string(),
+    headingJa: optionalString,
+    notice: optionalString,
+    body: optionalString,
+    image: optionalString,
+  }),
+  // 開催日 (日付バッジ + 説明)
+  z.object({
+    type: z.literal('gameday'),
+    headingEn: z.string(),
+    headingJa: optionalString,
+    days: z.array(
+      z.object({
+        label: z.string(),
+        date: z.string(),
+        dow: z.string(),
+        description: optionalString,
+        note: optionalString,
+      })
+    ),
+  }),
+  // 会場 (写真 + 情報 + Google Maps)
+  z.object({
+    type: z.literal('venue'),
+    headingEn: z.string(),
+    headingJa: optionalString,
+    name: z.string(),
+    address: optionalString,
+    access: optionalString,
+    mapsUrl: optionalString,
+    photo: optionalString,
+  }),
+  // チケット一覧 (白帯の価格バー)
+  z.object({
+    type: z.literal('tickets'),
+    headingEn: z.string(),
+    headingJa: optionalString,
+    intro: optionalString,
+    items: z.array(
+      z.object({
+        label: z.string(),
+        price: z.string(),
+        features: z.array(z.string()).default([]),
+        separatorAbove: z.boolean().default(false),
+      })
+    ),
+    notes: optionalString,
+  }),
+]);
+
+const pages = defineCollection({
+  loader: glob({ pattern: '**/*.yaml', base: './src/content/pages' }),
+  schema: z.object({
+    title: z.string(),
+    description: optionalString,
+    sections: z.array(guideSection),
+  }),
+});
+
 // ニュース記事。link を設定すると記事ページは生成されず、一覧からそのURLへ直接リンクする
 const news2025 = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/news2025' }),
@@ -74,4 +139,4 @@ const pages2025 = defineCollection({
   }),
 });
 
-export const collections = { news, faq, news2025, interviews2025, players2025, pages2025 };
+export const collections = { news, faq, pages, news2025, interviews2025, players2025, pages2025 };

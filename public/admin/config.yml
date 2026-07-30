@@ -47,6 +47,85 @@ collections:
       - { label: 回答, name: answer, widget: text }
       - { label: 表示順, name: order, widget: number, value_type: int, default: 0 }
 
+  - name: pages
+    label: 固定ページ (2026)
+    files:
+      - name: about
+        label: ABOUT
+        file: src/content/pages/about.yaml
+        fields: &page2026_fields
+          - { label: ページタイトル(英字見出し), name: title, widget: string }
+          - { label: 説明(OGP用・任意), name: description, widget: string, required: false }
+          - label: セクション
+            name: sections
+            widget: list
+            types:
+              - name: text
+                label: 本文セクション
+                widget: object
+                summary: '{{fields.headingEn}}'
+                fields:
+                  - { label: 見出し(英字), name: headingEn, widget: string }
+                  - { label: 見出し横の日本語(任意), name: headingJa, widget: string, required: false }
+                  - { label: 枠囲みの注意書き(任意), name: notice, widget: text, required: false }
+                  - { label: 本文(任意), name: body, widget: markdown, required: false }
+                  - { label: 画像(任意), name: image, widget: image, required: false }
+              - name: gameday
+                label: 開催日
+                widget: object
+                summary: '{{fields.headingEn}}'
+                fields:
+                  - { label: 見出し(英字), name: headingEn, widget: string, default: GAME DAY }
+                  - { label: 見出し横の日本語(任意), name: headingJa, widget: string, required: false, default: 開催日 }
+                  - label: 日程
+                    name: days
+                    widget: list
+                    summary: '{{fields.label}} {{fields.date}}'
+                    fields:
+                      - { label: 'ラベル(例: DAY1)', name: label, widget: string }
+                      - { label: '日付(例: 10/24)', name: date, widget: string }
+                      - { label: '曜日(例: [SAT])', name: dow, widget: string }
+                      - { label: 説明, name: description, widget: string, required: false }
+                      - { label: 注記(※〜・任意), name: note, widget: string, required: false }
+              - name: venue
+                label: 会場
+                widget: object
+                summary: '{{fields.headingEn}}'
+                fields:
+                  - { label: 見出し(英字), name: headingEn, widget: string, default: VENUE }
+                  - { label: 見出し横の日本語(任意), name: headingJa, widget: string, required: false, default: 会場 }
+                  - { label: 会場名, name: name, widget: string }
+                  - { label: 住所, name: address, widget: string, required: false }
+                  - { label: アクセス, name: access, widget: string, required: false }
+                  - { label: Google MapsのURL, name: mapsUrl, widget: string, required: false }
+                  - { label: 写真, name: photo, widget: image, required: false }
+              - name: tickets
+                label: チケット一覧
+                widget: object
+                summary: '{{fields.headingEn}}'
+                fields:
+                  - { label: 見出し(英字), name: headingEn, widget: string, default: TICKETS }
+                  - { label: 見出し横の日本語(任意), name: headingJa, widget: string, required: false, default: チケットについて }
+                  - { label: 前書き(任意), name: intro, widget: markdown, required: false }
+                  - label: チケット
+                    name: items
+                    widget: list
+                    summary: '{{fields.label}} {{fields.price}}'
+                    fields:
+                      - { label: '名称(例: DAY 1 - エントリーチケット)', name: label, widget: string }
+                      - { label: '価格(例: 3,000円)', name: price, widget: string }
+                      - { label: 特典・内容(任意), name: features, widget: list, required: false }
+                      - { label: この上に区切り線を入れる, name: separatorAbove, widget: boolean, default: false, required: false }
+                  - { label: 注記(※〜・任意), name: notes, widget: markdown, required: false }
+      - name: players-guide
+        label: PLAYERS GUIDE
+        file: src/content/pages/players-guide.yaml
+        fields: *page2026_fields
+      - name: spectator-guide
+        label: SPECTATOR GUIDE
+        file: src/content/pages/spectator-guide.yaml
+        fields: *page2026_fields
+
   - name: news2025
     label: ニュース (2025)
     label_singular: ニュース記事

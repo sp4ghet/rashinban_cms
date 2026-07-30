@@ -1,0 +1,98 @@
+---
+import { marked } from 'marked';
+import Heading from './Heading.astro';
+
+// デザイン同様、本文中の改行をそのまま <br> にする
+marked.use({ breaks: true });
+
+const { section } = Astro.props;
+const md = (src: string) => marked.parse(src) as string;
+---
+
+{
+  section.type === 'text' && (
+    <section class="guide-section">
+      <Heading en={section.headingEn} ja={section.headingJa} />
+      {section.notice && <div class="guide-notice" set:html={md(section.notice)} />}
+      {section.body && <div class="guide-body" set:html={md(section.body)} />}
+      {section.image && <img class="guide-image" src={section.image} alt="" />}
+    </section>
+  )
+}
+
+{
+  section.type === 'gameday' && (
+    <section class="guide-section">
+      <Heading en={section.headingEn} ja={section.headingJa} />
+      <div class="guide-gameday">
+        {section.days.map((day) => (
+          <div class="guide-gameday__row">
+            <div class="date-badge date-badge--boxed guide-gameday__badge">
+              <span class="date-badge__day">{day.label}</span>
+              <span class="date-badge__date">{day.date}</span>
+              <span class="date-badge__dow">{day.dow}</span>
+            </div>
+            <div class="guide-gameday__text">
+              {day.description && <p>{day.description}</p>}
+              {day.note && <p class="guide-gameday__note">{day.note}</p>}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+{
+  section.type === 'venue' && (
+    <section class="guide-section">
+      <Heading en={section.headingEn} ja={section.headingJa} />
+      <div class="guide-venue">
+        {section.photo && <img src={section.photo} alt={`${section.name}の会場写真`} />}
+        <div>
+          <p class="guide-venue__name">{section.name}</p>
+          {section.address && <p class="guide-venue__address">{section.address}</p>}
+          {section.access && <p class="guide-venue__access">{section.access}</p>}
+          {section.mapsUrl && (
+            <p class="guide-venue__map">
+              <a class="btn-pill" href={section.mapsUrl} target="_blank" rel="noreferrer">
+                Google Maps
+              </a>
+            </p>
+          )}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+{
+  section.type === 'tickets' && (
+    <section class="guide-section">
+      <Heading en={section.headingEn} ja={section.headingJa} />
+      {section.intro && <div class="guide-body" set:html={md(section.intro)} />}
+      <div class="guide-tickets">
+        {section.items.map((item) => (
+          <>
+            {item.separatorAbove && <hr class="guide-tickets__separator" />}
+            <div class="ticket-bar">
+              <p class="ticket-bar__title">
+                <span class="ticket-bar__label">{item.label}</span>
+                <span class="ticket-bar__price">{item.price}</span>
+                <span class="ticket-bar__tax">（税込）</span>
+              </p>
+              {item.features.length > 0 && (
+                <ul class="ticket-bar__features">
+                  {item.features.map((feature) => (
+                    <li>{feature}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </>
+        ))}
+      </div>
+      {section.notes && <div class="guide-body guide-tickets__notes" set:html={md(section.notes)} />}
+    </section>
+  )
+}

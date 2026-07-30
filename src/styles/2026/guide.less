@@ -1,0 +1,207 @@
+@import (reference) './variables.less';
+
+// 固定ページ (ABOUT / PLAYERS GUIDE / SPECTATOR GUIDE) のセクションブロック
+.guide-section {
+  margin-top: 120px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+// セクション見出し (左寄せ・下線つき)
+.guide-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 28px;
+  width: fit-content;
+  min-width: min(400px, 100%);
+  padding: 0 96px 24px 0;
+  border-bottom: 2px solid @color-text;
+  flex-wrap: wrap;
+
+  &__en {
+    font-family: @font-display;
+    font-weight: 700;
+    font-size: clamp(36px, 3.7vw, 64px);
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  &__ja {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+// 本文
+.guide-body {
+  margin-top: 40px;
+  max-width: 930px;
+  font-size: 16px;
+  font-weight: 500;
+
+  p {
+    margin-bottom: 1.6em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+// 枠囲みの注意書き
+.guide-notice {
+  margin-top: 40px;
+  max-width: 930px;
+  padding: 20px 28px;
+  border: 1px solid @color-border;
+  font-size: 16px;
+  font-weight: 700;
+
+  p {
+    margin: 0;
+  }
+}
+
+.guide-image {
+  display: block;
+  margin-top: 48px;
+  width: min(930px, 100%);
+}
+
+// 開催日
+.guide-gameday {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    flex-wrap: wrap;
+  }
+
+  &__badge {
+    min-width: 260px;
+    justify-content: center;
+    padding: 16px 28px;
+
+    .date-badge__day {
+      font-size: 24px;
+    }
+
+    .date-badge__date {
+      font-size: 44px;
+    }
+
+    .date-badge__dow {
+      font-size: 22px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 700;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__note {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+// 会場
+.guide-venue {
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  gap: 36px;
+  align-items: center;
+  margin-top: 48px;
+
+  @media @mobile {
+    grid-template-columns: 1fr;
+  }
+
+  &__name {
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  &__address {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &__access {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__map {
+    margin-top: 20px;
+  }
+}
+
+// チケット一覧 (白帯の価格バー)
+.guide-tickets {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__separator {
+    width: min(400px, 60%);
+    margin: 16px auto;
+    border: none;
+    border-top: 1px solid @color-text;
+  }
+
+  &__notes {
+    margin-top: 32px;
+  }
+}
+
+.ticket-bar {
+  background: @color-text;
+  color: @color-bg;
+  padding: 18px 24px;
+  text-align: center;
+
+  &__title {
+    font-weight: 900;
+    font-size: 18px;
+  }
+
+  &__price {
+    margin-left: 20px;
+    font-size: 22px;
+  }
+
+  &__tax {
+    font-size: 13px;
+  }
+
+  &__features {
+    margin-top: 10px;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 700;
+
+    li::before {
+      content: '・';
+    }
+  }
+}

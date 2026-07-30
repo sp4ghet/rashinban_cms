@@ -1,0 +1,92 @@
+title: SPECTATOR GUIDE
+description: 観戦向け情報・観戦チケット購入ページ
+sections:
+  - type: text
+    headingEn: FOR SPECTATOR
+    headingJa: GeoGuessr日本最強決定戦【RASHINBAN 2026】
+    notice: ''
+    body: |-
+      ◆本ページは観戦チケット購入ページです◆
+      大会への参加（出場）を希望される方は[エントリーページ](/players-guide/)をご確認ください。
+    image: ''
+  - type: gameday
+    headingEn: GAME DAY
+    headingJa: 開催日
+    days:
+      - label: DAY1
+        date: '10/24'
+        dow: '[SAT]'
+        description: 2026年10月24日（土）開場 未定 / 開始(予定) 13:00
+        note: ※時間は変更となる場合がございます
+      - label: DAY2
+        date: '10/25'
+        dow: '[SUN]'
+        description: 2026年10月25日（日）開場 未定 / 開始(予定) 13:00
+        note: ※時間は変更となる場合がございます
+  - type: venue
+    headingEn: VENUE
+    headingJa: 会場
+    name: eスポフィールド
+    address: 〒175-0082 東京都板橋区高島平1丁目79-3 トミコシ会館 2F
+    access: 西台駅 東口改札より徒歩1分
+    mapsUrl: https://maps.app.goo.gl/j33rsySagVjkjJbn7
+    photo: /assets/2026/venue.jpg
+  - type: tickets
+    headingEn: TICKETS
+    headingJa: チケットについて
+    intro: |-
+      会場で大会を観戦される方は、本ページから観戦チケットをご購入ください。
+
+      ▼販売チケット一覧
+    items:
+      - label: DAY 1 - 見学チケット
+        price: 3,000円
+        features: []
+        separatorAbove: false
+      - label: DAY 1 - 見学チケット(学割)
+        price: 1,000円
+        features: []
+        separatorAbove: false
+      - label: DAY 1 / DAY 2 - 観戦チケット
+        price: 0,000円
+        features: []
+        separatorAbove: false
+      - label: DAY 1 - 特典付き観戦チケット
+        price: 0,000円
+        features:
+          - 【特典内容①】
+          - 【特典内容②】
+        separatorAbove: true
+      - label: DAY 2 - 特典付き観戦チケット
+        price: 0,000円
+        features:
+          - 【特典内容①】
+          - 【特典内容②】
+        separatorAbove: false
+      - label: DAY 1 / DAY 2 - 特典付き観戦チケット
+        price: 0,000円
+        features:
+          - 【特典内容①】
+          - 【特典内容②】
+        separatorAbove: false
+    notes: ※ご購入後のキャンセル・変更はできません。
+  - type: text
+    headingEn: FOOD & DRINK
+    headingJa: 会場での飲食について
+    notice: ''
+    body: |-
+      会場にはドリンクバーがあります。観戦中もご自由にご利用ください。
+      【会場内での飲食可否】
+      【飲食物の持ち込み可否】
+    image: ''
+  - type: text
+    headingEn: NOTES
+    headingJa: 注意事項
+    notice: ''
+    body: |-
+      【再入場の可否】
+      【未就学児・子ども連れの入場について】
+      【撮影・SNS投稿の可否】
+      【観戦チケットの定員（ある場合）】
+      【配信への映り込み】
+    image: ''

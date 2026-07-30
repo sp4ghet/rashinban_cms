@@ -1,0 +1,12 @@
+---
+interface Props {
+  en: string;
+  ja?: string;
+}
+const { en, ja } = Astro.props;
+---
+
+<h2 class="guide-heading">
+  <span class="guide-heading__en">{en}</span>
+  {ja && <span class="guide-heading__ja">{ja}</span>}
+</h2>
