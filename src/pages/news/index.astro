@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/2026/Base.astro';
+import NewsCard from '../../components/2026/NewsCard.astro';
+
+const entries = (await getCollection('news')).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+---
+
+<Base title="NEWS - RASHINBAN 2026 - GeoGuessr日本最強決定戦">
+  <div class="page-bg">
+    <section class="article-page news-list">
+      <div class="container">
+        <div class="article-page__head">
+          <h1 class="article-page__news">News</h1>
+          <a class="btn-pill" href="/">Back to Top Page</a>
+        </div>
+
+        <ul class="news__grid news-list__grid">
+          {
+            entries.map((entry) => (
+              <li>
+                <NewsCard entry={entry} />
+              </li>
+            ))
+          }
+        </ul>
+
+        <p class="article-page__back">
+          <a class="btn-pill" href="#">Back to Top</a>
+        </p>
+      </div>
+    </section>
+  </div>
+</Base>

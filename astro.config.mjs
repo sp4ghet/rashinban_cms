@@ -44,7 +44,7 @@ export default defineConfig({
   // meta-refresh スタブでリダイレクトする。2026年のニュースを /news/ で始めるときは
   // 静的な '/news' の行だけ外す (スラッグは年で異なるので動的リダイレクトは残せる)
   redirects: {
-    '/news': '/2025/news',
+    // /news は 2026 の一覧ページになった (2025 の一覧は /2025/news)
     ...news2025Redirects,
     '/interviews/[slug]': '/2025/interviews/[slug]',
     '/players': '/2025/players',

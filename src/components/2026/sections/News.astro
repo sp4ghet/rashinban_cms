@@ -1,10 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
-import { formatDate } from '../../../utils';
+import NewsCard from '../NewsCard.astro';
 
-// 2026年のニュース (最新6件)。記事ページ・一覧ページは未実装なので、
-// 実装するまでは VIEW MORE を表示しない (旧URL /news/ は /2025/news/ へ
-// リダイレクトされるため)
+// 2026年のニュース (最新6件)。全件は /news/ の一覧ページへ
 const entries = (await getCollection('news'))
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0, 6);
@@ -19,25 +17,18 @@ const entries = (await getCollection('news'))
 
     {
       entries.length > 0 ? (
-        <ul class="news__grid">
-          {entries.map((entry) => {
-            const href = entry.data.link ?? `/news/${entry.id}/`;
-            const external = href.startsWith('http');
-            return (
+        <>
+          <ul class="news__grid">
+            {entries.map((entry) => (
               <li>
-                <a
-                  class="news-card"
-                  href={href}
-                  target={external ? '_blank' : undefined}
-                  rel={external ? 'noreferrer' : undefined}
-                >
-                  <span class="news-card__date">{formatDate(entry.data.date)}</span>
-                  <span class="news-card__title">{entry.data.title}</span>
-                </a>
+                <NewsCard entry={entry} />
               </li>
-            );
-          })}
-        </ul>
+            ))}
+          </ul>
+          <div class="news__more">
+            <a class="btn-pill" href="/news/">View More</a>
+          </div>
+        </>
       ) : (
         <p class="news__empty">Coming Soon</p>
       )

@@ -1,0 +1,22 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { formatDate } from '../../utils';
+
+interface Props {
+  entry: CollectionEntry<'news'>;
+}
+
+const { entry } = Astro.props;
+const href = entry.data.link ?? `/news/${entry.id}/`;
+const external = href.startsWith('http');
+---
+
+<a
+  class="news-card"
+  href={href}
+  target={external ? '_blank' : undefined}
+  rel={external ? 'noreferrer' : undefined}
+>
+  <span class="news-card__date">{formatDate(entry.data.date)}</span>
+  <span class="news-card__title">{entry.data.title}</span>
+</a>
