@@ -155,7 +155,6 @@
 }
 
 // ガイドカード (PLAYERS GUIDE / SPECTATOR GUIDE)
-// TODO: Figma から写真素材を書き出したら background-image を設定する
 .guide-card {
   position: relative;
   display: flex;
@@ -164,13 +163,23 @@
   justify-content: center;
   min-height: 224px;
   border: 1px solid @color-border;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    linear-gradient(135deg, #3a1010, #101018 60%, #1a0505);
   background-size: cover;
   background-position: center;
   text-align: center;
   text-decoration: none;
+
+  // 文字を読みやすくする暗めのオーバーレイを写真に重ねる
+  &--players {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+      url('/assets/2026/PLAYERS_GUIDE.png');
+  }
+
+  &--spectator {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+      url('/assets/2026/SPECTATOR_GUIDE.png');
+  }
 
   &__title {
     font-family: @font-display;
