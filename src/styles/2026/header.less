@@ -8,7 +8,9 @@
   z-index: 100;
 }
 
+// PCでもハンバーガーメニューを使う (デザインフレーム共通)
 .nav {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,12 +21,59 @@
     width: auto;
   }
 
-  &__links {
+  &__toggle {
     display: flex;
-    gap: clamp(40px, 3vw, 60px);
+    flex-direction: column;
+    gap: 7px;
+    border: none;
+    background: none;
+    padding: 8px 2px;
+    cursor: pointer;
+
+    span {
+      width: 30px;
+      height: 2px;
+      background: @color-text;
+      transition:
+        transform 0.2s,
+        opacity 0.2s;
+    }
+  }
+
+  // 開いている間はバツ印に
+  &.is-open &__toggle {
+    span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
+
+  &__links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: @color-bg;
+    padding: 8px 40px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  &.is-open &__links {
+    display: flex;
   }
 
   &__link {
+    display: block;
+    padding: 14px 0;
     font-family: @font-display;
     font-weight: 700;
     font-size: clamp(17px, 1.3vw, 27px);
@@ -37,49 +86,11 @@
     }
   }
 
-  &__toggle {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    border: none;
-    background: none;
-    padding: 6px 2px;
-    cursor: pointer;
-
-    span {
-      width: 26px;
-      height: 2px;
-      background: @color-text;
-    }
-  }
-
   @media @mobile {
     padding: 20px 24px;
 
-    &__toggle {
-      display: flex;
-    }
-
     &__links {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      flex-direction: column;
-      gap: 0;
-      background: @color-bg;
       padding: 8px 24px 24px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    &.is-open &__links {
-      display: flex;
-    }
-
-    &__link {
-      display: block;
-      padding: 12px 0;
     }
   }
 }
