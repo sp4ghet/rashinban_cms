@@ -30,9 +30,9 @@
   let ticking = false;
   const update = () => {
     ticking = false;
-    // 1画面分スクロールしたら完全に暗くなる (最初から少し暗くして文字を読みやすく)
+    // 1画面分スクロールで最大 0.8 まで暗くなる (KVがうっすら見え続ける程度)
     const progress = Math.min(1, window.scrollY / window.innerHeight);
-    bg?.style.setProperty('--hero-dim', String(0.3 + 0.7 * progress));
+    bg?.style.setProperty('--hero-dim', String(0.3 + 0.5 * progress));
   };
   const onScroll = () => {
     if (!ticking) {
