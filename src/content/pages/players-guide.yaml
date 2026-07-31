@@ -1,4 +1,4 @@
-title: PLAYERS GUIDE
+title: PLAYER'S GUIDE
 description: 選手向け情報・エントリーチケット購入ページ
 sections:
   - type: text
@@ -7,19 +7,19 @@ sections:
     notice: ''
     body: |-
       ◆本ページは大会参加者向けのエントリーチケット購入ページです◆
-      観戦のみを希望される方は[観戦ページ](/spectator-guide/)をご確認ください。
+      観戦のみを希望される方は[SPECTATOR'S GUIDE](/spectator-guide/)をご確認ください。
     image: ''
   - type: gameday
     headingEn: GAME DAY
     headingJa: 開催日
     days:
       - label: DAY1
-        date: '10/24'
+        date: 10/24
         dow: '[SAT]'
         description: 2026年10月24日（土）開場 未定 / 開始(予定) 13:00
         note: ※時間は変更となる場合がございます
       - label: DAY2
-        date: '10/25'
+        date: 10/25
         dow: '[SUN]'
         description: 2026年10月25日（日）開場 未定 / 開始(予定) 13:00
         note: ※時間は変更となる場合がございます
@@ -50,20 +50,22 @@ sections:
 
       ▼販売チケット一覧
     items:
-      - label: DAY 1 - エントリーチケット
-        price: 0,000円
+      - label: DAY 1 - 『PLAYER』チケット
+        price: 3,000円
         features:
           - Day 1への出場権
           - Day 1会場での観戦（ご自身の試合終了後も、当日はそのまま観戦できます）
         separatorAbove: false
-      - label: DAY 2 - 観戦チケット
-        price: 0,000円
-        features: []
+      - label: DAY 1 -『PLAYER』チケット(学割)
+        price: 1,000円
+        features:
+          - Day 1への出場権
+          - Day 1会場での観戦（ご自身の試合終了後も、当日はそのまま観戦できます）
         separatorAbove: false
     notes: |-
-      ※定員は最大64名・先着順です。定員に達し次第、販売を終了します。
-      ※ご購入後のキャンセル・返金はできません。
-      ※Day 2の観戦を希望される場合は、別途[観戦チケットページ](/spectator-guide/)からDay 2の観戦チケットをご購入ください。
+      ※定員は最大64名・先着順です。定員に達し次第、販売を終了します。  
+      ※学割は高校生以下が対象  
+      ※DAY 2の観戦を希望される場合は、別途【SPECTOR’S GUIDE】からDAY 2の観戦チケットをご購入ください。  ※ 選手の参加費については、会場使用料、映像・音響・照明機材の手配など本大会の大会設営費のみに充当させていただきます。
   - type: text
     headingEn: TOURNAMENT
     headingJa: 大会形式
@@ -89,13 +91,16 @@ sections:
       ［参加はこちら］[https://discord.gg/hSvNhzMWK](https://discord.gg/hSvNhzMWK)
     image: ''
   - type: text
+    headingEn: FOOD & DRINK
+    headingJa: 会場での飲食について
+    notice: ''
+    body: ゲームエリアおよび観戦席では、飲食物の持ち込みは蓋付き容器・ペットボトル飲料のみ可能です。飲食はご遠慮いただき、飲み物のみお召し上がりください。 カフェスペース内では、飲食および飲食物の持ち込みが可能です。
+    image: ''
+  - type: text
     headingEn: NOTES
     headingJa: 注意事項
     notice: ''
     body: |-
-      【再入場の可否】
-      【未就学児・子ども連れの入場について】
-      【撮影・SNS投稿の可否】
-      【観戦チケットの定員（ある場合）】
-      【配信への映り込み】
+      会場内の様子はライブ配信、ならびにアーカイブ配信されます。 広告宣伝・報道・関係機関への協力等に使われる場合がありますので予めご了承ください。 配信台はプレイヤーの姿をカメラに映して配信するため、プレイヤーは露出が可能な方に限らせていただきます。
+      露出を避けたい方はマスク等で対策をお願いします。
     image: ''
