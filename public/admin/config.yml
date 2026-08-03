@@ -108,6 +108,7 @@ collections:
                   - { label: 見出し横の日本語(任意), name: headingJa, widget: string, required: false, default: チケットについて }
                   - { label: 前書き(任意), name: intro, widget: markdown, required: false }
                   - { label: 販売中(オンにすると各チケットが購入ページへのリンクになる), name: onSale, widget: boolean, default: false, required: false }
+                  - { label: チケット購入ページURL(販売中のみ使用・全チケット共通), name: url, widget: string, required: false }
                   - { label: '販売開始の告知(販売前にチケット一覧へ重ねて表示・例: 9月1日から販売開始)', name: saleStartText, widget: string, required: false }
                   - label: チケット
                     name: items
@@ -116,7 +117,6 @@ collections:
                     fields:
                       - { label: '名称(例: DAY 1 - エントリーチケット)', name: label, widget: string }
                       - { label: '価格(例: 3,000円)', name: price, widget: string }
-                      - { label: 購入ページURL(販売中のみ使用), name: url, widget: string, required: false }
                       - { label: SOLD OUT表示にする, name: soldOut, widget: boolean, default: false, required: false }
                       - { label: 特典・内容(任意), name: features, widget: list, required: false }
                       - { label: この上に区切り線を入れる, name: separatorAbove, widget: boolean, default: false, required: false }

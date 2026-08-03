@@ -76,7 +76,7 @@ const md = (src: string) => marked.parse(src) as string;
           <p class="guide-tickets__presale-msg">{section.saleStartText}</p>
         )}
         {section.items.map((item) => {
-          const clickable = section.onSale && !item.soldOut && item.url;
+          const clickable = section.onSale && !item.soldOut && section.url;
           const Bar = clickable ? 'a' : 'div';
           return (
             <>
@@ -90,7 +90,7 @@ const md = (src: string) => marked.parse(src) as string;
                     'ticket-bar--disabled': !section.onSale,
                   },
                 ]}
-                href={clickable ? item.url : undefined}
+                href={clickable ? section.url : undefined}
                 target={clickable ? '_blank' : undefined}
                 rel={clickable ? 'noreferrer' : undefined}
               >

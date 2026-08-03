@@ -78,11 +78,11 @@ const guideSection = z.discriminatedUnion('type', [
     intro: optionalString,
     onSale: z.boolean().default(false),
     saleStartText: optionalString,
+    url: optionalString,
     items: z.array(
       z.object({
         label: z.string(),
         price: z.string(),
-        url: optionalString,
         soldOut: z.boolean().default(false),
         features: z.array(z.string()).default([]),
         separatorAbove: z.boolean().default(false),
