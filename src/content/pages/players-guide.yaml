@@ -49,6 +49,8 @@ sections:
       大会参加を希望される方は、本ページからエントリーチケットをご購入ください。
 
       ▼販売チケット一覧
+    onSale: false
+    saleStartText: 9月1日から販売開始
     items:
       - label: DAY 1 - 『PLAYER』チケット
         price: 3,000円

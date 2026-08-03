@@ -71,26 +71,46 @@ const md = (src: string) => marked.parse(src) as string;
     <section class="guide-section">
       <Heading en={section.headingEn} ja={section.headingJa} />
       {section.intro && <div class="guide-body" set:html={md(section.intro)} />}
-      <div class="guide-tickets">
-        {section.items.map((item) => (
-          <>
-            {item.separatorAbove && <hr class="guide-tickets__separator" />}
-            <div class="ticket-bar">
-              <p class="ticket-bar__title">
-                <span class="ticket-bar__label">{item.label}</span>
-                <span class="ticket-bar__price">{item.price}</span>
-                <span class="ticket-bar__tax">（税込）</span>
-              </p>
-              {item.features.length > 0 && (
-                <ul class="ticket-bar__features">
-                  {item.features.map((feature) => (
-                    <li>{feature}</li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          </>
-        ))}
+      <div class:list={['guide-tickets', { 'guide-tickets--presale': !section.onSale }]}>
+        {!section.onSale && section.saleStartText && (
+          <p class="guide-tickets__presale-msg">{section.saleStartText}</p>
+        )}
+        {section.items.map((item) => {
+          const clickable = section.onSale && !item.soldOut && item.url;
+          const Bar = clickable ? 'a' : 'div';
+          return (
+            <>
+              {item.separatorAbove && <hr class="guide-tickets__separator" />}
+              <Bar
+                class:list={[
+                  'ticket-bar',
+                  {
+                    'ticket-bar--link': clickable,
+                    'ticket-bar--soldout': section.onSale && item.soldOut,
+                    'ticket-bar--disabled': !section.onSale,
+                  },
+                ]}
+                href={clickable ? item.url : undefined}
+                target={clickable ? '_blank' : undefined}
+                rel={clickable ? 'noreferrer' : undefined}
+              >
+                <p class="ticket-bar__title">
+                  <span class="ticket-bar__label">{item.label}</span>
+                  <span class="ticket-bar__price">{item.price}</span>
+                  <span class="ticket-bar__tax">（税込）</span>
+                  {clickable && <i class="ticket-bar__external bi bi-box-arrow-up-right" />}
+                </p>
+                {item.features.length > 0 && (
+                  <ul class="ticket-bar__features">
+                    {item.features.map((feature) => (
+                      <li>{feature}</li>
+                    ))}
+                  </ul>
+                )}
+              </Bar>
+            </>
+          );
+        })}
       </div>
       {section.notes && <div class="guide-body guide-tickets__notes" set:html={md(section.notes)} />}
     </section>

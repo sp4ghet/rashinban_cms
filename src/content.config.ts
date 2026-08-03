@@ -68,16 +68,22 @@ const guideSection = z.discriminatedUnion('type', [
     mapsUrl: optionalString,
     photo: optionalString,
   }),
-  // チケット一覧 (白帯の価格バー)
+  // チケット一覧 (白帯の価格バー)。
+  // onSale=false の間は全体をグレーアウトして saleStartText を重ねる。
+  // 販売中は各バーが url へのリンクになり、soldOut のバーは SOLD OUT 表示になる
   z.object({
     type: z.literal('tickets'),
     headingEn: z.string(),
     headingJa: optionalString,
     intro: optionalString,
+    onSale: z.boolean().default(false),
+    saleStartText: optionalString,
     items: z.array(
       z.object({
         label: z.string(),
         price: z.string(),
+        url: optionalString,
+        soldOut: z.boolean().default(false),
         features: z.array(z.string()).default([]),
         separatorAbove: z.boolean().default(false),
       })

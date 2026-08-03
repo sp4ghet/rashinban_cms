@@ -157,10 +157,25 @@
 
 // チケット一覧 (白帯の価格バー)
 .guide-tickets {
+  position: relative;
   margin-top: 24px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  // 販売開始前の告知 (グレーのバー群の中央に重ねる)
+  &__presale-msg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(22px, 2vw, 30px);
+    font-weight: 900;
+    text-align: center;
+    pointer-events: none;
+  }
 
   &__separator {
     width: min(400px, 60%);
@@ -175,10 +190,49 @@
 }
 
 .ticket-bar {
+  position: relative;
+  display: block;
   background: @color-text;
   color: @color-bg;
   padding: 18px 24px;
   text-align: center;
+  text-decoration: none;
+
+  // 販売中: 購入ページへのリンク
+  &--link:hover {
+    background: #e3e3e3;
+  }
+
+  &__external {
+    margin-left: 16px;
+    font-size: 15px;
+  }
+
+  // 販売開始前: グレーアウト
+  &--disabled {
+    background: #3a3a3a;
+    color: rgba(0, 0, 0, 0.75);
+  }
+
+  // 売り切れ: グレーアウト + SOLD OUT
+  &--soldout {
+    background: #3a3a3a;
+    color: rgba(0, 0, 0, 0.75);
+
+    &::after {
+      content: 'SOLD OUT';
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: @font-display;
+      font-weight: 700;
+      font-size: 34px;
+      line-height: 1;
+      color: @color-text;
+    }
+  }
 
   &__title {
     font-weight: 900;
