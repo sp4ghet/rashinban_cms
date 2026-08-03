@@ -1,5 +1,6 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { getCollection } from 'astro:content';
+import { marked } from 'marked';
 import Base from '../layouts/2026/Base.astro';
 import Section from '../components/2026/guide/Section.astro';
 
@@ -20,7 +21,10 @@ export async function getStaticPaths() {
 }
 
 const { entry, kind } = Astro.props;
-const Content = kind === 'md' ? (await render(entry)).Content : null;
+// Sveltia のプレビューと同様に、単一の改行も <br> として反映する
+// (セクションブロックの本文と同じ marked + breaks で描画)
+marked.use({ breaks: true });
+const mdHtml = kind === 'md' ? (marked.parse(entry.body ?? '') as string) : null;
 ---
 
 <Base title={`${entry.data.title} - RASHINBAN 2026`} description={entry.data.description}>
@@ -36,7 +40,7 @@ const Content = kind === 'md' ? (await render(entry)).Content : null;
           kind === 'sections' ? (
             entry.data.sections.map((section) => <Section section={section} />)
           ) : (
-            <div class="md-page-body">{Content && <Content />}</div>
+            <div class="md-page-body" set:html={mdHtml} />
           )
         }
 
