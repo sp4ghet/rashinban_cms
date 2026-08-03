@@ -101,6 +101,16 @@ const pages = defineCollection({
   }),
 });
 
+// マークダウンだけの固定ページ (プライバシーポリシーなど)。
+// pages と同じフォルダに .md で置くと同じ見た目のページになる
+const pagesMd = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/pages' }),
+  schema: z.object({
+    title: z.string(),
+    description: optionalString,
+  }),
+});
+
 // ニュース記事。link を設定すると記事ページは生成されず、一覧からそのURLへ直接リンクする
 const news2025 = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/news2025' }),
@@ -145,4 +155,13 @@ const pages2025 = defineCollection({
   }),
 });
 
-export const collections = { news, faq, pages, news2025, interviews2025, players2025, pages2025 };
+export const collections = {
+  news,
+  faq,
+  pages,
+  pagesMd,
+  news2025,
+  interviews2025,
+  players2025,
+  pages2025,
+};

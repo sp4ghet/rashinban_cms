@@ -129,6 +129,13 @@ collections:
         label: SPECTATOR GUIDE
         file: src/content/pages/spectator-guide.yaml
         fields: *page2026_fields
+      - name: privacy-policy
+        label: プライバシーポリシー
+        file: src/content/pages/privacy-policy.md
+        fields:
+          - { label: ページタイトル(英字見出し), name: title, widget: string }
+          - { label: 説明(OGP用・任意), name: description, widget: string, required: false }
+          - { label: 本文, name: body, widget: markdown }
 
   - name: news2025
     label: ニュース (2025)

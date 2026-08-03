@@ -1,17 +1,26 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import Base from '../layouts/2026/Base.astro';
 import Section from '../components/2026/guide/Section.astro';
 
+// セクションブロック型 (pages) とマークダウン型 (pagesMd) の両方をこのルートで捌く
 export async function getStaticPaths() {
-  const entries = await getCollection('pages');
-  return entries.map((entry) => ({
-    params: { slug: entry.id },
-    props: { entry },
-  }));
+  const sectionPages = await getCollection('pages');
+  const mdPages = await getCollection('pagesMd');
+  return [
+    ...sectionPages.map((entry) => ({
+      params: { slug: entry.id },
+      props: { entry, kind: 'sections' as const },
+    })),
+    ...mdPages.map((entry) => ({
+      params: { slug: entry.id },
+      props: { entry, kind: 'md' as const },
+    })),
+  ];
 }
 
-const { entry } = Astro.props;
+const { entry, kind } = Astro.props;
+const Content = kind === 'md' ? (await render(entry)).Content : null;
 ---
 
 <Base title={`${entry.data.title} - RASHINBAN 2026`} description={entry.data.description}>
@@ -23,7 +32,13 @@ const { entry } = Astro.props;
           <a class="btn-pill" href="/">Back to Top Page</a>
         </div>
 
-        {entry.data.sections.map((section) => <Section section={section} />)}
+        {
+          kind === 'sections' ? (
+            entry.data.sections.map((section) => <Section section={section} />)
+          ) : (
+            <div class="md-page-body">{Content && <Content />}</div>
+          )
+        }
 
         <p class="article-page__back">
           <a class="btn-pill" href="#">Back to Top</a>
