@@ -50,8 +50,8 @@ sections:
 
       ▼販売チケット一覧
     onSale: true
+    url: https://rashinban2025.peatix.com/view
     saleStartText: 9月1日から販売開始
-    url: ''
     items:
       - label: DAY 1 - 『PLAYER』チケット
         price: 3,000円
