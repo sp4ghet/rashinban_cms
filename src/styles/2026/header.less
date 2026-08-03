@@ -124,8 +124,11 @@
   @media @mobile {
     padding: 20px 24px;
 
+    // モバイルは全幅で、上から下にスライドして開く
     &__drawer {
+      width: 100vw;
       padding: 110px 24px 16px;
+      transform: translateY(-100%);
     }
   }
 }
