@@ -9,8 +9,7 @@
   z-index: 100;
 }
 
-// PCでもハンバーガーメニューを使う (デザインフレーム共通)。
-// 開くと2025年と同様に右側からドロワーがスライドインする
+// ハンバーガーメニュー (Figma: 2026_web_about のドロワーデザイン)
 .nav {
   display: flex;
   align-items: center;
@@ -22,60 +21,42 @@
     width: auto;
   }
 
+  // 開いている間もバツにはならず、ハンバーガーのまま (デザイン準拠)
   &__toggle {
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 6px;
     border: none;
     background: none;
     padding: 8px 2px;
     cursor: pointer;
 
     span {
-      width: 30px;
-      height: 2px;
+      width: 36px;
+      height: 4px;
       background: @color-text;
-      transition:
-        transform 0.2s,
-        opacity 0.2s;
     }
   }
 
-  // 開いている間はバツ印に
-  &.is-open &__toggle {
-    span:nth-child(1) {
-      transform: translateY(9px) rotate(45deg);
-    }
-
-    span:nth-child(2) {
-      opacity: 0;
-    }
-
-    span:nth-child(3) {
-      transform: translateY(-9px) rotate(-45deg);
-    }
-  }
-
-  // 右側スライドインのドロワー (2025年の nav__menu を踏襲)
-  &__links {
+  // 右側スライドインの赤いドロワー
+  &__drawer {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     z-index: 1;
-    width: min(280px, 80vw);
+    width: min(385px, 92vw);
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding: 110px 40px 40px;
-    background: @color-bg;
+    justify-content: space-between;
+    padding: 120px 40px 16px;
+    background: @color-red;
     transform: translateX(100%);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    text-align: right;
     transition:
       transform 0.3s ease-in-out,
       opacity 0.3s ease-in-out,
@@ -83,20 +64,26 @@
     overflow-y: auto;
   }
 
-  &.is-open &__links {
+  &.is-open &__drawer {
     transform: none;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
   }
 
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: right;
+  }
+
   &__link {
     display: block;
-    padding: 10px 0;
     font-family: @font-display;
     font-weight: 700;
-    font-size: clamp(28px, 2.4vw, 40px);
-    letter-spacing: 0.03em;
+    font-size: clamp(30px, 3vw, 45px);
+    letter-spacing: 0.02em;
     line-height: 1;
     text-decoration: none;
     text-transform: uppercase;
@@ -106,7 +93,39 @@
     }
   }
 
+  &__drawer-footer {
+    margin-top: 40px;
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    font-size: 22px;
+
+    a {
+      color: @color-text;
+      text-decoration: none;
+      line-height: 1;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__copyright {
+    margin-top: 16px;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+  }
+
   @media @mobile {
     padding: 20px 24px;
+
+    &__drawer {
+      padding: 110px 24px 16px;
+    }
   }
 }

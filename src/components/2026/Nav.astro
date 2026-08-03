@@ -7,12 +7,28 @@
     <span></span>
     <span></span>
   </button>
-  <ul class="nav__links">
-    <li><a href="#about" class="nav__link">ABOUT</a></li>
-    <li><a href="#news" class="nav__link">NEWS</a></li>
-    <li><a href="#tournament" class="nav__link">TOURNAMENT</a></li>
-    <li><a href="#join-us" class="nav__link">JOIN US</a></li>
-  </ul>
+
+  {/* 右からスライドインする赤いドロワー (Figma: 2026_web_about) */}
+  <div class="nav__drawer">
+    <ul class="nav__links">
+      <li><a href="/#about" class="nav__link">ABOUT</a></li>
+      <li><a href="/#news" class="nav__link">NEWS</a></li>
+      <li><a href="/#broadcast" class="nav__link">BROADCAST</a></li>
+      <li><a href="/#tournament" class="nav__link">TOURNAMENT</a></li>
+      <li><a href="/#join-us" class="nav__link">JOIN US</a></li>
+      <li><a href="/#faq" class="nav__link">FAQ</a></li>
+    </ul>
+
+    <div class="nav__drawer-footer">
+      <ul class="nav__socials">
+        <li><a href="https://x.com/rashinban_geo" target="_blank" rel="noreferrer" aria-label="X"><i class="bi bi-twitter-x"></i></a></li>
+        <li><a href="https://twitch.tv/sp4geo" target="_blank" rel="noreferrer" aria-label="Twitch"><i class="bi bi-twitch"></i></a></li>
+        <li><a href="https://youtube.com/@sp4geo" target="_blank" rel="noreferrer" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
+        <li><a href="https://discord.gg/8mM5FzeQwu" target="_blank" rel="noreferrer" aria-label="Discord"><i class="bi bi-discord"></i></a></li>
+      </ul>
+      <p class="nav__copyright">© 2026 RASHINBAN Tournament. All rights reserved.</p>
+    </div>
+  </div>
 </nav>
 
 <script>
@@ -29,7 +45,7 @@
   nav?.querySelectorAll('.nav__link').forEach((link) => {
     link.addEventListener('click', close);
   });
-  // ドロワーの外側をクリック / Escape で閉じる (2025年と同じ挙動)
+  // ドロワーの外側をクリック / Escape で閉じる
   document.addEventListener('click', (event) => {
     if (nav?.classList.contains('is-open') && !nav.contains(event.target as Node)) close();
   });
