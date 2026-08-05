@@ -80,19 +80,15 @@ sections:
       ・ダブルエリミネーショントーナメント
       1度敗北しても、Lower Bracketで勝ち残ればUpper Bracketの勝者と決勝で戦うことができます。
 
-      試合形式
-
-      ・BO3
-
       ※詳細なルールは【ルールブックURL / start.gg大会ページ】をご確認ください。
-    image: ''
+    image: /assets/2026/TOURNAMENT_SCHEDULE.png
   - type: text
     headingEn: OFFICIAL DISCORD
     headingJa: 公式Discordサーバー
     notice: ''
     body: |-
       大会に関する連絡・質問の受付はすべて公式Discordサーバーで行います。
-      ［参加はこちら］[https://discord.gg/hSvNhzMWK](https://discord.gg/hSvNhzMWK)
+      ［参加はこちら］[https://discord.gg/vWuH9Q3pKM](https://discord.gg/vWuH9Q3pKM)
     image: ''
   - type: text
     headingEn: FOOD & DRINK

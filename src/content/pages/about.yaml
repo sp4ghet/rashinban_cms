@@ -21,7 +21,7 @@ sections:
       ランダムに選ばれたGoogleストリートビューの画像から、それが世界のどこなのかを推測（＝Guess）するゲームです。
       出題地点とGuessした地点との距離でスコアが決まり、距離が近いほどスコアが高くなります。出題地点を完全に当てると満点の5000点で、「5K」とも呼ばれます。
       プレイヤーたちは、インフラ、言語、ストリートビューの撮影に使われている車、植物など、あらゆる情報から場所を推理していきます。
-    image: /assets/2026/about-visual.jpg
+    image: /assets/2026/What_is_geoguessr.jpg
   - type: text
     headingEn: DUELS
     headingJa: ''
@@ -33,4 +33,4 @@ sections:
 
       例えば、相手とほぼ同じ地点にGuessした場合はあまりダメージを与えられませんが、相手に比べて精密なGuessができれば大ダメージを与えることができます。そして、最終的に相手のHPを削り切ったプレイヤーの勝利となります。
       自分がどうGuessするかということだけではなく、相手との駆け引きやGuessのスピードなど、戦略も重要になってきます。
-    image: /assets/2026/about-visual.jpg
+    image: /assets/2026/What_is_DUELS.png
