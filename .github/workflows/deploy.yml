@@ -10,6 +10,12 @@ permissions:
   pages: write
   id-token: write
 
+# Pages は environment ごとに同時デプロイが1つまで。連続 push で deploy が競合して
+# 詰まるのを防ぐため、デプロイを直列化する (実行中のものは中断せず完了させる)。
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
