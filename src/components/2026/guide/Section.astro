@@ -93,6 +93,8 @@ const md = (src: string) => marked.parse(src) as string;
                 href={clickable ? section.url : undefined}
                 target={clickable ? '_blank' : undefined}
                 rel={clickable ? 'noreferrer' : undefined}
+                data-ga-ticket={clickable ? item.label : undefined}
+                data-ga-ticket-url={clickable ? section.url : undefined}
               >
                 <p class="ticket-bar__title">
                   <span class="ticket-bar__label">{item.label}</span>

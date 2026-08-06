@@ -1,0 +1,40 @@
+---
+// Google Analytics 4 (GA4)。本番ドメイン (rashinban.org) のビルドでのみ出力する。
+// dev / preview / cms.rashinban.org では読み込まれないので、計測データが汚れない。
+//
+// 測定ID (G-XXXXXXXXXX) は GA4 の「管理 > データストリーム」で確認できる。
+// 下の定数を直接書き換えるか、ビルド時に環境変数 PUBLIC_GA_ID で注入する。
+const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_ID ?? 'G-NW4JJZY1SY';
+
+const enabled =
+  Astro.site?.hostname === 'rashinban.org' &&
+  /^G-[A-Z0-9]{4,}$/.test(GA_MEASUREMENT_ID);
+---
+
+{
+  enabled && (
+    <>
+      <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
+      <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', GA_MEASUREMENT_ID);
+
+        // チケット購入リンクのクリックを ticket_click イベントとして計測する。
+        // (GA4 の拡張計測でも外部リンクは click として拾えるが、専用イベントの方が
+        //  GA4 上でキーイベント/コンバージョンとして扱いやすい)
+        document.addEventListener('click', (e) => {
+          const el = e.target.closest('[data-ga-ticket]');
+          if (!el) return;
+          gtag('event', 'ticket_click', {
+            ticket_label: el.getAttribute('data-ga-ticket'),
+            link_url: el.getAttribute('data-ga-ticket-url') || el.getAttribute('href'),
+          });
+        });
+      </script>
+    </>
+  )
+}

@@ -69,7 +69,7 @@ sections:
         price: 2,000円
         features: []
         separatorAbove: false
-    notes: ※学割は高校生以下が対象
+    notes: ※ 学割は高校生以下が対象です。
   - type: text
     headingEn: FOOD & DRINK
     headingJa: 会場での飲食について

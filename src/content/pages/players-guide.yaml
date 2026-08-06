@@ -38,9 +38,9 @@ sections:
       本大会に参加される方は、必ず本ページから「プレイヤーチケット」をご購入ください。
       プレイヤーチケットの購入と、start.ggでのエントリー登録の両方が完了した時点で、エントリー確定となります。
     body: |-
-      エントリー開始：2026年9月1日（火）
-      定員：最大64名（先着順）
-      start.ggへのリンク
+      エントリー開始:2026年9月1日（火）
+      定員:最大64名（先着順）
+      start.gg: [https://www.start.gg/tournament/rashinban-2026/details](https://www.start.gg/tournament/rashinban-2026/details)
     image: ''
   - type: tickets
     headingEn: TICKETS
@@ -66,9 +66,9 @@ sections:
           - Day 1会場での観戦（ご自身の試合終了後も、当日はそのまま観戦できます）
         separatorAbove: false
     notes: |-
-      ※定員は最大64名・先着順です。定員に達し次第、販売を終了します。  
-      ※学割は高校生以下が対象  
-      ※DAY 2の観戦を希望される場合は、別途【SPECTATOR’S GUIDE】からDAY 2の観戦チケットをご購入ください。
+      ※ 定員は最大64名・先着順です。定員に達し次第、販売を終了します。  
+      ※ 学割は高校生以下が対象です。  
+      ※ DAY 2の観戦を希望される場合は、別途[【SPECTATOR'S GUIDE】](/spectator-guide/)からDAY 2の観戦チケットをご購入ください。
       ※ 選手の参加費については、会場使用料、映像・音響・照明機材の手配など本大会の大会設営費のみに充当させていただきます。
   - type: text
     headingEn: TOURNAMENT
@@ -80,7 +80,7 @@ sections:
       ・ダブルエリミネーショントーナメント
       1度敗北しても、Lower Bracketで勝ち残ればUpper Bracketの勝者と決勝で戦うことができます。
 
-      ※詳細なルールは【ルールブックURL / start.gg大会ページ】をご確認ください。
+      ※詳細なルールは後日公開されるルールブックをご確認ください。
     image: /assets/2026/TOURNAMENT_SCHEDULE.png
   - type: text
     headingEn: OFFICIAL DISCORD
@@ -88,7 +88,7 @@ sections:
     notice: ''
     body: |-
       大会に関する連絡・質問の受付はすべて公式Discordサーバーで行います。
-      ［参加はこちら］[https://discord.gg/vWuH9Q3pKM](https://discord.gg/vWuH9Q3pKM)
+      [参加はこちら](https://discord.gg/vWuH9Q3pKM)
     image: ''
   - type: text
     headingEn: FOOD & DRINK

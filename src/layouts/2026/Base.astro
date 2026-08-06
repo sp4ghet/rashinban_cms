@@ -1,6 +1,7 @@
 ---
 import Nav from '../../components/2026/Nav.astro';
 import Footer from '../../components/2026/Footer.astro';
+import Analytics from '../../components/2026/Analytics.astro';
 import '../../styles/2026/main.less';
 
 interface Props {
@@ -25,6 +26,7 @@ const ogImageUrl = ogImage && new URL(ogImage, Astro.site).href;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <Analytics />
     <title>{title}</title>
     <meta name="description" content={description} />
     {/* 本番 (rashinban.org) 以外のドメインは検索エンジンに載せない */}

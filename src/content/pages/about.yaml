@@ -6,7 +6,7 @@ sections:
     headingJa: ''
     notice: ''
     body: |-
-      "GeoGuessrプレイヤーsp4ghet（[@sp4ghet](https://x.com/sp4ghet)）とKai（[@KaiGeoguessr](https://x.com/KaiGeoguessr)）の発案・主導のもと、日本コミュニティの有志によって運営される国内大会です。
+      GeoGuessrプレイヤーsp4ghet（[@sp4ghet](https://x.com/sp4ghet)）とKai（[@KaiGeoguessr](https://x.com/KaiGeoguessr)）の発案・主導のもと、日本コミュニティの有志によって運営される国内大会です。
       公式開催の世界大会とコミュニティ開催の小規模大会の間を埋めるような位置づけの、これまでにはなかった「日本国内最高峰の大会」として設計されました。
       世界大会に存在した年齢制限を撤廃し、18歳以下の実力者たちが多数参加するほか、選手がより本来の能力を発揮しやすいよう、競技性をとことん追及したレギュレーションを採用しています。
 
@@ -18,7 +18,7 @@ sections:
     headingJa: ''
     notice: ''
     body: |-
-      ランダムに選ばれたGoogleストリートビューの画像から、それが世界のどこなのかを推測（＝Guess）するゲームです。
+      ランダムに選ばれたGoogleストリートビューの画像から、それが世界のどこなのかを推測(=Guess)するゲームです。
       出題地点とGuessした地点との距離でスコアが決まり、距離が近いほどスコアが高くなります。出題地点を完全に当てると満点の5000点で、「5K」とも呼ばれます。
       プレイヤーたちは、インフラ、言語、ストリートビューの撮影に使われている車、植物など、あらゆる情報から場所を推理していきます。
     image: /assets/2026/What_is_geoguessr.jpg
