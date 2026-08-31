@@ -16,12 +16,12 @@ sections:
       - label: DAY1
         date: 10/24
         dow: '[SAT]'
-        description: 2026年10月24日（土）開場 未定 / 開始(予定) 13:00
+        description: 2026年10月24日（土）開場 12:00 / 開始 13:00 / 終了 19:00
         note: ※時間は変更となる場合がございます
       - label: DAY2
         date: 10/25
         dow: '[SUN]'
-        description: 2026年10月25日（日）開場 未定 / 開始(予定) 13:00
+        description: 2026年10月25日（日）開場 11:00 / 開始 12:00 / 終了 20:00
         note: ※時間は変更となる場合がございます
   - type: venue
     headingEn: VENUE
