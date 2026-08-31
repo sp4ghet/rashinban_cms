@@ -121,6 +121,60 @@ collections:
                       - { label: 特典・内容(任意), name: features, widget: list, required: false }
                       - { label: この上に区切り線を入れる, name: separatorAbove, widget: boolean, default: false, required: false }
                   - { label: 注記(※〜・任意), name: notes, widget: markdown, required: false }
+              - name: program
+                label: 支援プログラムの仕組み (申し込み種別①②③)
+                widget: object
+                summary: '{{fields.headingEn}}'
+                fields:
+                  - { label: 見出し(英字), name: headingEn, widget: string, default: HOW THE PROGRAM WORKS }
+                  - { label: 見出し横の日本語(任意), name: headingJa, widget: string, required: false, default: 仕組み/申し込み方法 }
+                  - label: 申し込み種別
+                    name: items
+                    widget: list
+                    summary: '{{fields.title}}'
+                    fields:
+                      - { label: '小見出し(例: ① 選手による支援の申し込み)', name: title, widget: string }
+                      - { label: リード文(太字・任意), name: lead, widget: text, required: false }
+                      - { label: '申請フォームの白帯に表示する文言(例: 選手用申請フォーム・任意)', name: formLabel, widget: string, required: false }
+                      - { label: 申請フォームのURL(未入力の間は白帯がリンクにならない), name: formUrl, widget: string, required: false }
+                      - { label: '本文(任意・太字ラベルは「**支援金額**：本文」のようにコロンを ** の外に書く)', name: body, widget: markdown, required: false }
+                      - { label: '支援フローの見出し(例: [ 選手指名型支援フロー ]・任意)', name: flowLabel, widget: string, required: false }
+                      - label: 支援フロー(任意)
+                        name: flow
+                        widget: list
+                        required: false
+                        summary: '{{fields.title}}'
+                        fields:
+                          - label: アイコン
+                            name: icon
+                            widget: select
+                            default: person
+                            options:
+                              - { label: 人物(申請), value: person }
+                              - { label: マッチング, value: match }
+                              - { label: 吹き出し(やり取り), value: chat }
+                              - { label: お金(送金・補助), value: money }
+                          - { label: 内容, name: title, widget: string }
+                          - { label: 補足(小さく表示・任意), name: note, widget: string, required: false }
+              - name: applications
+                label: 申請選手一覧 (「選手申請 (2026)」の内容を表示)
+                widget: object
+                summary: '{{fields.headingEn}}'
+                fields:
+                  - { label: 見出し(英字), name: headingEn, widget: string, default: PLAYER APPLICATIONS }
+                  - { label: 見出し横の日本語(任意), name: headingJa, widget: string, required: false, default: 申請選手一覧 }
+                  - { label: 前書き(太字・任意), name: intro, widget: text, required: false }
+                  - { label: 選手が0人のときに表示する文言(任意), name: emptyText, widget: string, required: false }
+              - name: supporters
+                label: ご支援者一覧 (「ご支援者 (2026)」の内容を表示)
+                widget: object
+                summary: '{{fields.headingEn}}'
+                fields:
+                  - { label: 見出し(英字), name: headingEn, widget: string, default: SUPPORTERS }
+                  - { label: 見出し横の日本語(任意), name: headingJa, widget: string, required: false, default: ご支援者一覧 }
+                  - { label: 前書き(太字・任意), name: intro, widget: text, required: false }
+                  - { label: 選手指名なしのご支援者の見出し, name: generalLabel, widget: string, default: 個人協賛 }
+                  - { label: 選手指名ありのご支援者の見出し, name: designatedLabel, widget: string, default: 選手指名支援 }
       - name: players-guide
         label: PLAYERS GUIDE
         file: src/content/pages/players-guide.yaml
@@ -129,6 +183,10 @@ collections:
         label: SPECTATOR GUIDE
         file: src/content/pages/spectator-guide.yaml
         fields: *page2026_fields
+      - name: patron
+        label: SUPPORT A PLAYER PROGRAM (/patron)
+        file: src/content/pages/patron.yaml
+        fields: *page2026_fields
       - name: privacy-policy
         label: プライバシーポリシー
         file: src/content/pages/privacy-policy.md
@@ -136,6 +194,47 @@ collections:
           - { label: ページタイトル(英字見出し), name: title, widget: string }
           - { label: 説明(OGP用・任意), name: description, widget: string, required: false }
           - { label: 本文, name: body, widget: markdown }
+
+  # /patron の PLAYER APPLICATIONS に表示 (レートの高い順)
+  - name: players
+    label: 選手申請 (2026)
+    label_singular: 申請選手
+    folder: src/content/players
+    create: true
+    extension: yaml
+    format: yaml
+    identifier_field: name
+    summary: '{{name}} (RATE:{{rating}})'
+    sortable_fields: [rating, name]
+    fields:
+      - { label: 選手名, name: name, widget: string }
+      - { label: GeoGuessrプロフィールURL(任意), name: geoguessrUrl, widget: string, required: false }
+      - { label: レート, name: rating, widget: number, value_type: int, default: 0 }
+      - { label: 選手からの一言(任意), name: comment, widget: text, required: false }
+      - { label: 支援成立(オンにするとカードがグレーアウトし「支援成立」と支援者名が表示される), name: supported, widget: boolean, default: false, required: false }
+      - { label: 支援者名(支援成立時にカードへ表示・任意), name: supporter, widget: string, required: false }
+
+  # /patron の SUPPORTERS に表示。指名した選手が空なら「個人協賛」、あれば「選手指名支援」
+  - name: supporters
+    label: ご支援者 (2026)
+    label_singular: ご支援者
+    folder: src/content/supporters
+    create: true
+    extension: yaml
+    format: yaml
+    identifier_field: name
+    summary: '{{name}}'
+    sortable_fields: [name]
+    fields:
+      - { label: お名前(掲載名), name: name, widget: string }
+      - label: 指名した選手(選手指名型のみ・空なら個人協賛として掲載)
+        name: player
+        widget: relation
+        collection: players
+        value_field: name
+        search_fields: [name]
+        display_fields: [name]
+        required: false
 
   - name: news2025
     label: ニュース (2025)

@@ -1,9 +1,11 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
-// Sveltia は未入力の任意フィールドを空文字列で保存するため、undefined に正規化する
+// Sveltia は未入力の任意フィールドを空文字列 (relation ウィジェットは null) で保存するため、
+// undefined に正規化する
 const optionalString = z
   .string()
+  .nullable()
   .optional()
   .transform((v) => v || undefined);
 
@@ -90,6 +92,49 @@ const guideSection = z.discriminatedUnion('type', [
     ),
     notes: optionalString,
   }),
+  // 支援プログラムの仕組み (/patron の HOW THE PROGRAM WORKS)。
+  // 申し込み種別 (①②③) ごとに 小見出し / リード文 / 申請フォームの白帯リンク / 本文 / 支援フロー
+  z.object({
+    type: z.literal('program'),
+    headingEn: z.string(),
+    headingJa: optionalString,
+    items: z.array(
+      z.object({
+        title: z.string(),
+        lead: optionalString,
+        formLabel: optionalString,
+        formUrl: optionalString,
+        body: optionalString,
+        flowLabel: optionalString,
+        flow: z
+          .array(
+            z.object({
+              icon: z.enum(['person', 'match', 'chat', 'money']).default('person'),
+              title: z.string(),
+              note: optionalString,
+            })
+          )
+          .default([]),
+      })
+    ),
+  }),
+  // 申請選手一覧 (/patron の PLAYER APPLICATIONS)。players コレクションをカードで並べる
+  z.object({
+    type: z.literal('applications'),
+    headingEn: z.string(),
+    headingJa: optionalString,
+    intro: optionalString,
+    emptyText: optionalString,
+  }),
+  // ご支援者一覧 (/patron の SUPPORTERS)。supporters コレクションを個人協賛 / 選手指名支援に分けて並べる
+  z.object({
+    type: z.literal('supporters'),
+    headingEn: z.string(),
+    headingJa: optionalString,
+    intro: optionalString,
+    generalLabel: z.string().default('個人協賛'),
+    designatedLabel: z.string().default('選手指名支援'),
+  }),
 ]);
 
 const pages = defineCollection({
@@ -108,6 +153,30 @@ const pagesMd = defineCollection({
   schema: z.object({
     title: z.string(),
     description: optionalString,
+  }),
+});
+
+// 支援プログラムに申請した選手 (/patron の PLAYER APPLICATIONS に表示)
+const players = defineCollection({
+  loader: glob({ pattern: '**/*.yaml', base: './src/content/players' }),
+  schema: z.object({
+    name: z.string(),
+    geoguessrUrl: optionalString,
+    rating: z.number(),
+    comment: optionalString,
+    // 支援成立: カードをグレーアウトして「支援成立 (支援者名)」を重ねる
+    supported: z.boolean().default(false),
+    supporter: optionalString,
+  }),
+});
+
+// ご支援者 (/patron の SUPPORTERS に表示)。
+// player は指名した選手の名前 (players の name)。空なら個人協賛、入っていれば選手指名支援
+const supporters = defineCollection({
+  loader: glob({ pattern: '**/*.yaml', base: './src/content/supporters' }),
+  schema: z.object({
+    name: z.string(),
+    player: optionalString,
   }),
 });
 
@@ -160,6 +229,8 @@ export const collections = {
   faq,
   pages,
   pagesMd,
+  players,
+  supporters,
   news2025,
   interviews2025,
   players2025,

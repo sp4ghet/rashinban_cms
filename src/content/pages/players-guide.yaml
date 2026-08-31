@@ -49,18 +49,20 @@ sections:
       大会参加を希望される方は、本ページからプレイヤーチケットをご購入ください。
 
       ▼販売チケット一覧
-    onSale: false
-    url: https://rashinban2025.peatix.com/view
+    onSale: true
+    url: https://peatix.com/event/5111792
     saleStartText: 9月1日から販売開始
     items:
       - label: DAY 1 - 『PLAYER』チケット
         price: 3,000円
+        soldOut: false
         features:
           - Day 1への出場権
           - Day 1会場での観戦（ご自身の試合終了後も、当日はそのまま観戦できます）
         separatorAbove: false
       - label: DAY 1 -『PLAYER』チケット(学割)
         price: 1,000円
+        soldOut: false
         features:
           - Day 1への出場権
           - Day 1会場での観戦（ご自身の試合終了後も、当日はそのまま観戦できます）
@@ -80,7 +82,7 @@ sections:
       ・ダブルエリミネーショントーナメント
       1度敗北しても、Lower Bracketで勝ち残ればUpper Bracketの勝者と決勝で戦うことができます。
 
-      ※詳細なルールは後日公開されるルールブックをご確認ください。
+      ※詳細なルールは[ルールブック](https://docs.google.com/document/d/1WLcz-fG9VsZvd_V8g3cPyJOe8fW25ggfiqSiTuxihCc/edit?usp=sharing)をご確認ください。
     image: /assets/2026/TOURNAMENT_SCHEDULE.png
   - type: text
     headingEn: OFFICIAL DISCORD

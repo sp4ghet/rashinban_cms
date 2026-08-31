@@ -38,8 +38,8 @@ sections:
       会場で大会を観戦される方は、本ページから観戦チケットをご購入ください。
 
       ▼販売チケット一覧
-    onSale: false
-    url: https://rashinban2025.peatix.com/view
+    onSale: true
+    url: https://peatix.com/event/5111792
     saleStartText: 9月1日から販売開始
     items:
       - label: DAY 1 -『見学』チケット
@@ -49,6 +49,7 @@ sections:
         separatorAbove: false
       - label: DAY 1 -『見学』チケット(学割)
         price: 1,000円
+        soldOut: false
         features: []
         separatorAbove: false
       - label: DAY 2 -『サポーター席』チケット
@@ -63,13 +64,21 @@ sections:
         separatorAbove: false
       - label: DAY 2 -『A席』チケット
         price: 4,000円
+        soldOut: false
         features: []
         separatorAbove: false
       - label: DAY 2 -『A席』チケット(学割)
         price: 2,000円
+        soldOut: false
         features: []
         separatorAbove: false
     notes: ※ 学割は高校生以下が対象です。
+  - type: text
+    headingEn: SEATING
+    headingJa: ''
+    notice: ''
+    body: ''
+    image: /assets/images/SeatingChart.png
   - type: text
     headingEn: FOOD & DRINK
     headingJa: 会場での飲食について

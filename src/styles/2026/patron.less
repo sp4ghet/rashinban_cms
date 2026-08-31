@@ -1,0 +1,251 @@
+@import (reference) './variables.less';
+
+// /patron (SUPPORT A PLAYER PROGRAM) のセクションブロック (Figma: SUPPORT A PLAYER PROGRAM)
+
+// 本文 markdown の小見出し (### ) と区切り線 (---)。NOTE セクションで使用
+.guide-body {
+  h3 {
+    margin: 2em 0 0.8em;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.4;
+  }
+
+  hr {
+    width: min(320px, 100%);
+    margin: 2.5em 0;
+    border: none;
+    border-top: 1px solid @color-text;
+  }
+}
+
+// 太字のリード文 (申し込み種別の説明・一覧の前書き)
+.guide-lead {
+  margin-top: 32px;
+  font-size: 16px;
+  font-weight: 700;
+
+  p {
+    margin: 0;
+  }
+}
+
+// セクション内の短い区切り線
+.guide-rule {
+  width: min(320px, 100%);
+  margin: 56px 0;
+  border: none;
+  border-top: 1px solid @color-text;
+}
+
+// 申し込み種別 (①②③)
+.program {
+  margin-top: 40px;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.4;
+  }
+
+  .guide-body {
+    max-width: none;
+  }
+}
+
+// 申請フォームへの白帯リンク
+.form-bar {
+  display: block;
+  margin-top: 32px;
+  padding: 28px 24px;
+  background: @color-text;
+  color: @color-bg;
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s;
+
+  &--link:hover {
+    background: #e3e3e3;
+  }
+
+  &__external {
+    margin-left: 16px;
+    font-size: 15px;
+  }
+}
+
+// 支援フロー (黒枠のステップを ▼ でつなぐ)
+.flow {
+  margin-top: 48px;
+
+  &__label {
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  &__steps {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 20px 28px;
+    border: 2px solid @color-text;
+    background: @color-bg;
+    text-align: center;
+
+    // ステップ間の ▼
+    & + &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: -16px;
+      transform: translateX(-50%);
+      border-style: solid;
+      border-width: 8px 12px 0 12px;
+      border-color: @color-text transparent transparent transparent;
+    }
+  }
+
+  &__icon {
+    font-size: 40px;
+    line-height: 1;
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  &__note {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+// 申請選手一覧 (カード)
+.patron-cards {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+
+  @media @mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.patron-card {
+  position: relative;
+  padding: 24px 32px 28px;
+  border: 1px solid @color-text;
+
+  // 支援成立: 中身をグレーアウトし「支援成立 (支援者名)」を中央に重ねる
+  &--supported {
+    border-color: #6a6a6a;
+    color: #4a4a4a;
+
+    .patron-card__name {
+      border-color: #4a4a4a;
+    }
+
+    a {
+      pointer-events: none;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 16px;
+    color: @color-text;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  &__overlay-title {
+    font-size: 36px;
+    font-weight: 900;
+  }
+
+  &__overlay-name {
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+  }
+
+  &__name {
+    width: fit-content;
+    max-width: 100%;
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid @color-text;
+    font-family: @font-display;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+  }
+
+  &__meta {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__comment {
+    font-size: 16px;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+  }
+}
+
+// ご支援者一覧
+.supporters {
+  margin-top: 40px;
+
+  &__group + &__group {
+    margin-top: 48px;
+  }
+
+  &__label {
+    width: min(400px, 100%);
+    padding-bottom: 8px;
+    border-bottom: 1px solid @color-text;
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  &__list {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 2;
+  }
+}

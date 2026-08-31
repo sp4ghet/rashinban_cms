@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import { marked } from 'marked';
 import Heading from './Heading.astro';
 
@@ -7,6 +8,25 @@ marked.use({ breaks: true });
 
 const { section } = Astro.props;
 const md = (src: string) => marked.parse(src) as string;
+
+// 支援フローのアイコン (Bootstrap Icons)。握手アイコンが無いためマッチングは people-fill で代用
+const FLOW_ICONS: Record<string, string> = {
+  person: 'bi-person-fill',
+  match: 'bi-people-fill',
+  chat: 'bi-chat-fill',
+  money: 'bi-cash-coin',
+};
+
+// 申請選手一覧: レートの高い順 (同率は名前順)
+const players =
+  section.type === 'applications'
+    ? (await getCollection('players')).sort(
+        (a, b) => b.data.rating - a.data.rating || a.data.name.localeCompare(b.data.name)
+      )
+    : [];
+const supporters = section.type === 'supporters' ? await getCollection('supporters') : [];
+const generalSupporters = supporters.filter((s) => !s.data.player);
+const designatedSupporters = supporters.filter((s) => s.data.player);
 ---
 
 {
@@ -115,6 +135,127 @@ const md = (src: string) => marked.parse(src) as string;
         })}
       </div>
       {section.notes && <div class="guide-body guide-tickets__notes" set:html={md(section.notes)} />}
+    </section>
+  )
+}
+
+{
+  section.type === 'program' && (
+    <section class="guide-section">
+      <Heading en={section.headingEn} ja={section.headingJa} />
+      <div class="program">
+        {section.items.map((item, i) => {
+          const FormBar = item.formUrl ? 'a' : 'div';
+          return (
+            <>
+              {i > 0 && <hr class="guide-rule" />}
+              <div class="program__item">
+                <h3 class="program__title">{item.title}</h3>
+                {item.lead && <div class="guide-lead" set:html={md(item.lead)} />}
+                {item.formLabel && (
+                  <FormBar
+                    class:list={['form-bar', { 'form-bar--link': !!item.formUrl }]}
+                    href={item.formUrl || undefined}
+                    target={item.formUrl ? '_blank' : undefined}
+                    rel={item.formUrl ? 'noreferrer' : undefined}
+                  >
+                    {item.formLabel}
+                    {item.formUrl && <i class="form-bar__external bi bi-box-arrow-up-right" />}
+                  </FormBar>
+                )}
+                {item.body && <div class="guide-body" set:html={md(item.body)} />}
+                {item.flow.length > 0 && (
+                  <div class="flow">
+                    {item.flowLabel && <p class="flow__label">{item.flowLabel}</p>}
+                    <ol class="flow__steps">
+                      {item.flow.map((step) => (
+                        <li class="flow__step">
+                          <i class:list={['flow__icon', 'bi', FLOW_ICONS[step.icon]]} aria-hidden="true" />
+                          <span class="flow__title">{step.title}</span>
+                          {step.note && <span class="flow__note">{step.note}</span>}
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                )}
+              </div>
+            </>
+          );
+        })}
+      </div>
+    </section>
+  )
+}
+
+{
+  section.type === 'applications' && (
+    <section class="guide-section">
+      <Heading en={section.headingEn} ja={section.headingJa} />
+      {section.intro && <div class="guide-lead" set:html={md(section.intro)} />}
+      {players.length > 0 ? (
+        <ul class="patron-cards">
+          {players.map((player) => {
+            const { supported, supporter } = player.data;
+            return (
+              <li class:list={['patron-card', { 'patron-card--supported': supported }]}>
+                {supported && (
+                  <div class="patron-card__overlay">
+                    <span class="patron-card__overlay-title">支援成立</span>
+                    {supporter && <span class="patron-card__overlay-name">({supporter})</span>}
+                  </div>
+                )}
+                <p class="patron-card__name">{player.data.name}</p>
+                <p class="patron-card__meta">
+                  {player.data.geoguessrUrl ? (
+                    <a href={player.data.geoguessrUrl} target="_blank" rel="noreferrer">
+                      GeoGuessr [Link]
+                    </a>
+                  ) : (
+                    'GeoGuessr'
+                  )}
+                </p>
+                <p class="patron-card__meta">Rate:{player.data.rating}</p>
+                {player.data.comment && <p class="patron-card__comment">{player.data.comment}</p>}
+              </li>
+            );
+          })}
+        </ul>
+      ) : (
+        section.emptyText && <p class="guide-body">{section.emptyText}</p>
+      )}
+    </section>
+  )
+}
+
+{
+  section.type === 'supporters' && (
+    <section class="guide-section">
+      <Heading en={section.headingEn} ja={section.headingJa} />
+      {section.intro && <div class="guide-lead" set:html={md(section.intro)} />}
+      <div class="supporters">
+        <div class="supporters__group">
+          <h3 class="supporters__label">{section.generalLabel}</h3>
+          {generalSupporters.length > 0 && (
+            <ul class="supporters__list">
+              {generalSupporters.map((s) => (
+                <li>{s.data.name}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+        <div class="supporters__group">
+          <h3 class="supporters__label">{section.designatedLabel}</h3>
+          {designatedSupporters.length > 0 && (
+            <ul class="supporters__list">
+              {designatedSupporters.map((s) => (
+                <li>
+                  {s.data.name}({s.data.player})
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
     </section>
   )
 }
