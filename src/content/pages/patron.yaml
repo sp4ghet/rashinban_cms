@@ -1,6 +1,15 @@
 title: PLAYER PATRON PROGRAM
 description: 選手支援プログラム（選手指名型・選手指名なし型）の仕組みと申し込み方法
 sections:
+  - type: text
+    headingEn: INTRODUCTION
+    headingJa: イントロダクション
+    notice: ''
+    body: |-
+      PLAYER PATRON PROGRAMは、RASHINBANに出場する選手の出場費・交通費・宿泊費を支える制度です。
+
+      パトロンは、特定の選手を選んで直接支援する「選手指名型」と、選手を指名せず、大会運営のルールに基づいて選手支援金を配分する「選手指名なし型」のいずれかを選択できます。
+    image: ''
   - type: program
     headingEn: HOW THE PROGRAM WORKS
     headingJa: 仕組み/申し込み方法
