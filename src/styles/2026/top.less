@@ -385,3 +385,69 @@
     font-weight: 700;
   }
 }
+
+// ============ SPONSOR ============
+.sponsor {
+  padding-bottom: clamp(96px, 13.3vw, 256px);
+
+  &__logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(20px, 2.1vw, 40px);
+    max-width: 800px;
+    margin: 56px auto 0;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      height: auto;
+      min-width: 0;
+    }
+
+    &--lead {
+      width: 96%;
+
+      img { width: 100%; }
+    }
+
+    &--partners {
+      width: 72%;
+
+      img:first-child { width: 59%; }
+      img:last-child { width: 22%; }
+    }
+
+    &--supporters {
+      width: 100%;
+
+      img:first-child { width: 42.5%; }
+      img:last-child { width: 53%; }
+    }
+
+    &--community {
+      width: 36%;
+
+      img:first-child { width: 44%; }
+      img:last-child { width: 46%; }
+    }
+  }
+
+  @media @mobile {
+    &__logos { margin-top: 40px; }
+
+    &__row--supporters {
+      flex-direction: column;
+      gap: 24px;
+
+      img:first-child { width: 70%; }
+      img:last-child { width: 88%; }
+    }
+
+    &__row--community { width: 52%; }
+  }
+}
