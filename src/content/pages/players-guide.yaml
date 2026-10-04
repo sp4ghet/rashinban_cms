@@ -90,11 +90,7 @@ sections:
     headingEn: PRIZE
     headingJa: 賞金
     notice: ''
-    body: |-
-      - 1位：200,000円
-      - 2位：100,000円
-      - 3位:：50,000円
-      - 4-8位：10,000円
+    body: 1位：200,000円　2位：100,000円　3位:：50,000円　4-8位：10,000円
     image: /assets/images/賞金.jpg
   - type: text
     headingEn: OFFICIAL DISCORD
