@@ -87,6 +87,16 @@ sections:
       ※詳細なルールは[ルールブック](https://docs.google.com/document/d/1WLcz-fG9VsZvd_V8g3cPyJOe8fW25ggfiqSiTuxihCc/edit?usp=sharing)をご確認ください。
     image: /assets/2026/TOURNAMENT_SCHEDULE.png
   - type: text
+    headingEn: PRIZE
+    headingJa: 賞金
+    notice: ''
+    body: |-
+      - 1位：200,000円
+      - 2位：100,000円
+      - 3位:：50,000円
+      - 4-8位：10,000円
+    image: ''
+  - type: text
     headingEn: OFFICIAL DISCORD
     headingJa: 公式Discordサーバー
     notice: ''
