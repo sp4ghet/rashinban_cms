@@ -21,7 +21,7 @@ sections:
       - label: DAY2
         date: 10/25
         dow: '[SUN]'
-        description: 2026年10月25日（日）開場 11:00 / 開始 12:00 / 終了 20:00
+        description: 2026年10月25日（日）開場 11:00 / 開始 12:00 / 終了 22:00
         note: ※時間は変更となる場合がございます
   - type: venue
     headingEn: VENUE
