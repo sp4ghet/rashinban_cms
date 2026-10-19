@@ -70,7 +70,7 @@ sections:
           - Day 1会場での観戦（ご自身の試合終了後も、当日はそのまま観戦できます）
         separatorAbove: false
     notes: |-
-      ※ 定員は最大64名・先着順です。定員に達し次第、販売を終了します。  
+      ※ 定員は最大40名・先着順です。定員に達し次第、販売を終了します。  
       ※ 学割は高校生以下が対象です。  
       ※ DAY 2の観戦を希望される場合は、別途[【SPECTATOR'S GUIDE】](/spectator-guide/)からDAY 2の観戦チケットをご購入ください。
       ※ 選手の参加費については、会場使用料、映像・音響・照明機材の手配など本大会の大会設営費のみに充当させていただきます。
@@ -81,11 +81,14 @@ sections:
     body: |-
       トーナメント形式
 
-      ・ダブルエリミネーショントーナメント
+      DAY 1 グループステージ
+      4つのグループそれぞれで総当たり戦を行います。各グループの上位2名がDAY 2に進出できます。1位はUpper Bracket、2位はLowerBracketからのスタートです。
+
+      DAY 2 ダブルエリミネーショントーナメント
       1度敗北しても、Lower Bracketで勝ち残ればUpper Bracketの勝者と決勝で戦うことができます。
 
       ※詳細なルールは[ルールブック](https://docs.google.com/document/d/1WLcz-fG9VsZvd_V8g3cPyJOe8fW25ggfiqSiTuxihCc/edit?usp=sharing)をご確認ください。
-    image: /assets/2026/TOURNAMENT_SCHEDULE.png
+    image: /assets/images/TOURNAMENT SCHEDULE-2.jpg
   - type: text
     headingEn: PRIZE
     headingJa: 賞金
