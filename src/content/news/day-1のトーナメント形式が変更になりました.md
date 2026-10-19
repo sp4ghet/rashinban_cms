@@ -1,5 +1,5 @@
 ---
-title: DAY 1のトーナメント形式が変更になりました
+title: DAY 1のトーナメント形式が変更されました
 headline: ''
 date: 2026-10-19
 description: ''
@@ -7,4 +7,4 @@ ogImage: ''
 link: https://rashinban.org/players-guide/
 ---
 
-DAY 1のトーナメント形式が変更になりました
+DAY 1のトーナメント形式が変更されました
