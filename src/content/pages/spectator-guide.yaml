@@ -80,7 +80,7 @@ sections:
     headingJa: ''
     notice: ''
     body: ''
-    image: /assets/images/SeatingChart.png
+    image: /assets/images/座席表.png
   - type: text
     headingEn: FOOD & DRINK
     headingJa: 会場での飲食について
