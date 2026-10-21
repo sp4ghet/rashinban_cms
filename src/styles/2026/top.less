@@ -13,14 +13,25 @@
   padding: 48px 24px 40px;
   text-align: center;
 
-  &__title {
+  &__branding {
     grid-row: 2;
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 2vw, 32px);
+    width: min(100%, clamp(300px, 41vw, 800px));
+    margin-bottom: 24px;
+  }
 
+  &__title {
     img {
-      display: inline-block;
-      width: clamp(300px, 41vw, 800px);
+      width: 100%;
     }
+  }
+
+  &__sponsor {
+    width: 100%;
+    height: auto;
   }
 
   &__dates {
@@ -387,8 +398,13 @@
 }
 
 // ============ SPONSOR ============
+.sponsor .section-title__en,
+.community-partner .section-title__en {
+  font-size: clamp(48px, 7.5vw, 144px);
+}
+
 .sponsor {
-  padding-bottom: clamp(96px, 13.3vw, 256px);
+  padding-bottom: 0;
 
   &__logos {
     display: flex;
@@ -405,32 +421,36 @@
     justify-content: space-between;
 
     img {
+      width: 100%;
       height: auto;
       min-width: 0;
     }
 
     &--lead {
       width: 96%;
-
-      img { width: 100%; }
     }
 
-    &--partners {
-      width: 72%;
+    &--geoguessr {
+      width: 50%;
+    }
 
-      img:first-child { width: 59%; }
-      img:last-child { width: 22%; }
+    &--voicemod {
+      width: 38%;
+    }
+
+    &--ajinomoto {
+      width: 14.4%;
     }
 
     &--supporters {
-      width: 100%;
+      width: 89%;
 
       img:first-child { width: 42.5%; }
       img:last-child { width: 53%; }
     }
 
     &--community {
-      width: 36%;
+      width: 32%;
 
       img:first-child { width: 44%; }
       img:last-child { width: 46%; }
@@ -439,6 +459,10 @@
 
   @media @mobile {
     &__logos { margin-top: 40px; }
+
+    &__row--geoguessr { width: 66%; }
+    &__row--voicemod { width: 54%; }
+    &__row--ajinomoto { width: 24%; }
 
     &__row--supporters {
       flex-direction: column;
@@ -449,5 +473,35 @@
     }
 
     &__row--community { width: 52%; }
+  }
+}
+
+// ============ COMMUNITY PARTNER ============
+.community-partner {
+  padding-top: clamp(96px, 8.3vw, 160px);
+  padding-bottom: clamp(96px, 13.3vw, 256px);
+
+  &__logos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: clamp(32px, 4.2vw, 80px);
+    max-width: 680px;
+    margin: 64px auto 0;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media @mobile {
+    .section-title__en {
+      font-size: clamp(44px, 12vw, 92px);
+    }
+
+    &__logos {
+      margin-top: 40px;
+    }
   }
 }
