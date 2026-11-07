@@ -11,6 +11,12 @@ link: ''
 
 本大会で**5位タイ**という結果を残したStephen選手に、インタビューに回答していただきました。
 
+<div class="column-row">
+  <div class="centered"><img src="/assets/images/interview/stephen1.png"></div>
+  <div class="centered"><img src="/assets/images/interview/stephen2.png"></div>
+</div>
+
+
 ***
 
 **Q. GeoGuessrを始めたきっかけを教えてください。**
@@ -84,7 +90,6 @@ Best8入り。
 ![](/assets/images/interview/stephen3.png)入場するstephen選手　貫禄があります
 
 ![](/assets/images/interview/stephen4.png)解説の癖でしょうか　ヘッドセットのマイクを口元に下ろしています
-
 
 ***
 
