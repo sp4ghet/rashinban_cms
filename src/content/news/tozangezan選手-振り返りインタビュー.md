@@ -11,11 +11,6 @@ link: ''
 
 本大会で**4位&田村ビルズ賞受賞**という結果を残したtozangezan選手に、インタビューに回答していただきました。
 
-<div class="column-row">
-  <div class="centered"><img src="/assets/images/interview/tozan1.png"></div>
-  <div class="centered"><img src="/assets/images/interview/tozan2.png"></div>
-</div>
-
 <div class="column-row" style="display: flex; justify-content: center; gap: 16px;">
   <div class="centered" style="width: 48%;"><img src="/assets/images/interview/tozan1.png" style="width: 100%; height: auto;"></div>
   <div class="centered" style="width: 48%;"><img src="/assets/images/interview/tozan2.png" style="width: 100%; height: auto;"></div>
