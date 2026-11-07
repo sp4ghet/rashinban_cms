@@ -97,4 +97,4 @@ DAY 2のvs Nowloの試合はBan Pickの話が出てから、Moving3回やろう�
 
 ![](/assets/images/interview/kmap3.png)ステージに上がるkmap選手
 
-![](/assets/images/interview/kamp4.png)ゲーム中の様子　下唇を噛み、最後まで精査し続けるkmap選手
+![](/assets/images/interview/kmap4.png)ゲーム中の様子　下唇を噛み、最後まで精査し続けるkmap選手
