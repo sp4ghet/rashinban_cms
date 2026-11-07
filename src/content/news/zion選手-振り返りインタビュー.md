@@ -11,6 +11,12 @@ link: ''
 
 本大会で**7位タイ**という結果を残したZion選手に、インタビューに回答していただきました。
 
+<div class="column-row">
+  <div class="centered"><img src="/assets/images/interview/zion1.png"></div>
+  <div class="centered"><img src="/assets/images/interview/zion2.png"></div>
+</div>
+
+
 ***
 
 ##### **Q. GeoGuessrを始めたきっかけを教えてください。**
