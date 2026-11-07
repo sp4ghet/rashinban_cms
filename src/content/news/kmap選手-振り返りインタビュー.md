@@ -11,6 +11,11 @@ link: ''
 
 本大会で**7位タイ**という結果を残したkmap選手に、インタビューに回答していただきました。
 
+<div class="column-row">
+  <div class="centered"><img src="/assets/images/interview/kmap1.png"></div>
+  <div class="centered"><img src="/assets/images/interview/kmap2.png"></div>
+</div>
+
 
 ***
 
