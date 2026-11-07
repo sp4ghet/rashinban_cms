@@ -11,6 +11,12 @@ link: ''
 
 本大会で**4位&田村ビルズ賞受賞**という結果を残したtozangezan選手に、インタビューに回答していただきました。
 
+<div class="column-row">
+  <div class="centered"><img src="/assets/images/interview/tozan1.png"></div>
+  <div class="centered"><img src="/assets/images/interview/tozan2.png"></div>
+</div>
+
+
 ***
 
 ##### **Q. GeoGuessrを始めたきっかけを教えてください。**
