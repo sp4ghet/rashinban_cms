@@ -16,7 +16,7 @@ link: ''
   <div class="centered"><img src="/assets/images/interview/tozan2.png"></div>
 </div>
 
-```plain
+```html
 <div class="column-row" style="display: flex; justify-content: center; gap: 16px;">
   <div class="centered" style="width: 48%;">
     <img src="/assets/images/interview/shiyoe1.png" style="width: 100%; height: auto;">
