@@ -7,7 +7,6 @@ ogImage: ''
 link: ''
 ---
 
-
 ### ２日間に渡る激闘の末、頂点に輝いたのは....?
 
 2026年10月25日(日)、eスポフィールドにて、世界中の風景を手がかりに位置を推理するゲーム、「GeoGuessr」の日本での最強を決める大会「RASHINBAN2026」のDAY 2が開催されました。
@@ -27,7 +26,7 @@ DAY 1のグループステージを勝ち抜いた精鋭８名が集結し、ス
 
 <div class="column-row">
   <div>
-    <img src="/assets/images/news/day2/day2_10.png" />
+    <img src="/assets/images/news/day2/day2_9.png" />
   </div>
   <div>
     <p>
@@ -38,7 +37,7 @@ DAY 1のグループステージを勝ち抜いた精鋭８名が集結し、ス
 
 <div class="column-row">
   <div>
-    <img src="/assets/images/news/day2/day2_10.png" />
+    <img src="/assets/images/news/day2/day2_8.png" />
   </div>
   <div>
     <p>
@@ -49,7 +48,7 @@ DAY 1のグループステージを勝ち抜いた精鋭８名が集結し、ス
 
 <div class="column-row">
   <div>
-    <img src="/assets/images/news/day2/day2_10.png" />
+    <img src="/assets/images/news/day2/day2_7.png" />
   </div>
   <div>
     <p>
