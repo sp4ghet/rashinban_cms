@@ -7,9 +7,7 @@ ogImage: ''
 link: ''
 ---
 
-![](/assets/images/news/day2/day2_tozan1.png)![](/assets/images/news/day2/day2_tozan2.png)![](/assets/images/news/day2/day2_10k1.png)![](/assets/images/news/day2/day2_10k2.png)![](/assets/images/news/day2/day2_nowlo1.png)![](/assets/images/news/day2/day2_nowlo2.png)![](/assets/images/news/day2/day2_shiyoe1.png)![](/assets/images/news/day2/day2_shiyoe2.png)
-
-### ２日間に渡る激闘の末、頂点に輝いたのは....?
+## ２日間に渡る激闘の末、頂点に輝いたのは....?
 
 2026年10月25日(日)、eスポフィールドにて、世界中の風景を手がかりに位置を推理するゲーム、「GeoGuessr」の日本での最強を決める大会「RASHINBAN2026」のDAY 2が開催され、DAY 1のグループステージを勝ち抜いた精鋭８名がステージ上で熱戦を繰り広げました。
 DAY 2のMoveモードでは、満点の5Kを獲得することが重視される「Pinpointing Duels」という採用されました。両者が5Kを達成した場合、先にGuessした選手にのみポイントが入るため、素早さと正確性、そして高い集中力が求められます。通常のMoveとは異なり、Guessの速さが直接勝敗を左右する新鮮なルール。両者が25Kを達成するハイレベルな攻防も繰り広げられ、会場は大いに盛り上がりました。
@@ -68,7 +66,7 @@ DAY 2のMoveモードでは、満点の5Kを獲得することが重視される
 
 ***
 
-### ハイライト
+## ハイライト
 
 数々の熱戦が繰り広げられた試合の中から、特に会場を沸かせたシーンをご紹介します。
 
@@ -102,7 +100,7 @@ Grand Final Reset、しよえ選手と鳴神選手の対戦、1ゲーム目 No M
 
 ***
 
-### 会場レポート
+## 会場レポート
 
 前日のDAY 1から一夜明け、迎えたDAY 2。36名のプレイヤーが向かい合い、激戦を繰り広げたeスポフィールドは、選ばれし8名が頂点を懸けて戦う舞台へと様変わり。1年ぶりの大舞台に、大勢の観客が足を運びました。
 
@@ -129,7 +127,7 @@ RASHINBANのロゴが入ったステッカーやキービジュアルをあし�
 
 ***
 
-### 写真の公開・ご利用についてお知らせ
+## 写真の公開・ご利用についてお知らせ
 
 大会の写真を[**Flickr**](https://flic.kr/s/aHBqjDbNVd)にて公開しています。写真は自由にダウンロードすることが可能です。大会の思い出として、SNSへの投稿や振り返り記事などにぜひご活用ください。
 
@@ -147,6 +145,9 @@ RASHINBANのロゴが入ったステッカーやキービジュアルをあし�
 ***
 
 Written by niwai / ShandyGaff / matori
+
 Edited by とりやま
+
 Photography by 葛城ラデン
+
 Designed by nm3
