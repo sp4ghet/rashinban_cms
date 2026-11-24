@@ -58,7 +58,7 @@ Moveモードでは、両者が5Kを達成した場合に先にGuessした選手
   </div>
   <div style="width: 48%; margin: 0 !important; padding: 0 !important;">
     <p style="margin: 0 !important; padding: 0 !important;">
-     特別賞「田村ビルズ賞」に選ばれたのはtozangezan選手。日本でも指折りのMovingプレイヤーとして知られているtozangezan選手は新しく導入された「Pinpointing Duels」と抜群の相性を見せました。表彰式では田村ビルズ様よりおせんべいを手渡しで贈られました。大会の雰囲気を楽しみ、表情豊かにプレイする姿も印象的でした。
+     特別賞「田村ビルズ賞」に選ばれたのはtozangezan選手。日本でも指折りのMovingプレイヤーとして知られているtozangezan選手は新しく導入された「Pinpointing Duels」と抜群の相性を見せました。表彰式では田村ビルズ様よりおせんべいが手渡しで贈られました。大会の雰囲気を楽しみ、表情豊かにプレイする姿も印象的でした。
     </p>
   </div>
 </div>
