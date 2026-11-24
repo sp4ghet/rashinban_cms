@@ -19,11 +19,11 @@ DAY 2のMoveモードでは、満点の5Kを獲得することが重視される
 両者が10Kを達成するハイレベルな攻防も繰り広げられ、会場は大いに盛り上がりました。
 
 <div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px;">
-  <div style="width: 48%;">
-    <img src="/assets/images/news/day2/day2_10.png"  style="width: 100%; height: auto; display: block;">
+  <div style="width: 48%; margin: 0 !important; padding: 0 !important;">
+    <img src="/assets/images/news/day2/day2_10.png"  style="width: 100%; height: auto; display: block; margin: 0 !important; padding: 0 !important;">
   </div>
-  <div style="width: 48%;">
-    <p style="margin: 0;">
+  <div style="width: 48%; margin: 0 !important; padding: 0 !important;">
+    <p style="margin: 0 !important; padding: 0 !important;">
       一位に輝いたのは自他ともに認める天才イケメン、しよえ選手。今年のAPAC World Leagueにも参加した実力者が、冷静なプレイングや高いMovingスキルを存分に発揮し、日本のGeoGuessrプレイヤーの頂点に立ちました。昨年は予選敗退という悔しい思いをしたしよえ選手。日本代表としてコミュニティを背負い、1年間戦った経験を糧に見事雪辱を果たしました。
     </p>
   </div>
@@ -142,7 +142,7 @@ RASHINBANのロゴが入ったステッカーやキービジュアルをあし�
 
 ***
 
-Written by niwai / ShandyGaff / matori
+Written by niwai / ShandyGaff / matori\</br>
 Edited by とりやま
 Photography by 葛城ラデン
 Designed by nm3
