@@ -62,15 +62,31 @@ DAY 2のMoveモードでは、満点の5Kを獲得することが重視される
 
 数々の熱戦が繰り広げられた試合の中から、特に会場を沸かせたシーンをご紹介します。
 
+<div class="column-row" style="display: flex; justify-content: center; gap: 16px;">
+  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen1.png" style="width: 100%; height: auto;"></div>
+  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen2.png" style="width: 100%; height: auto;"></div>
+</div>
 Lower Round1、Nowlo選手とkmap選手の対戦、3ゲーム目 MoveのRound13。
 優勝候補筆頭と目されていたNowlo選手が、その実力を存分に発揮！　ノルウェー南西部のラウンドで、文字情報を一切得ることなく、周囲の風景だけを頼りになんと単独5Kを達成。驚異的な精度のGuessを見せ、kmap選手との接戦を7-5で制しました。
 
+<div class="column-row" style="display: flex; justify-content: center; gap: 16px;">
+  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen1.png" style="width: 100%; height: auto;"></div>
+  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen2.png" style="width: 100%; height: auto;"></div>
+</div>
 Lower Quarter-Final、tozangezan選手とStephen選手の対戦、1ゲーム目 MoveのRound5。
 今大会から新たに導入された「Pinpointing Duels」は、まさにtozangezan選手の得意分野。日本・松山市の入り組んだ住宅街が出題されたこちらのラウンドでは、複雑な道路網を正確に読み解き、見事単独5K！このゲームを7-2で制するなど、安定した精査力を見せつけたtozangezan選手には、特別賞「田村ビルズ賞」が贈られました。
 
+<div class="column-row" style="display: flex; justify-content: center; gap: 16px;">
+  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen1.png" style="width: 100%; height: auto;"></div>
+  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen2.png" style="width: 100%; height: auto;"></div>
+</div>
 Upper Final、しよえ選手と鳴神選手の対戦、2ゲーム目 MoveのRound6。
 ともに5Kの精度に定評のある両選手。目立った手がかりのないトルコの半島が出題されたこちらのラウンドでは、ほぼ海岸線の形だけを頼りに、なんと両者が5Kを達成！二人合わせて10Kという驚異的なGuessで、そのレベルの高さを見せつけました。この対戦は鳴神選手が勝利しましたが、しよえ選手もLower Bracketを勝ち抜き、Grand Finalで再び両者が激突することとなりました。
 
+<div class="column-row" style="display: flex; justify-content: center; gap: 16px;">
+  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen1.png" style="width: 100%; height: auto;"></div>
+  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen2.png" style="width: 100%; height: auto;"></div>
+</div>
 Grand Final Reset、しよえ選手と鳴神選手の対戦、1ゲーム目 No MoveのRound4。
 北側に見えた小さな山などのわずかなヒントを頼りに、人口100人あまりの町の名前を地図上から発見したしよえ選手。見事5Kを達成し、鳴神選手の残りHPを削り切って1ゲーム目を勝ち取りました。しよえ選手自身も「自分がGeoGuessrをやってきて一番いいGuess」と振り返るほどの、まさに圧巻のプレーでした。
 
@@ -82,13 +98,16 @@ Grand Final Reset、しよえ選手と鳴神選手の対戦、1ゲーム目 No M
 
 ![](/assets/images/news/day2/day2_6.png)激闘を制した8名のプレイヤーがそれぞれの実力をステージ上で披露する一方、実況・解説が試合の熱さを臨場感たっぷりに進行。観客席からは歓声や拍手が上がり、オフライン大会ならではの熱気と興奮に包まれました。
 
-今年は新たな試みとして、来場者全員にイベントパスが配布されました。大会の記念品となるだけでなく、裏面に推し選手のサインをもらう来場者の姿も見られるなど、選手と観客の交流のきっかけにもなりました。
+![](/assets/images/news/day2/day2_3.png)今年は新たな試みとして、来場者全員にイベントパスが配布されました。大会の記念品となるだけでなく、裏面に推し選手のサインをもらう来場者の姿も見られるなど、選手と観客の交流のきっかけにもなりました。
 
+![](/assets/images/news/day2/day2_4.png)
 また会場には応援ボードが用意され、観客がそれぞれの”推し選手”に応援メッセージをボードに書き込み、より熱のこもった応援を送りました。
 
+![](/assets/images/news/day2/day2_2.png)
 会場後方では、ここでしか手に入らない大会オリジナルグッズが販売されました。
 RASHINBANのロゴが入ったステッカーやキービジュアルをあしらった缶バッジをはじめ、昨年好評だった「止まれ」標識の缶バッジには、カナダのヌナブト準州で使われている標識など、新たなデザインも登場。大きな話題を呼びました。
 
+![](/assets/images/news/day2/day2_5.png)
 スポンサーの皆様による企業ブースも賑わいを見せました。田村ビルズ様のGeoGuessrを用いた業務を体験できるブースや、VoiceMod様のブースなど、試合の合間に観客や選手が訪れていました。
 
 会場には年に一度の大舞台を一目見ようと二日間で延べ123名が来場。手に汗握る試合の数々に観客は釘付けになりました。昨年の初開催で刻まれた歴史的な一歩は、二年目を迎え、その歩みは選手と観客が生み出すさらなる熱狂とともに、より確かなものとなりました。
@@ -113,6 +132,7 @@ RASHINBANのロゴが入ったステッカーやキービジュアルをあし�
 なお、写真に写っているご本人から申し出があった場合など、利用の中止や削除をお願いすることがあります。皆さまが安心して大会の思い出を共有できるよう、ご理解とご協力をお願いいたします。
 
 ***
+
 
 Written by niwai / ShandyGaff / matori
 Edited by とりやま
