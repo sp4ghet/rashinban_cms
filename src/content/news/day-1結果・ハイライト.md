@@ -37,11 +37,14 @@ DAY 1のグループステージでは、日本中から集まった36名のプ�
   <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen2.png" style="width: 100%; height: auto;"></div>
 </div>
 
-![](/assets/images/news/day1/day1_stephen1.png)
-
 Group Bより、YRP選手とStephen選手の対戦、3ゲーム目 NMPZのRound5。
 画面左側に見える山々をピレネー山脈と推測したStephen選手、写真一枚からフランス南部の地点を見事に的中。この驚異的なGuessが決め手となり、昨年の「RASHINBAN 2025」で準優勝に輝いたYRP選手を相手に、2-1で勝利を収めました。
 
+<div class="column-row" style="display: flex; justify-content: center; gap: 16px;">
+  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen1.png" style="width: 100%; height: auto;"></div>
+  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen2.png" style="width: 100%; height: auto;"></div>
+</div>
+![](/assets/images/news/day1/day1_shiyoe1.png)
 Group Cより、Ratt選手としよえ選手の対戦、1ゲーム目 MoveのRound4。
 アルゼンチンが出題されたこちらのラウンド。序盤は南部のパタゴニア地方を疑っていたしよえ選手でしたが、終盤に地名の書かれた看板を発見すると、即座に推測を修正。そこからわずか10秒で正確な地点を特定し、見事5Kを達成しました。限られた時間の中で、圧倒的な精査力と判断力を見せつけました。
 
