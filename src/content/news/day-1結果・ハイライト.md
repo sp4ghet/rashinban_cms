@@ -15,9 +15,10 @@ link: ''
 
 DAY 1のグループステージでは、日本中から集まった36名のプレイヤーが4つのグループに分かれ、総当たり戦を実施。1人あたり8試合、会場全体では計144試合が行われ、それぞれの実力をぶつけ合いました。
 
-![](/assets/images/day1_1.png)
-
-![](/assets/images/day1_2.png)
+<div class="column-row" style="display: flex; justify-content: center; gap: 16px;">
+  <div class="centered" style="width: 48%;"><img src="/assets/images/day1_1.png" style="width: 100%; height: auto;"></div>
+  <div class="centered" style="width: 48%;"><img src="/assets/images/day1_2.png" style="width: 100%; height: auto;"></div>
+</div>
 
 日本での大規模なオフライン大会は今回で2度目。初参加の選手も多く、序盤は選手たちの表情に緊張が見られましたが、試合が進むにつれて会場の雰囲気にも慣れていった様子。試合終了後には握手を交わしたり、感想を言い合ったりするなど、選手同士の活発な交流も見られました。
 
