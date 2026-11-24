@@ -81,7 +81,7 @@ Lower Round 1、Nowlo選手とkmap選手の対戦、3ゲーム目 MoveのRound 1
   <div class="centered" style="width: 48%;"><img src="/assets/images/news/day2/day2_tozan2.png" style="width: 100%; height: auto;"></div>
 </div>
 Lower Quarter-Final、tozangezan選手とStephen選手の対戦、1ゲーム目 MoveのRound 5。
-今大会から新たに導入された「Pinpointing Duels」は、まさにtozangezan選手の得意分野。日本・松山市の入り組んだ住宅街が出題されたこちらのラウンドでは、複雑な道路網を正確に読み解き、見事単独5K！このゲームを7-2で制するなど、卓越した精査力を誇るtozangezan選手には、特別賞「田村ビルズ賞」が贈られました。
+今大会から新たに導入された「Pinpointing Duels」は、まさにtozangezan選手の得意分野。日本・松山市の入り組んだ住宅街が出題されたこちらのラウンドでは、複雑な道路網を正確に読み解き、見事単独5K！このゲームを7-2で制するなど、卓越した精査力を見せつけたtozangezan選手には、特別賞「田村ビルズ賞」が贈られました。
 
 <div class="column-row" style="display: flex; justify-content: center; gap: 16px;">
   <div class="centered" style="width: 48%;"><img src="/assets/images/news/day2/day2_10k1.png" style="width: 100%; height: auto;"></div>
