@@ -30,33 +30,33 @@ DAY 2のMoveモードでは、満点の5Kを獲得することが重視される
 </div>
 
 <div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px;">
-  <div style="width: 48%;">
-    <img src="/assets/images/news/day2/day2_9.png"  style="width: 100%; height: auto; display: block;">
+  <div style="width: 48%; margin: 0 !important; padding: 0 !important;">
+    <img src="/assets/images/news/day2/day2_9.png"  style="width: 100%; height: auto; display: block; margin: 0 !important; padding: 0 !important;">
   </div>
-  <div style="width: 48%;">
-    <p style="margin: 0;">
+  <div style="width: 48%; margin: 0 !important; padding: 0 !important;">
+    <p style="margin: 0 !important; padding: 0 !important;">
       準優勝に輝いたのは、日本マップのトッププレイヤーとして知られる鳴神選手。持ち前の高い精査力を随所で見せつけ、初日のグループステージを1位で通過した勢いそのままに躍進。惜しくも頂点には届きませんでしたが、会場を湧かせるGuessを連発し、実力を示しました。
     </p>
   </div>
 </div>
 
 <div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px;">
-  <div style="width: 48%;">
-    <img src="/assets/images/news/day2/day2_8.png"  style="width: 100%; height: auto; display: block;">
+  <div style="width: 48%; margin: 0 !important; padding: 0 !important;">
+    <img src="/assets/images/news/day2/day2_8.png"  style="width: 100%; height: auto; display: block; margin: 0 !important; padding: 0 !important;">
   </div>
-  <div style="width: 48%;">
-    <p style="margin: 0;">
+  <div style="width: 48%; margin: 0 !important; padding: 0 !important;">
+    <p style="margin: 0 !important; padding: 0 !important;">
      ３位にランクインしたのはここす選手。昨年は本戦に進出するも惜しくも表彰台に届きませんでした。今回は豊富なプレイ経験に裏打ちされた正確かつ安定したGuessで大会を盛り上げました。
     </p>
   </div>
 </div>
 
 <div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px;">
-  <div style="width: 48%;">
-    <img src="/assets/images/news/day2/day2_7.png"  style="width: 100%; height: auto; display: block;">
+  <div style="width: 48%; margin: 0 !important; padding: 0 !important;">
+    <img src="/assets/images/news/day2/day2_7.png"  style="width: 100%; height: auto; display: block; margin: 0 !important; padding: 0 !important;">
   </div>
-  <div style="width: 48%;">
-    <p style="margin: 0;">
+  <div style="width: 48%; margin: 0 !important; padding: 0 !important;">
+    <p style="margin: 0 !important; padding: 0 !important;">
      特別賞「田村ビルズ賞」に選ばれたのはtozangezan選手。日本でも指折りのMovingプレイヤーとして知られているtozangezan選手は新しく導入された「Pinpointing Duels」と抜群の相性を見せました。表彰式では田村ビルズ様よりおせんべいを手渡しで贈られました。大会の雰囲気を楽しみ、表情豊かにプレイする姿も印象的でした。
     </p>
   </div>
@@ -121,7 +121,7 @@ RASHINBANのロゴが入ったステッカーやキービジュアルをあし�
 
 会場には年に一度の大舞台を一目見ようと二日間で延べ123名が来場。手に汗握る試合の数々に観客は釘付けになりました。昨年の初開催で刻まれた歴史的な一歩は、二年目を迎え、その歩みは選手と観客が生み出すさらなる熱狂とともに、より確かなものとなりました。
 
-- **[DAY２配信アーカイブはこちら](https://www.youtube.com/live/y477vj2V-TI?si=yYk1ZZMoFoiDA53R)**
+- **[DAY ２配信アーカイブはこちら](https://www.youtube.com/live/y477vj2V-TI?si=yYk1ZZMoFoiDA53R)**
 
 ***
 
