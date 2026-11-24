@@ -7,6 +7,8 @@ ogImage: ''
 link: ''
 ---
 
+![](/assets/images/news/day1/day1_shiyoe2.png)![](/assets/images/news/day1/day1_sam1.png)![](/assets/images/news/day1/day1_sam2.png)![](/assets/images/news/day1/day1_meishin1.png)![](/assets/images/news/day1/day1_meishin2.png)
+
 ### 日本中からプレイヤーがeスポフィールドに集結！ DAY 2に勝ち進んだのは……?
 
 ![](/assets/images/day1_3.png)
