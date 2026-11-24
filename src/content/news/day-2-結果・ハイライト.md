@@ -7,7 +7,6 @@ ogImage: ''
 link: ''
 ---
 
-
 ## ２日間に渡る激闘の末、頂点に輝いたのは....?
 
 <div class="column-row" style="display: flex; justify-content: center; gap: 16px;">
@@ -17,54 +16,45 @@ link: ''
 2026年10月25日(日)、eスポフィールドにて、世界中の風景を手がかりに位置を推理するゲーム、「GeoGuessr」の日本での最強を決める大会「RASHINBAN2026」のDAY 2が開催され、DAY 1のグループステージを勝ち抜いた精鋭８名がステージ上で熱戦を繰り広げました。
 DAY 2のMoveモードでは、満点の5Kを獲得することが重視される「Pinpointing Duels」という採用されました。両者が5Kを達成した場合、先にGuessした選手にのみポイントが入るため、素早さと正確性、そして高い集中力が求められます。通常のMoveとは異なり、Guessの速さが直接勝敗を左右する新鮮なルール。両者が25Kを達成するハイレベルな攻防も繰り広げられ、会場は大いに盛り上がりました。
 
-```plain
-<div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px;">
-  <div style="width: 48%;">
-    <img src="/assets/images/news/day2/day2_10.png" style="width: 100%; height: auto; display: block;">
-  </div>
-  <div style="width: 48%;">
-    <p style="margin: 0;">
-```
-
 <div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px;">
   <div style="width: 48%;">
     <img src="/assets/images/news/day2/day2_10.png"  style="width: 100%; height: auto; display: block;">
   </div>
   <div style="width: 48%;">
     <p style="margin: 0;">
-一位に輝いたのは自他ともに認める天才イケメン、しよえ選手。今年はAPAC World Leagueにも参加し活躍した実力者が、冷静なプレイングや高いMovingスキルを存分に発揮し、日本のGeoGuessrプレイヤーの頂点に立ちました。昨年は予選敗退という悔しい思いをしたしよえ選手。日本代表としてコミュニティを背負い、1年間戦った経験を糧に見事雪辱を果たしました。
+      一位に輝いたのは自他ともに認める天才イケメン、しよえ選手。今年はAPAC World Leagueにも参加し活躍した実力者が、冷静なプレイングや高いMovingスキルを存分に発揮し、日本のGeoGuessrプレイヤーの頂点に立ちました。昨年は予選敗退という悔しい思いをしたしよえ選手。日本代表としてコミュニティを背負い、1年間戦った経験を糧に見事雪辱を果たしました。
     </p>
   </div>
 </div>
 
-<div class="column-row">
-  <div>
-    <img src="/assets/images/news/day2/day2_9.png" />
+<div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px;">
+  <div style="width: 48%;">
+    <img src="/assets/images/news/day2/day2_9.png"  style="width: 100%; height: auto; display: block;">
   </div>
-  <div>
-    <p>
+  <div style="width: 48%;">
+    <p style="margin: 0;">
       準優勝に輝いたのは、日本マップのトッププレイヤーとして知られる鳴神選手。持ち前の高い精査力を随所で見せつけ、初日のグループステージを1位で通過した勢いそのままに躍進。惜しくも頂点には届きませんでしたが、会場を湧かせるGuessを連発し、実力を示しました。
     </p>
   </div>
 </div>
 
-<div class="column-row">
-  <div>
-    <img src="/assets/images/news/day2/day2_8.png" />
+<div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px;">
+  <div style="width: 48%;">
+    <img src="/assets/images/news/day2/day2_8.png"  style="width: 100%; height: auto; display: block;">
   </div>
-  <div>
-    <p>
+  <div style="width: 48%;">
+    <p style="margin: 0;">
      ３位にランクインしたのはここす選手。昨年は本戦に進出するも惜しくも表彰台に届かず。しかし今回は、豊富なプレイ経験に裏打ちされた正確性の高い安定したGuessで大会を盛り上げました。
     </p>
   </div>
 </div>
 
-<div class="column-row">
-  <div>
-    <img src="/assets/images/news/day2/day2_7.png" />
+<div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px;">
+  <div style="width: 48%;">
+    <img src="/assets/images/news/day2/day2_7.png"  style="width: 100%; height: auto; display: block;">
   </div>
-  <div>
-    <p>
+  <div style="width: 48%;">
+    <p style="margin: 0;">
      特別賞「田村ビルズ賞」に選ばれたのはtozangezan選手。日本でも指折りのMovingプレイヤーとして知られているtozangezan選手は新しく導入された「Pinpointing Duels」と抜群の相性を見せました。表彰式では田村ビルズ様よりおせんべいを手渡しで贈られました。大会の雰囲気を楽しみ、表情豊かにプレイする姿も印象的でした。
     </p>
   </div>
