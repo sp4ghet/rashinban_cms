@@ -1,7 +1,7 @@
 ---
 title: DAY 2 結果・ハイライト
 headline: GeoGuessr 日本最強決定戦「RASHINBAN 2026」終幕
-date: 2026-11-24
+date: 2026-11-25
 description: ''
 ogImage: ''
 link: ''
@@ -141,9 +141,6 @@ RASHINBANのロゴが入ったステッカーやキービジュアルをあし�
 ***
 
 Written by niwai / ShandyGaff / matori
-
 Edited by とりやま
-
 Photography by 葛城ラデン
-
 Designed by nm3
