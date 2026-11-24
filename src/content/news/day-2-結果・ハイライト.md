@@ -71,29 +71,29 @@ DAY 2のMoveモードでは、満点の5Kを獲得することが重視される
 数々の熱戦が繰り広げられた試合の中から、特に会場を沸かせたシーンをご紹介します。
 
 <div class="column-row" style="display: flex; justify-content: center; gap: 16px;">
-  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen1.png" style="width: 100%; height: auto;"></div>
-  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen2.png" style="width: 100%; height: auto;"></div>
+  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day2/day2_nowlo1.png" style="width: 100%; height: auto;"></div>
+  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day2/day2_nowlo2.png" style="width: 100%; height: auto;"></div>
 </div>
 Lower Round1、Nowlo選手とkmap選手の対戦、3ゲーム目 MoveのRound13。
 優勝候補筆頭と目されていたNowlo選手が、その実力を存分に発揮！　ノルウェー南西部のラウンドで、文字情報を一切得ることなく、周囲の風景だけを頼りになんと単独5Kを達成。驚異的な精度のGuessを見せ、kmap選手との接戦を7-5で制しました。
 
 <div class="column-row" style="display: flex; justify-content: center; gap: 16px;">
-  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen1.png" style="width: 100%; height: auto;"></div>
-  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen2.png" style="width: 100%; height: auto;"></div>
+  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day2/day2_tozan1.png" style="width: 100%; height: auto;"></div>
+  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day2/day2_tozan2.png" style="width: 100%; height: auto;"></div>
 </div>
 Lower Quarter-Final、tozangezan選手とStephen選手の対戦、1ゲーム目 MoveのRound5。
 今大会から新たに導入された「Pinpointing Duels」は、まさにtozangezan選手の得意分野。日本・松山市の入り組んだ住宅街が出題されたこちらのラウンドでは、複雑な道路網を正確に読み解き、見事単独5K！このゲームを7-2で制するなど、安定した精査力を見せつけたtozangezan選手には、特別賞「田村ビルズ賞」が贈られました。
 
 <div class="column-row" style="display: flex; justify-content: center; gap: 16px;">
-  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen1.png" style="width: 100%; height: auto;"></div>
-  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen2.png" style="width: 100%; height: auto;"></div>
+  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day2/day2_10k1.png" style="width: 100%; height: auto;"></div>
+  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day2/day2_10k2.png" style="width: 100%; height: auto;"></div>
 </div>
 Upper Final、しよえ選手と鳴神選手の対戦、2ゲーム目 MoveのRound6。
 ともに5Kの精度に定評のある両選手。目立った手がかりのないトルコの半島が出題されたこちらのラウンドでは、ほぼ海岸線の形だけを頼りに、なんと両者が5Kを達成！二人合わせて10Kという驚異的なGuessで、そのレベルの高さを見せつけました。この対戦は鳴神選手が勝利しましたが、しよえ選手もLower Bracketを勝ち抜き、Grand Finalで再び両者が激突することとなりました。
 
 <div class="column-row" style="display: flex; justify-content: center; gap: 16px;">
-  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen1.png" style="width: 100%; height: auto;"></div>
-  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen2.png" style="width: 100%; height: auto;"></div>
+  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day2/day2_shiyoe1.png" style="width: 100%; height: auto;"></div>
+  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day2/day2_shiyoe2.png" style="width: 100%; height: auto;"></div>
 </div>
 Grand Final Reset、しよえ選手と鳴神選手の対戦、1ゲーム目 No MoveのRound4。
 北側に見えた小さな山などのわずかなヒントを頼りに、人口100人あまりの町の名前を地図上から発見したしよえ選手。見事5Kを達成し、鳴神選手の残りHPを削り切って1ゲーム目を勝ち取りました。しよえ選手自身も「自分がGeoGuessrをやってきて一番いいGuess」と振り返るほどの、まさに圧巻のプレーでした。
