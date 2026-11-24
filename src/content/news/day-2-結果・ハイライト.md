@@ -9,7 +9,7 @@ link: ''
 
 ## ２日間に渡る激闘の末、頂点に輝いたのは....?
 
-<div class="column-row" style="display: flex; justify-content: center; gap: 16px;">
+<div class="column-row" style="display: flex; justify-content: center; gap: 16px;"margin-bottom: 32px !important;>
   <div class="centered" style="width: 48%;"><img src="/assets/images/news/day2/sokuhou.jpg" style="width: 100%; height: auto;"></div>
   <div class="centered" style="width: 48%;"><img src="/assets/images/news/day2/bracket2.png" style="width: 100%; height: auto;"></div>
 </div>
@@ -18,7 +18,7 @@ link: ''
 DAY 2のMoveモードでは、満点の5Kを獲得することが重視される「Pinpointing Duels」が採用されました。両者が5Kを達成した場合、先にGuessした選手にのみポイントが入るため、素早さと正確性、そして高い集中力が求められる「Pinpointing Duels」は、通常のMoveとは異なり、Guessの速さが直接勝敗を左右する新鮮なルール。
 両者が10Kを達成するハイレベルな攻防も繰り広げられ、会場は大いに盛り上がりました。
 
-<div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px;">
+<div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px; margin-bottom: 32px !important;">
   <div style="width: 48%; margin: 0 !important; padding: 0 !important;">
     <img src="/assets/images/news/day2/day2_10.png"  style="width: 100%; height: auto; display: block; margin: 0 !important; padding: 0 !important;">
   </div>
@@ -29,7 +29,7 @@ DAY 2のMoveモードでは、満点の5Kを獲得することが重視される
   </div>
 </div>
 
-<div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px;">
+<div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px; margin-bottom: 32px !important;">
   <div style="width: 48%; margin: 0 !important; padding: 0 !important;">
     <img src="/assets/images/news/day2/day2_9.png"  style="width: 100%; height: auto; display: block; margin: 0 !important; padding: 0 !important;">
   </div>
@@ -40,7 +40,7 @@ DAY 2のMoveモードでは、満点の5Kを獲得することが重視される
   </div>
 </div>
 
-<div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px;">
+<div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px; margin-bottom: 32px !important;">
   <div style="width: 48%; margin: 0 !important; padding: 0 !important;">
     <img src="/assets/images/news/day2/day2_8.png"  style="width: 100%; height: auto; display: block; margin: 0 !important; padding: 0 !important;">
   </div>
@@ -51,7 +51,7 @@ DAY 2のMoveモードでは、満点の5Kを獲得することが重視される
   </div>
 </div>
 
-<div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px;">
+<div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px; margin-bottom: 32px !important;">
   <div style="width: 48%; margin: 0 !important; padding: 0 !important;">
     <img src="/assets/images/news/day2/day2_7.png"  style="width: 100%; height: auto; display: block; margin: 0 !important; padding: 0 !important;">
   </div>
