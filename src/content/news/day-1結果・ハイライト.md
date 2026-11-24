@@ -34,8 +34,10 @@ DAY 1のグループステージでは、日本中から集まった36名のプ�
 
 <div class="column-row" style="display: flex; justify-content: center; gap: 16px;">
   <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen1.png" style="width: 100%; height: auto;"></div>
-  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen1.png" style="width: 100%; height: auto;"></div>
+  <div class="centered" style="width: 48%;"><img src="/assets/images/news/day1/day1_stephen2.png" style="width: 100%; height: auto;"></div>
 </div>
+
+![](/assets/images/news/day1/day1_stephen1.png)
 
 Group Bより、YRP選手とStephen選手の対戦、3ゲーム目 NMPZのRound5。
 画面左側に見える山々をピレネー山脈と推測したStephen選手、写真一枚からフランス南部の地点を見事に的中。この驚異的なGuessが決め手となり、昨年の「RASHINBAN 2025」で準優勝に輝いたYRP選手を相手に、2-1で勝利を収めました。
