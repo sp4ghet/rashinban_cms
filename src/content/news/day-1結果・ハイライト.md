@@ -74,6 +74,12 @@ Group Aより、Nowlo選手と鳴神選手の対戦、3ゲーム目 NMPZのRound
 ***
 
 Written by niwai / ShandyGaff / matori
+
+
 Edited by とりやま
+
+
 Photography by 葛城ラデン
+
+
 Designed by nm3
