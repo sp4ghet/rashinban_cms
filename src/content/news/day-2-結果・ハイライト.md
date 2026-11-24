@@ -13,7 +13,7 @@ link: ''
   <div class="centered" style="width: 48%;"><img src="/assets/images/news/day2/sokuhou.jpg" style="width: 100%; height: auto;"></div>
   <div class="centered" style="width: 48%;"><img src="/assets/images/news/day2/bracket2.png" style="width: 100%; height: auto;"></div>
 </div>
-2026年10月24日（土）・25日（日）、eスポフィールドにて、世界中の風景を手がかりに位置を推測するゲーム「GeoGuessr」の日本最強を決める大会「RASHINBAN 2026」が二日間に渡って開催されました。</br>
+2026年10月24日（土）・25日（日）、eスポフィールドにて、世界中の風景を手がかりに位置を推測するゲーム「GeoGuessr」の日本最強を決める大会「RASHINBAN 2026」が二日間にわたって開催されました。</br>
 </br>
 
 DAY 2ではグループステージを勝ち抜いた精鋭8名によるトーナメントを実施。</br>
