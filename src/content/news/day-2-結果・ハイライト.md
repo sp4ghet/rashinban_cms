@@ -142,7 +142,7 @@ RASHINBANのロゴが入ったステッカーやキービジュアルをあし�
 
 ***
 
-Written by niwai / ShandyGaff / matori\</br>
+Written by niwai / ShandyGaff / matori
 Edited by とりやま
 Photography by 葛城ラデン
 Designed by nm3
