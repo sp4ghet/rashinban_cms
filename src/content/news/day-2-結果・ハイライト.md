@@ -12,13 +12,22 @@ link: ''
 2026年10月25日(日)、eスポフィールドにて、世界中の風景を手がかりに位置を推理するゲーム、「GeoGuessr」の日本での最強を決める大会「RASHINBAN2026」のDAY 2が開催され、DAY 1のグループステージを勝ち抜いた精鋭８名がステージ上で熱戦を繰り広げました。
 DAY 2のMoveモードでは、満点の5Kを獲得することが重視される「Pinpointing Duels」という採用されました。両者が5Kを達成した場合、先にGuessした選手にのみポイントが入るため、素早さと正確性、そして高い集中力が求められます。通常のMoveとは異なり、Guessの速さが直接勝敗を左右する新鮮なルール。両者が25Kを達成するハイレベルな攻防も繰り広げられ、会場は大いに盛り上がりました。
 
-<div class="column-row">
-  <div>
-    <img src="/assets/images/news/day2/day2_10.png" />
+
+```plain
+<div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px;">
+  <div style="width: 48%;">
+    <img src="/assets/images/news/day2/day2_10.png" style="width: 100%; height: auto; display: block;">
   </div>
-  <div>
-    <p>
-      一位に輝いたのは自他ともに認める天才イケメン、しよえ選手。今年はAPAC World Leagueにも参加し活躍した実力者が、冷静なプレイングや高いMovingスキルを存分に発揮し、日本のGeoGuessrプレイヤーの頂点に立ちました。昨年は予選敗退という悔しい思いをしたしよえ選手。日本代表としてコミュニティを背負い、1年間戦った経験を糧に見事雪辱を果たしました。
+  <div style="width: 48%;">
+    <p style="margin: 0;">
+```
+
+<div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px;">
+  <div style="width: 48%;">
+    <img src="/assets/images/news/day2/day2_10.png"  style="width: 100%; height: auto; display: block;">
+  </div>
+  <div style="width: 48%;">
+    <p style="margin: 0;">一位に輝いたのは自他ともに認める天才イケメン、しよえ選手。今年はAPAC World Leagueにも参加し活躍した実力者が、冷静なプレイングや高いMovingスキルを存分に発揮し、日本のGeoGuessrプレイヤーの頂点に立ちました。昨年は予選敗退という悔しい思いをしたしよえ選手。日本代表としてコミュニティを背負い、1年間戦った経験を糧に見事雪辱を果たしました。
     </p>
   </div>
 </div>
@@ -101,13 +110,16 @@ Grand Final Reset、しよえ選手と鳴神選手の対戦、1ゲーム目 No M
 ![](/assets/images/news/day2/day2_3.png)今年は新たな試みとして、来場者全員にイベントパスが配布されました。大会の記念品となるだけでなく、裏面に推し選手のサインをもらう来場者の姿も見られるなど、選手と観客の交流のきっかけにもなりました。
 
 ![](/assets/images/news/day2/day2_4.png)
+
 また会場には応援ボードが用意され、観客がそれぞれの”推し選手”に応援メッセージをボードに書き込み、より熱のこもった応援を送りました。
 
 ![](/assets/images/news/day2/day2_2.png)
+
 会場後方では、ここでしか手に入らない大会オリジナルグッズが販売されました。
 RASHINBANのロゴが入ったステッカーやキービジュアルをあしらった缶バッジをはじめ、昨年好評だった「止まれ」標識の缶バッジには、カナダのヌナブト準州で使われている標識など、新たなデザインも登場。大きな話題を呼びました。
 
 ![](/assets/images/news/day2/day2_5.png)
+
 スポンサーの皆様による企業ブースも賑わいを見せました。田村ビルズ様のGeoGuessrを用いた業務を体験できるブースや、VoiceMod様のブースなど、試合の合間に観客や選手が訪れていました。
 
 会場には年に一度の大舞台を一目見ようと二日間で延べ123名が来場。手に汗握る試合の数々に観客は釘付けになりました。昨年の初開催で刻まれた歴史的な一歩は、二年目を迎え、その歩みは選手と観客が生み出すさらなる熱狂とともに、より確かなものとなりました。
@@ -132,7 +144,6 @@ RASHINBANのロゴが入ったステッカーやキービジュアルをあし�
 なお、写真に写っているご本人から申し出があった場合など、利用の中止や削除をお願いすることがあります。皆さまが安心して大会の思い出を共有できるよう、ご理解とご協力をお願いいたします。
 
 ***
-
 
 Written by niwai / ShandyGaff / matori
 Edited by とりやま
