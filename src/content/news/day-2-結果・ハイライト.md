@@ -7,7 +7,7 @@ ogImage: ''
 link: ''
 ---
 
-![](/assets/images/news/day2/bracket.png)
+![](/assets/images/news/day2/sokuhou.jpg)![](/assets/images/news/day2/bracket2.png)
 
 ## ２日間に渡る激闘の末、頂点に輝いたのは....?
 
