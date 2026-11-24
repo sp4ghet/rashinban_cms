@@ -7,7 +7,7 @@ ogImage: ''
 link: ''
 ---
 
-### 日本中からプレイヤーがeスポフィールドに集結！ DAY 2に勝ち進んだのは……?
+### ![](/assets/images/news/day2/day2_1.png)![](/assets/images/news/day2/day2_2.png)![](/assets/images/news/day2/day2_3.png)![](/assets/images/news/day2/day2_4.png)![](/assets/images/news/day2/day2_5.png)![](/assets/images/news/day2/day2_6.png)![](/assets/images/news/day2/day2_7.png)![](/assets/images/news/day2/day2_8.png)![](/assets/images/news/day2/day2_9.png)日本中からプレイヤーがeスポフィールドに集結！ DAY 2に勝ち進んだのは……?
 
 ![](/assets/images/day1_3.png)
 
