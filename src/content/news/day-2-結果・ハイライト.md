@@ -13,10 +13,9 @@ link: ''
   <div class="centered" style="width: 48%;"><img src="/assets/images/news/day2/sokuhou.jpg" style="width: 100%; height: auto;"></div>
   <div class="centered" style="width: 48%;"><img src="/assets/images/news/day2/bracket2.png" style="width: 100%; height: auto;"></div>
 </div>
-2026年10月24日（土）・25日（日）、eスポフィールドにて、世界中の風景を手がかりに位置を推測するゲーム「GeoGuessr」の日本最強を決める大会「RASHINBAN 2026」が二日間に渡って開催されました。
+2026年10月24日（土）・25日（日）、eスポフィールドにて、世界中の風景を手がかりに位置を推測するゲーム「GeoGuessr」の日本最強を決める大会「RASHINBAN 2026」が二日間に渡って開催されました。</br>
 
 DAY 2ではグループステージを勝ち抜いた精鋭８名によるトーナメントを実施。
-
 DAY 2のMoveモードでは、満点の5Kを獲得することが重視される「Pinpointing Duels」が採用されました。両者が5Kを達成した場合、先にGuessした選手にのみポイントが入るため、素早さと正確性、そして高い集中力が求められる「Pinpointing Duels」は、通常のMoveとは異なり、Guessの速さが直接勝敗を左右する新鮮なルール。
 両者が10Kを達成するハイレベルな攻防も繰り広げられ、会場は大いに盛り上がりました。
 
