@@ -67,19 +67,14 @@ Group Dより、tozangezan選手とsam選手の対戦、1ゲーム目 MoveのRou
 Group Aより、Nowlo選手と鳴神選手の対戦、3ゲーム目 NMPZのRound4。
 グループ内レーティング1位のNowlo選手に対し、鳴神選手がまさかの3-0で大金星！　特に圧巻だったのが、アイルランド南西部が出題されたこちらのラウンド。写真一枚から地域を推測し、誤差わずか14kmという驚異的なGuessを披露しました。精査力に定評のある鳴神選手ですが、全モードでその実力を発揮し、鮮やかな勝利を収めました。
 
-**[DAY 1ブラケット（start.gg）](DAY1ブラケット（startgg）)**
 
-**[DAY 1配信アーカイブはこちら](https://www.youtube.com/live/v3RSsxMrqtk?si=mMWfbIan3OBtHdqy&utm_source=chatgpt.com)**
+
+- **[DAY 1ブラケット（start.gg）](DAY1ブラケット（startgg）)**
+- **[DAY 1配信アーカイブはこちら](https://www.youtube.com/live/v3RSsxMrqtk?si=mMWfbIan3OBtHdqy&utm_source=chatgpt.com)**
 
 ***
 
 Written by niwai / ShandyGaff / matori
-
-
 Edited by とりやま
-
-
 Photography by 葛城ラデン
-
-
 Designed by nm3
