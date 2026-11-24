@@ -7,7 +7,7 @@ ogImage: ''
 link: ''
 ---
 
-## ２日間に渡る激闘の末、頂点に輝いたのは....?
+## 二日間にわたる激闘の末、頂点に輝いたのは....?
 
 <div class="column-row" style="display: flex; justify-content: center; gap: 16px;"margin-bottom: 32px !important;>
   <div class="centered" style="width: 48%;"><img src="/assets/images/news/day2/sokuhou.jpg" style="width: 100%; height: auto;"></div>
