@@ -26,7 +26,8 @@ DAY 2のMoveモードでは、満点の5Kを獲得することが重視される
     <img src="/assets/images/news/day2/day2_10.png"  style="width: 100%; height: auto; display: block;">
   </div>
   <div style="width: 48%;">
-    <p style="margin: 0;">一位に輝いたのは自他ともに認める天才イケメン、しよえ選手。今年はAPAC World Leagueにも参加し活躍した実力者が、冷静なプレイングや高いMovingスキルを存分に発揮し、日本のGeoGuessrプレイヤーの頂点に立ちました。昨年は予選敗退という悔しい思いをしたしよえ選手。日本代表としてコミュニティを背負い、1年間戦った経験を糧に見事雪辱を果たしました。
+    <p style="margin: 0;">
+一位に輝いたのは自他ともに認める天才イケメン、しよえ選手。今年はAPAC World Leagueにも参加し活躍した実力者が、冷静なプレイングや高いMovingスキルを存分に発揮し、日本のGeoGuessrプレイヤーの頂点に立ちました。昨年は予選敗退という悔しい思いをしたしよえ選手。日本代表としてコミュニティを背負い、1年間戦った経験を糧に見事雪辱を果たしました。
     </p>
   </div>
 </div>
