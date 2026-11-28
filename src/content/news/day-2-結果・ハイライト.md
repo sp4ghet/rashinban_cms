@@ -17,7 +17,7 @@ link: ''
 </br>
 
 DAY 2ではグループステージを勝ち抜いた精鋭8名によるトーナメントを実施。</br>
-Moveモードでは、両者が5Kを達成した場合に先にGuessした選手のみがポイントを獲得する「Pinpointing Duels」が採用されました。正確性に加え、Guessの速さも勝敗を左右する新鮮なルール。両者合わせて10Kというハイレベルな攻防も繰り広げられ、会場は大いに盛り上がりました。
+Moveモードでは、5Kの速さと精度を重視した独自の得点方式でポイントを競う「Pinpointing Duels」が採用されました。正確性に加え、Guessの速さも勝敗を左右する新鮮なルール。両者合わせて10Kというハイレベルな攻防も繰り広げられ、会場は大いに盛り上がりました。
 
 <div class="column-row" style="display: flex; justify-content: center; align-items: flex-start; gap: 16px; margin-bottom: 32px !important;">
   <div style="width: 48%; margin: 0 !important; padding: 0 !important;">
@@ -81,7 +81,7 @@ Lower Round 1、Nowlo選手とkmap選手の対戦、3ゲーム目 MoveのRound 1
   <div class="centered" style="width: 48%;"><img src="/assets/images/news/day2/day2_tozan2.png" style="width: 100%; height: auto;"></div>
 </div>
 Lower Quarter-Final、tozangezan選手とStephen選手の対戦、1ゲーム目 MoveのRound 5。
-今大会から新たに導入された「Pinpointing Duels」は、まさにtozangezan選手の得意分野。日本・松山市の入り組んだ住宅街が出題されたこちらのラウンドでは、複雑な道路網を正確に読み解き、見事単独5K！このゲームを7-2で制するなど、卓越した精査力を見せつけたtozangezan選手には、特別賞「田村ビルズ賞」が贈られました。
+日本・松山市の入り組んだ住宅街が出題されたこちらのラウンドでは、tozangezan選手が複雑な道路網を正確に読み解き、見事単独5K！このゲームを7-2で制するなど、卓越した精査力を見せつけたtozangezan選手には、特別賞「田村ビルズ賞」が贈られました。
 
 <div class="column-row" style="display: flex; justify-content: center; gap: 16px;">
   <div class="centered" style="width: 48%;"><img src="/assets/images/news/day2/day2_10k1.png" style="width: 100%; height: auto;"></div>
